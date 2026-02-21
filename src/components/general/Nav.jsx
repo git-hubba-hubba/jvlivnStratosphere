@@ -15,7 +15,7 @@ function Nav() {
             <div className="letta">N</div>
           </div>
           <img
-            src="/public/images/jvlMantra.png"
+            src="/images/jvlMantra.png"
             alt=""
             className="gifMe"
           />
