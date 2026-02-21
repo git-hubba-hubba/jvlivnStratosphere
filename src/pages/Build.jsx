@@ -4,12 +4,12 @@ import Sequence from "../components/teach/Sequence";
 
 function Build() {
   const stepCalculator = [
-    { img: "/public/images/jclwireframe.png", title: "1. Initial Consultation", desc: "We begin by understanding your goals, users, and technical requirements. This phase ensures alignment on scope, functionality, timelines, and success criteria before development begins." },
-    { img: "/public/images/jvlVscode.png", title: "2. Front End Framework", desc: "We design and build a modern, responsive user interface using industry-standard frameworks. The focus is on usability, performance, and a clean experience across mobile and web platforms." },
-    { img: "/public/images/jvlBE.png", title: "3. BackEnd Connectivity", desc: "We develop secure and scalable backend services that power your application. This includes APIs, databases, authentication, and integrations to ensure reliable data flow and system performance" },
-    { img: "/public/images/jvlYT.png", title: "4. Feature Review and Connectivity ", desc: "We review core features and confirm system connectivity across all components. This step ensures frontend and backend features are properly integrated, functional, and aligned with application requirements." },
-    { img: "/public/images/jvlTed.png", title: "5. Application Review & Finalization", desc: "We conduct thorough testing, optimization, and quality assurance to ensure stability, security, and functionality. Feedback is incorporated to finalize the application for production readiness." },
-    { img: "/public/images/jvlFinal.png", title: "6. Delivery & Deployment", desc: "We deploy the application to the appropriate production environment and ensure a smooth launch. Final documentation, handoff, and post-deployment support are provided as needed." },
+    { img: "/images/jclwireframe.png", title: "1. Initial Consultation", desc: "We begin by understanding your goals, users, and technical requirements. This phase ensures alignment on scope, functionality, timelines, and success criteria before development begins." },
+    { img: "/images/jvlVscode.png", title: "2. Front End Framework", desc: "We design and build a modern, responsive user interface using industry-standard frameworks. The focus is on usability, performance, and a clean experience across mobile and web platforms." },
+    { img: "/images/jvlBE.png", title: "3. BackEnd Connectivity", desc: "We develop secure and scalable backend services that power your application. This includes APIs, databases, authentication, and integrations to ensure reliable data flow and system performance" },
+    { img: "/images/jvlYT.png", title: "4. Feature Review and Connectivity ", desc: "We review core features and confirm system connectivity across all components. This step ensures frontend and backend features are properly integrated, functional, and aligned with application requirements." },
+    { img: "/images/jvlTed.png", title: "5. Application Review & Finalization", desc: "We conduct thorough testing, optimization, and quality assurance to ensure stability, security, and functionality. Feedback is incorporated to finalize the application for production readiness." },
+    { img: "/images/jvlFinal.png", title: "6. Delivery & Deployment", desc: "We deploy the application to the appropriate production environment and ensure a smooth launch. Final documentation, handoff, and post-deployment support are provided as needed." },
   ];
   return (
     <>
