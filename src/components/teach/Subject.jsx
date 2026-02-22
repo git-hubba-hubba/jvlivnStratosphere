@@ -12,7 +12,7 @@ function Subject({obj}) {
     <p className="subdesc">{obj.subDesc}</p>
 
     <div className="btnCafe">
-    <button className="syllabus">Download Syllabus</button>
+    <button className="syllabus">Syllabus</button>
     <Tvmodal2 />
     
     </div>

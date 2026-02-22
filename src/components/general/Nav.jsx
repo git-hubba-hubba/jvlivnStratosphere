@@ -15,7 +15,7 @@ function Nav() {
             <div className="letta">N</div>
           </div>
           <img
-            src="/images/jvlMantra.png"
+            src="/images/jclLogoMajor.png"
             alt=""
             className="gifMe"
           />

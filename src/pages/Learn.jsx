@@ -4,6 +4,12 @@ import Subject from '../components/teach/Subject'
 function Learn() {
   const subjects = [
     {
+      img: "https://n8n.io/brandguidelines/dont/vertical-align.png",
+      subName: "Agentic Sys Development",
+      subDesc:
+        "Unlock the power of automation with n8n, the open-source workflow automation tool that lets you connect apps, APIs, and databases with ease. In this hands-on course, you’ll learn how to design, build, and deploy scalable automation workflows without relying on expensive SaaS tools.t"
+    },
+    {
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/960px-Unofficial_JavaScript_logo_2.svg.png",
       subName: "JavaScript Programming",
       subDesc:
