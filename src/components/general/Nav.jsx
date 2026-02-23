@@ -14,11 +14,9 @@ function Nav() {
             <div className="letta">V</div>
             <div className="letta">N</div>
           </div>
-          <img
-            src="/images/jclLogoMajor.png"
-            alt=""
-            className="gifMe"
-          />
+          <Link to="/home">
+            <img src="/images/jclLogoMajor.png" alt="" className="gifMe" />
+          </Link>
           {/* <p className="slogan">True. Innovative. Tech. Solutions</p> */}
         </div>
         <div className="majorRight">

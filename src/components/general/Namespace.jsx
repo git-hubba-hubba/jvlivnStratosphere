@@ -3,6 +3,7 @@ import React from "react";
 function Namespace() {
   return (
     <>
+    <div className="spacer"></div>
       <div className="nameStretch">
         <div className="letta">J</div>
         <div className="letta">V</div>

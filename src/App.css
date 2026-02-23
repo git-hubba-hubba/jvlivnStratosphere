@@ -303,6 +303,7 @@
   width:30px;
   margin-right:15%;
 }
+
 .nameStretch{
   display:flex;
   justify-content: space-around;
@@ -312,6 +313,11 @@
 }
 .gifMe{
   width:100%;
+  opacity:.3;
+}
+.gifMe:hover{
+  width:100%;
+  opacity:1;
 }
 .navSuperior{
   border: .2px solid grey;
