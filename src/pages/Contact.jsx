@@ -101,7 +101,7 @@ function Contact() {
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
       <Namespace />
 
-      <h2 style={{color:"navy"}}>Services At a Glance</h2>
+      <h2 style={{color:"navy"}}>Our Services At a Glance</h2>
 
       <div className="flashMeContainer">
         {allCardInfo.map((crd, i) => {
