@@ -10,7 +10,7 @@ function Home() {
       <div className="introduckN">
         <div className="descriptionUpper">
           <div className="smSay">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.
+            Learn about who we are and what we seek to accomplish.
           </div>
           <img
             src="https://cdn-icons-png.flaticon.com/256/25/25694.png"

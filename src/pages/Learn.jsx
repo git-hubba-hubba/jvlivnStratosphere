@@ -71,7 +71,7 @@ function Learn() {
     <div className="introduckN">
         <div className="descriptionUpper">
           <div className="smSay">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.
+            Explore Our Many Different Course Offerings
           </div>
           <img
             src="https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png"

@@ -88,7 +88,7 @@ function Contact() {
       <div className="introduckN">
         <div className="descriptionUpper">
           <div className="smSay">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.
+            Witness What We Aim to Accomplish for Your Organization
           </div>
           <img
             src="https://cdn-icons-png.flaticon.com/512/65/65000.png"

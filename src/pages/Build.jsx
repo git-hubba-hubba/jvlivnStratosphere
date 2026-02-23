@@ -16,7 +16,7 @@ function Build() {
       <div className="introduckN">
         <div className="descriptionUpper">
           <div className="smSay">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.
+            Understand our Build Process & Procedural Outline
           </div>
           <img
             src="https://cdn-icons-png.flaticon.com/512/603/603781.png"
