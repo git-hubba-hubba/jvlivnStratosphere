@@ -17,6 +17,7 @@ function App() {
       <div className="organicSplit">
         <div className="ogRight"></div>
         <div className="ogMid">
+        
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/build" element={<Build />} />

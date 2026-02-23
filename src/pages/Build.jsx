@@ -42,7 +42,7 @@ function Build() {
             <div className="letta">N</div>
           </div>
           <div className="spacer"></div>
-      <h2 className="csd">Featured Services </h2>
+      {/* <h2 className="csd">Featured Services </h2>
       <p className="csdp">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
         blanditiis? Corrupti, voluptatem.
@@ -82,7 +82,7 @@ function Build() {
           />
           <div className="dubContent">CMS and Agentic Tool Creation</div>
         </div>
-      </div>
+      </div> */}
       <hr />
       
       

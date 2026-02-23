@@ -215,7 +215,7 @@
   width: 80vw;
   height: 80vh;
   background: #0b0b0b;
-  color: peru;
+  color: navy;
   border-radius: 14px;
   padding: 30px;
   overflow-y: auto;
@@ -337,12 +337,14 @@
   justify-content: space-evenly;
 }
 .quad{
-  border: 4px double grey;
+  border: 4px double navy;
   width:45%;
 }
 .quad:hover{
-  border: 6px double black;
+  border: 6px double white;
   width:45%;
+  background-color: navy;
+  color:white;
   transition:.3s;
 }
 .hiddenOne{
@@ -433,8 +435,22 @@ justify-content: space-between;
   width:100%;
 }
 .spacer{
-  margin:9em;
+  margin:6em;
 }
+.jvlShowcase{
+  width:100%;
+}
+.movieScreen{
+  border:solid navy;
+  /* height:84vh; */
+  
+}
+.screen{
+  border:solid black;
+  margin:1em;
+  height:55vh;
+}
+
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
