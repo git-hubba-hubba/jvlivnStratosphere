@@ -26,7 +26,7 @@ function Nav() {
                 <img
                   src="https://cdn-icons-png.flaticon.com/256/25/25694.png"
                   alt=""
-                  className="navImg"
+                  className="navImg heartbeat"
                 />
                 <div className="navTitle">Home</div>
               </div>
@@ -37,7 +37,7 @@ function Nav() {
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/603/603781.png"
                   alt=""
-                  className="navImg"
+                  className="navImg heartbeat"
                 />
                 <div className="navTitle">Build</div>
               </div>
@@ -48,7 +48,7 @@ function Nav() {
                 <img
                   src="https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png"
                   alt=""
-                  className="navImg"
+                  className="navImg heartbeat"
                 />
                 <div className="navTitle">Learn</div>
               </div>
@@ -59,7 +59,7 @@ function Nav() {
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/65/65000.png"
                   alt=""
-                  className="navImg"
+                  className="navImg heartbeat"
                 />
                 <div className="navTitle">Vision</div>
               </div>
