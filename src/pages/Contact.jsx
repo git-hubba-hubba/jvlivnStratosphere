@@ -1,7 +1,7 @@
 import React from "react";
 import Namespace from "../components/general/Namespace";
 import Contractor from "../components/build/Contractor";
-import  FlashCard  from "../components/build/FlashCard";
+import FlashCard from '../components/build/FlashCard'
 function Contact() {
   const allCardInfo = [
     {
