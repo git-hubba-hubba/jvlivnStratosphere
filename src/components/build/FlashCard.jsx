@@ -151,6 +151,7 @@ export function FlashCard({
                   </>
                 );
               })}
+              <h2>{obj.pricing}</h2>
             </>
           </div>
         </div>
@@ -159,50 +160,3 @@ export function FlashCard({
   );
 }
 
-/** Example */
-export default function FlashCardDemo() {
-  return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
-        padding: 24,
-        background: "#f5f7fb",
-        fontFamily:
-          "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
-      }}
-    >
-      <FlashCard
-        width={380}
-        height={240}
-        front={
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 12, letterSpacing: 1, opacity: 0.7 }}>
-              FRONT
-            </div>
-            <div style={{ fontSize: 22, fontWeight: 800, marginTop: 8 }}>
-              What is n8n?
-            </div>
-            <div style={{ marginTop: 10, opacity: 0.8 }}>
-              Click to reveal the answer
-            </div>
-          </div>
-        }
-        back={
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 12, letterSpacing: 1, opacity: 0.7 }}>
-              BACK
-            </div>
-            <div style={{ fontSize: 18, fontWeight: 700, marginTop: 8 }}>
-              An open-source workflow automation tool
-            </div>
-            <div style={{ marginTop: 10, opacity: 0.85 }}>
-              Connect apps + APIs, automate tasks, self-host it.
-            </div>
-          </div>
-        }
-      />
-    </div>
-  );
-}

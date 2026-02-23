@@ -15,7 +15,7 @@ function Contact() {
         "Startup automation recommendations",
         "Action plan summary delivered within 48 hours",
       ],
-      pricing: "Starting at $75 per session",
+      pricing: "Starting at $50 per hour",
     },
     {
       title: "Web Development",
@@ -41,7 +41,7 @@ function Contact() {
         "Automation integrations (when applicable)",
         "Basic team training session",
       ],
-      pricing: "Startup Package: $1,000 – $2,500",
+      pricing: "Startup Package: $2,500 – $5,000",
     },
     {
       title: "Tutorial ",
@@ -80,7 +80,7 @@ function Contact() {
         "Messaging clarity improvement",
         "Mini brand guideline document",
       ],
-      pricing: "Growth Package: $1,500 – $3,500",
+      pricing: "Growth Package: $750",
     },
   ];
   return (
