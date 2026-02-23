@@ -112,6 +112,7 @@ function Contact() {
           );
         })}
       </div>
+      <Namespace />
       <Contractor />
     </>
   );
