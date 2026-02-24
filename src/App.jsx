@@ -6,8 +6,6 @@ import Home from "./pages/Home";
 import Build from "./pages/Build";
 import Learn from "./pages/Learn";
 import Contact from "./pages/Contact";
-import TestimonialsStack from "./components/build/TestimonialsStack";
-
 function App() {
   return (
     <>

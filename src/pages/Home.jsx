@@ -134,7 +134,7 @@ function Home() {
       <h2>Reviews & Testimonials</h2>
       <TestimonialsQueue />
       <img
-        src="https://img.freepik.com/free-photo/friendly-carefree-happy-goodlooking-tall-african-american-female-model-with-curly-hairstyle-hold_1258-139746.jpg?semt=ais_hybrid&w=740&q=80"
+        src="https://t3.ftcdn.net/jpg/03/87/94/86/360_F_387948605_WXRMvwVWbB1V21quHWFwTTQEUDqz5n3S.jpg"
         alt=""
         className="fillerPic"
       />

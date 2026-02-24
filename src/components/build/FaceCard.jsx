@@ -6,7 +6,7 @@ function FaceCard({ obj }) {
       <img
         src="images/jclLogoMajor.png"
         alt=""
-        className="cardCoverer"
+        className="cardCoverer heartbeat"
       />
       <h3 className="facerTitle">{obj.title} Services</h3>
     </>

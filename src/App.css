@@ -470,14 +470,14 @@ justify-content: space-between;
   width:100%;
 }
 .movieScreen{
-  border:solid navy;
+  /* border:solid navy; */
   /* height:84vh; */
   
 }
 .screen{
-  border:solid black;
-  margin:1em;
-  height:55vh;
+  /* border:solid black; */
+  margin:3em;
+  /* height:55vh; */
 }
 .barrel{
   /* border:.2px solid navy; */
@@ -498,6 +498,13 @@ justify-content: space-between;
   opacity:.3;
   height:70%;
   /* border-radius:50%; */
+}
+.ctDesc{
+  padding:2em;
+  text-align:center;
+}
+.investPic{
+  width:100%;
 }
 /* ------------------------------------------- */
 /* ------------------------------------------- */

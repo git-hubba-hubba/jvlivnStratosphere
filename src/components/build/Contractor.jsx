@@ -9,15 +9,7 @@ function Contractor() {
     const [currentSlide,setCurrentSlide] = useState("")
   return (
     <div>
-      <h2 className="ctTitle">Consultation Structure & Business Development</h2>
-      <p className="ctDesc">
-        Our Goal is to provide innovative viable tech solutions to your company.
-        We accomplish this by understandin the unique needs of your organization
-        and utilizing its strengths,connections,and reach to develop
-        cost-effective ways to generate more income. We provide record-keeping
-        services and other essential tools to create effective strategies for
-        profit generation and overall business growth.
-      </p>
+   
 
       <div className="movieScreen">
         <div className="screen">
