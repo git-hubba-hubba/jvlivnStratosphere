@@ -472,12 +472,12 @@ justify-content: space-between;
 .movieScreen{
   /* border: .2px solid rgb(141, 141, 169); */
   height:auto;
-  margin:1em;
+  /* margin:1em; */
   
 }
 .screen{
   border: .2px solid black;
-  margin:3em;
+  /* margin:3em; */
   background-color:rgba(86, 86, 113, 0.774);
   color:white;
   padding:1em;
