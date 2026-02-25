@@ -1,7 +1,7 @@
 import React from "react";
 import CalendarScheduler from "../components/general/CalendarScheduler";
 import Sequence from "../components/teach/Sequence";
-
+import Contractor from "../components/build/Contractor";
 function Build() {
   const stepCalculator = [
     { img: "/images/jclwireframe.png", title: "1. Initial Consultation", desc: "We begin by understanding your goals, users, and technical requirements. This phase ensures alignment on scope, functionality, timelines, and success criteria before development begins." },
@@ -42,6 +42,8 @@ function Build() {
             <div className="letta">N</div>
           </div>
           <div className="spacer"></div>
+
+          <Contractor />
       {/* <h2 className="csd">Featured Services </h2>
       <p className="csdp">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
