@@ -15,7 +15,7 @@ function Contractor() {
         <h2>Our Investment Approach</h2>
         <div className="screen">
           
-          {currentSlide === ""? <img src="/public/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
+          {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
             {currentSlide === "pricing" ? <> <Pricing /> </> : "" }
             {currentSlide === "engagement" ? <> <Engagement /> </> : "" }
             {currentSlide === "solutions" ? <> <Solutions /> </> : "" }
