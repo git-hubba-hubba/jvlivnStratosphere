@@ -130,7 +130,7 @@ function Home() {
       </div>
       <div className="spacer"></div>
      
-<Events />
+
       <h2>Reviews & Testimonials</h2>
       <TestimonialsQueue />
       <img
