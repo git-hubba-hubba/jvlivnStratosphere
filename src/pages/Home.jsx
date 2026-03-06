@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import TextAside from "../components/general/TextAside";
 import TestimonialsQueue from '../components/build/TestimonialsStack'
 import CalendarScheduler from '../components/general/CalendarScheduler'
-
+import Events from "./Events";
 function Home() {
   const [currentInfo, setCurrentInfo] = useState(null);
   return (
@@ -130,7 +130,7 @@ function Home() {
       </div>
       <div className="spacer"></div>
      
-
+<Events />
       <h2>Reviews & Testimonials</h2>
       <TestimonialsQueue />
       <img

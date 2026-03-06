@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Build from "./pages/Build";
 import Learn from "./pages/Learn";
 import Contact from "./pages/Contact";
+import Events from "./pages/Events";
 function App() {
   return (
     <>

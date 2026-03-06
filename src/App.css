@@ -512,6 +512,10 @@ justify-content: space-between;
 .lionShare{
   width:100%;
 }
+.eventMajor{
+  border: 6px double navy;
+  padding:1em;
+}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
