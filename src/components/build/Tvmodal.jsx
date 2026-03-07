@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "./TvModal.css";
 
-export default function TvModal() {
+export default function TvModal({name,component, width}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -18,8 +18,8 @@ export default function TvModal() {
   return (
     <>
       {/* Trigger (DIV, not button) */}
-      <div className="open-trigger" onClick={openModal}>
-        Open Modal
+      <div className="open-trigger" style={{border:"solid white", width: width}}  onClick={openModal}>
+        {name}
       </div>
 
       {isOpen && (
@@ -29,16 +29,12 @@ export default function TvModal() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-header">
-              <h2>Modal Title</h2>
+              <h2>{name}</h2>
               <div className="close-x" onClick={closeModal}>✕</div>
             </div>
 
             <div className="modal-content">
-              {Array.from({ length: 30 }).map((_, i) => (
-                <p key={i}>
-                  This is scrollable modal content. Line {i + 1}.
-                </p>
-              ))}
+              {component}
             </div>
           </div>
         </div>

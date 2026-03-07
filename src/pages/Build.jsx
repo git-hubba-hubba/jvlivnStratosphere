@@ -2,6 +2,7 @@ import React from "react";
 import CalendarScheduler from "../components/general/CalendarScheduler";
 import Sequence from "../components/teach/Sequence";
 import Contractor from "../components/build/Contractor";
+import TestimonialsQueue from "../components/build/TestimonialsStack";
 function Build() {
   const stepCalculator = [
     { img: "/images/jclwireframe.png", title: "1. Initial Consultation", desc: "We begin by understanding your goals, users, and technical requirements. This phase ensures alignment on scope, functionality, timelines, and success criteria before development begins." },
@@ -43,7 +44,30 @@ function Build() {
           </div>
           <div className="spacer"></div>
 
-          <Contractor />
+
+          <h2>Reviews & Testimonials</h2>
+      <TestimonialsQueue />
+      <img
+        src="https://t3.ftcdn.net/jpg/03/87/94/86/360_F_387948605_WXRMvwVWbB1V21quHWFwTTQEUDqz5n3S.jpg"
+        alt=""
+        className="fillerPic"
+      />
+      <h2>Service Guarantee</h2>
+      <p className="gserv">
+        We guarantee that every course and learning experience we deliver is
+        built on high-quality lesson planning, thorough research, and real-world
+        industry relevance. Our curriculum is intentionally designed using
+        current technologies, proven methodologies, and best practices aligned
+        with today’s tech landscape. Each lesson is carefully structured to
+        ensure clarity, progression, and practical application—so students
+        aren’t just learning concepts, but developing skills they can
+        immediately use in professional environments. We continuously review and
+        refine our materials to reflect evolving tools, standards, and employer
+        expectations. Our commitment is simple: if you engage with our program,
+        you will receive instruction that is intentional, well-researched, and
+        aligned with the skills demanded by the modern technology industry.
+      </p>
+          
       {/* <h2 className="csd">Featured Services </h2>
       <p className="csdp">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,

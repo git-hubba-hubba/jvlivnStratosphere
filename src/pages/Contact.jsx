@@ -3,6 +3,7 @@ import Namespace from "../components/general/Namespace";
 import Contractor from "../components/build/Contractor";
 import { FlashCard } from "../components/build/FlashCard"
 import Events from "./Events";
+import MajorModelXP from "../components/teach/MajorModelXP";
 function Contact() {
   const allCardInfo = [
     {
@@ -114,7 +115,13 @@ function Contact() {
         })}
       </div>
       <Namespace />
-      <Events />
+      {/* <Events /> */}
+        {/* ---->  Live event Calendar */}
+
+    
+        {/* <MajorModelXP /> */}
+
+
     </>
   );
 }
