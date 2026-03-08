@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "./TvModal.css";
 
-export default function TvModal({name,component, width}) {
+export default function TvModal({name,component, width,title}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -29,7 +29,7 @@ export default function TvModal({name,component, width}) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-header">
-              <h2>{name}</h2>
+              <h2>{title}</h2>
               <div className="close-x" onClick={closeModal}>✕</div>
             </div>
 

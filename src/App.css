@@ -206,7 +206,7 @@
 
 .calendar-day {
   padding: 10px;
-  background: #f1f1f1;
+  background: white;
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
@@ -547,6 +547,21 @@ justify-content: space-between;
   /* border:solid black; */
   border-radius:50%;
   padding:8px;
+}
+.recruitContainer{
+  border:solid grey;
+  /* height:44vh; */
+  padding:1em;
+
+}
+.recTxt{
+  margin:1em;
+  text-align:right;
+  font-size:16px;
+}
+.recPicture{
+  width:100%;
+  opacity:.3;
 }
 /* ------------------------------------------- */
 /* ------------------------------------------- */
