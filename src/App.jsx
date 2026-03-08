@@ -7,6 +7,7 @@ import Build from "./pages/Build";
 import Learn from "./pages/Learn";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
+import Footer from "./pages/Footer";
 function App() {
   return (
     <>
@@ -16,7 +17,6 @@ function App() {
       <div className="organicSplit">
         <div className="ogRight"></div>
         <div className="ogMid">
-        
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/build" element={<Build />} />
@@ -26,10 +26,6 @@ function App() {
         </div>
         <div className="ogLeft"></div>
       </div>
-
-      {/* Advertising Products and Services */}
-
-      {/* Events and Volunteering */}
     </>
   );
 }

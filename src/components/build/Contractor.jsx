@@ -13,7 +13,6 @@ function Contractor() {
    
 
       <div className="movieScreen">
-        <h2>Our Investment Approach</h2>
         <div className="screen">
           
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
@@ -32,7 +31,7 @@ function Contractor() {
                 setCurrentSlide("pricing")
               }}
             />
-            <div className="navTitle">Pricing</div>
+            <div className="navTitle">Mission</div>
           </div>
 
           <div className="navBtn">
@@ -43,7 +42,7 @@ function Contractor() {
                 setCurrentSlide("engagement")
               }}
             />
-            <div className="navTitle">Steps</div>
+            <div className="navTitle">Recruit</div>
           </div>
 
           <div className="navBtn">
@@ -54,7 +53,7 @@ function Contractor() {
                 setCurrentSlide("solutions")
               }}
             />
-            <div className="navTitle">Problem</div>
+            <div className="navTitle">Events</div>
           </div>
 
           <div className="navBtn">
@@ -65,7 +64,7 @@ function Contractor() {
                 setCurrentSlide("targeting")
               }}
             />
-            <div className="navTitle">Mission</div>
+            <div className="navTitle">Invest</div>
           </div>
         </nav>
       </div>

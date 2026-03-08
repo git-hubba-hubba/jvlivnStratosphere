@@ -1,7 +1,9 @@
 import React from "react";
+import { useYoutubeAudio } from "../teach/useYoutubeAudio";
 import { Link } from "react-router-dom";
 
 function Nav() {
+  const toggleMusic = useYoutubeAudio("2uhxcxRtkaQ");
   return (
     <>
       <div className="navSuperior">
@@ -15,7 +17,7 @@ function Nav() {
             <div className="letta">N</div>
           </div>
           <Link to="/home">
-            <img src="/images/jclLogoMajor.png" alt="" className="gifMe" />
+            <img src="/images/jclLogoMajor.png" alt="" className="gifMe" onClick={toggleMusic} />
           </Link>
           {/* <p className="slogan">True. Innovative. Tech. Solutions</p> */}
         </div>

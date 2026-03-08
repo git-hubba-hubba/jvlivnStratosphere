@@ -549,7 +549,7 @@ justify-content: space-between;
   padding:8px;
 }
 .recruitContainer{
-  border:solid grey;
+  /* border:solid grey; */
   /* height:44vh; */
   padding:1em;
 
@@ -563,6 +563,7 @@ justify-content: space-between;
   width:100%;
   opacity:.3;
 }
+
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */

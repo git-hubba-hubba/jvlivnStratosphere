@@ -144,11 +144,11 @@ export function FlashCard({
             {/* Create Back Structure */}
             <>
               <h4>Included Service Features: </h4>
-              {obj.features.map((feat) => {
+              {obj.features.map((feat,i) => {
                 return (
-                  <>
+                  <div key={i}>
                     <Bulletpoint txt={feat} />
-                  </>
+                  </div>
                 );
               })}
               <h2>{obj.pricing}</h2>

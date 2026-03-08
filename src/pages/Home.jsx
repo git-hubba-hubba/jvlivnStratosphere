@@ -132,7 +132,7 @@ function Home() {
       <div className="spacer"></div>
 
       <Contractor />
-      <hr />
+      
     </>
   );
 }
