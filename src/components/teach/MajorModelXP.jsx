@@ -33,7 +33,7 @@ function MajorModelXP() {
         <p style={{color:'blue'}}>Cloud Service Provided that Encompasses Each Service</p>
 
         <div className="containerC">
-        <Tvmodal name={"Maintenance Process"}width={"90%"} component={<MandP />} title={"Maintence & Restructuring"} />
+        <Tvmodal name={"Maintenance Process"}width={"90%"} component={<MandP />} title={"Maintenance & Restructuring"} />
         </div>
 
 
