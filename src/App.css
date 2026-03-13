@@ -441,9 +441,7 @@ justify-content: space-between;
 .taTitle{
   text-align:right;
 }
-.brandMani{
-  padding:2em;
-}
+
 .stretchImg{
   width:90%;
   margin:1em;
@@ -601,12 +599,16 @@ justify-content: space-between;
   }
   .stepDescribe{
     padding: 1em;
-    font-size:14px;
+    font-size:26px;
   }
   .stepPhoto{
     width:50%;
     border: 6px double black;
     margin:1em;
+  }
+  .brandMani{
+    padding:2em;
+    font-size:26px;
   }
 }
 
@@ -640,12 +642,16 @@ justify-content: space-between;
   }
   .stepDescribe{
     padding: 1em;
-    font-size:14px;
+    font-size:22px;
   }
   .stepPhoto{
     width:50%;
     border: 6px double black;
     margin:1em;
+  }
+  .brandMani{
+    padding:2em;
+    font-size:22px;
   }
 }
 /* ------------------------------------------- IPAD*/
@@ -678,12 +684,16 @@ justify-content: space-between;
   }
   .stepDescribe{
     padding: 0;
-    font-size:14px;
+    font-size:18px;
   }
   .stepPhoto{
     width:100%;
     border: 6px double black;
     margin:0;
+  }
+  .brandMani{
+    padding:2em;
+    font-size:18px;
   }
 }
 /* ------------------------------------------- MOBILE*/
