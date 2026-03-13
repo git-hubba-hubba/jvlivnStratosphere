@@ -26,6 +26,11 @@ function Build() {
           />
         </div>
       </div>
+
+      <h2 className="brandMani heartbeat">
+        Welcome to JVLIVN where we help businesses build websites, automate workflows,
+        and launch scalable digital products.
+      </h2>
       <h2 className="howIt">How Our Process Works</h2>
       <Sequence info={stepCalculator[0]} />
       <Sequence info={stepCalculator[1]} />
