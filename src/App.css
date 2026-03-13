@@ -621,14 +621,14 @@ justify-content: space-between;
     display:block;
   }
   .ogMid{
-    width:80%;
+    width:100%;
   }
   .ogLeft{
-    width:10%;
+    width:0%;
     /* border: .2px solid grey; */
   }
   .ogRight{
-    width:10%;
+    width:0%;
     /* border: .2px solid grey; */
   }
   .stepContainer{
@@ -642,7 +642,7 @@ justify-content: space-between;
   }
   .stepDescribe{
     padding: 1em;
-    font-size:22px;
+    font-size:18px;
   }
   .stepPhoto{
     width:50%;
