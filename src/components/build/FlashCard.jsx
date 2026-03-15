@@ -20,7 +20,7 @@ export function FlashCard({
   front,
   back,
   width = "400px",
-  height = "500px",
+  height = "450px",
   borderRadius = 22,
   durationMs = 600,
   perspective = 1000,
