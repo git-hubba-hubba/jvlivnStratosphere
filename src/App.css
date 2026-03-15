@@ -1,5 +1,4 @@
 #root {
-  width: 1880px;
   /* height:4444vh; */
   border: 9px double navy;
   margin:0;
@@ -313,7 +312,7 @@
   /* border: .2px solid grey; */
   display:flex;
   justify-content: space-evenly;
-  margin:1em;
+  margin:2em;
 }
 .navBtn{
   /* border: .2px solid black; */
@@ -348,7 +347,8 @@
   /* display:flex; */
 }
 .introduckN{
-
+border: 6px double navy;
+padding:1em;
 }
 .descriptionUpper{
   display:flex;
@@ -497,7 +497,7 @@ justify-content: space-between;
   width:100%;
   /* margin:2em; */
   opacity:.3;
-  height:70%;
+  /* height:40%; */
   /* border-radius:50%; */
 }
 .ctDesc{
@@ -514,7 +514,12 @@ justify-content: space-between;
   border: 6px double navy;
   padding:1em;
 }
-
+.majorLeft{
+  /* border:solid red; */
+}
+.majorRight{
+  /* border:solid orange; */
+}
 .majorModelContainer{
   /* border:solid red; */
   margin:1em;
