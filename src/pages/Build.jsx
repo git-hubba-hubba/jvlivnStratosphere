@@ -75,8 +75,9 @@ function Build() {
 
       <div className="relaxer">
       </div>
-      <Bookmark name={"Membership"}/>
-      <Contractor />
+      <Bookmark name={"Recruitment"}/>
+      <MajorModelXP />
+     
         {/* <MajorModelXP /> */}
 
       {/* <h2>Reviews & Testimonials</h2> */}

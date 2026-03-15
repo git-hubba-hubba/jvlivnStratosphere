@@ -5,6 +5,7 @@ import CalendarScheduler from "../components/general/CalendarScheduler";
 import Events from "./Events";
 import Contractor from "../components/build/Contractor";
 import Bookmark from "./Bookmark";
+import MajorModelXP from "../components/teach/MajorModelXP";
 function Home() {
   const [currentInfo, setCurrentInfo] = useState(null);
   return (
@@ -131,7 +132,8 @@ function Home() {
         <div className="letta">N</div>
       </div>
       <div className="spacer"></div>
-
+      <Bookmark name={"Membership"}/>
+      <Contractor />
       {/* <Contractor /> */}
       
     </>
