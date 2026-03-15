@@ -100,11 +100,11 @@ function Contact() {
           />
         </div>
       </div>
-
+      <Bookmark name={"Our Services"}/>
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
      
 
-      <Bookmark name={"Our Services"}/>
+      
       <div className="flashMeContainer">
         {allCardInfo.map((crd, i) => {
           return (

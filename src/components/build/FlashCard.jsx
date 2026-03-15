@@ -47,7 +47,7 @@ export function FlashCard({
 
         .fc-card {
           position: relative;
-          width: 100%;
+          width: 98%;
           height: 100%;
           transform-style: preserve-3d;
           transition: transform ${durationMs}ms cubic-bezier(.2,.9,.2,1);
