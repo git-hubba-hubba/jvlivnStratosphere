@@ -4,6 +4,7 @@ import Contractor from "../components/build/Contractor";
 import { FlashCard } from "../components/build/FlashCard"
 import Events from "./Events";
 import MajorModelXP from "../components/teach/MajorModelXP";
+import Bookmark from "./Bookmark";
 function Contact() {
   const allCardInfo = [
     {
@@ -101,10 +102,9 @@ function Contact() {
       </div>
 
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
-      <Namespace />
+     
 
-      <h2 style={{color:"navy"}}>Our Services At a Glance</h2>
-
+      <Bookmark name={"Our Services"}/>
       <div className="flashMeContainer">
         {allCardInfo.map((crd, i) => {
           return (

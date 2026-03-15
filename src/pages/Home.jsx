@@ -4,6 +4,7 @@ import TestimonialsQueue from "../components/build/TestimonialsStack";
 import CalendarScheduler from "../components/general/CalendarScheduler";
 import Events from "./Events";
 import Contractor from "../components/build/Contractor";
+import Bookmark from "./Bookmark";
 function Home() {
   const [currentInfo, setCurrentInfo] = useState(null);
   return (
@@ -20,7 +21,7 @@ function Home() {
           />
         </div>
       </div>
-
+      <Bookmark name={"About Us"}/>
       <div className="quadMaster">
         <div className="qp">
           <div
@@ -131,7 +132,7 @@ function Home() {
       </div>
       <div className="spacer"></div>
 
-      <Contractor />
+      {/* <Contractor /> */}
       
     </>
   );

@@ -453,6 +453,11 @@ justify-content: space-between;
 .gserv{
   margin:1em;
 }
+.fontdiner-swanky-regular {
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .howIt{
   color:grey;
@@ -566,7 +571,14 @@ justify-content: space-between;
   width:100%;
   opacity:.3;
 }
-
+.relaxer{
+  margin:2em;
+}
+.fancyName{
+  text-align:right;
+  color:grey;
+  opacity:.4;
+}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */

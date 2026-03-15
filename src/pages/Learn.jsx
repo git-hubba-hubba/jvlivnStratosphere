@@ -1,5 +1,6 @@
 import React from 'react'
 import Subject from '../components/teach/Subject'
+import Bookmark from './Bookmark';
 
 function Learn() {
   const subjects = [
@@ -81,8 +82,7 @@ function Learn() {
         </div>
       </div>
     
-    <h2 className="titler">Courses & Tutorials</h2>
-    <div className="courseCata">
+      <Bookmark name={"Courses&Content"}/>    <div className="courseCata">
       {subjects.map((topic,i)=>{
         return <Subject key={i} obj={topic}/>
       })}

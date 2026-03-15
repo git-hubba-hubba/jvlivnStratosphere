@@ -18,7 +18,7 @@ function MajorModelXP() {
     <>
     
     <div className="majorModelContainer">
-    <p>After being recruited into the JVLIVN network, members complete their initial training and graduate into the next stage: securing real clients. Once a recruit brings in a business opportunity, JVLIVN moves into the Build Phase, where we help transform that opportunity into a fully developed digital solution. During this phase, members work alongside the JVLIVN framework to deliver professional-grade systems that help the recruited organization operate more effectively.
+    <p style={{fontSize:"22px"}}>After being recruited into the JVLIVN network, members complete their initial training and graduate into the next stage: securing real clients. Once a recruit brings in a business opportunity, JVLIVN moves into the Build Phase, where we help transform that opportunity into a fully developed digital solution. During this phase, members work alongside the JVLIVN framework to deliver professional-grade systems that help the recruited organization operate more effectively.
     </p>
         <div className="containerA">
             <Tvmodal name={"Recruitment Process"} title={"Recruitment Process"} width={"90%"} component={<Recruit/>} />

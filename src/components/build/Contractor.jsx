@@ -16,10 +16,10 @@ function Contractor() {
         <div className="screen">
           
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
-            {currentSlide === "pricing" ? <> <Pricing /> </> : "" }
+            {currentSlide === "pricing" ? <> Membership </> : "" }
             {currentSlide === "engagement" ? <> <MajorModelXP /> </> : "" }
-            {currentSlide === "solutions" ? <> <Solutions/> </> : "" }
-            {currentSlide === "targeting" ? <> <Targeting /> </> : ""}
+            {currentSlide === "solutions" ? <> <Pricing /> </> : "" }
+            {currentSlide === "targeting" ? <> "" </> : ""}
 
         </div>
         <nav className="navMain">
