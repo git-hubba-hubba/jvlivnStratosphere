@@ -478,9 +478,9 @@ justify-content: space-between;
   
 }
 .screen{
-  border: .2px solid black;
+  /* border: .2px solid black; */
   /* margin:3em; */
-  background-color:rgba(86, 86, 113, 0.774);
+  background-color:navy;
   color:white;
   padding:1em;
   /* height:55vh; */
@@ -593,6 +593,11 @@ justify-content: space-between;
   height:90px;
   border-radius:50%;
   border:solid white;
+}
+.rko{
+  /* border:solid peru; */
+  /* display:flex; */
+  justify-content: space-around;
 }
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -754,10 +759,12 @@ justify-content: space-between;
   }
   .tierSep{
     border: .2px solid white;
-    margin:1em;
-    padding:1em;
+    margin:.2em;
+    padding:.5em;
     height:auto;
     width:auto;
+    display:flex;
+    justify-content: space-evenly;
   }
 }
 /* ------------------------------------------- MOBILE*/
