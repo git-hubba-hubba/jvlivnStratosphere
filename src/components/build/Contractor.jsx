@@ -5,6 +5,7 @@ import Pricing from '../general/Pricing'
 import Engagement from "../general/Engage"
 import Solutions from "../general/Solutions";
 import MajorModelXP from "../teach/MajorModelXP";
+import Membership from "../general/Membership";
 
 function Contractor() {
     const [currentSlide,setCurrentSlide] = useState("")
@@ -16,7 +17,7 @@ function Contractor() {
         <div className="screen">
           
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
-            {currentSlide === "pricing" ? <> Membership </> : "" }
+            {currentSlide === "pricing" ? <> <Membership/> </> : "" }
             {currentSlide === "engagement" ? <> <MajorModelXP /> </> : "" }
             {currentSlide === "solutions" ? <> <Pricing /> </> : "" }
             {currentSlide === "targeting" ? <> "" </> : ""}
