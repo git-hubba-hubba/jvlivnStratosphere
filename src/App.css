@@ -480,7 +480,7 @@ justify-content: space-between;
 .screen{
   /* border: .2px solid black; */
   /* margin:3em; */
-  background-color:navy;
+  background-color:rgb(51, 51, 120);
   color:white;
   padding:1em;
   /* height:55vh; */

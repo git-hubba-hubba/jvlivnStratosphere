@@ -14,16 +14,7 @@ function Contractor() {
    
 
       <div className="movieScreen">
-        <div className="screen">
-          
-          {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
-            {currentSlide === "pricing" ? <> <Membership/> </> : "" }
-            {currentSlide === "engagement" ? <> <MajorModelXP /> </> : "" }
-            {currentSlide === "solutions" ? <> <Pricing /> </> : "" }
-            {currentSlide === "targeting" ? <> "" </> : ""}
-
-        </div>
-        <nav className="navMain">
+      <nav className="navMain">
           <div className="navBtn">
             <img
               src="https://cdn-icons-png.flaticon.com/512/245/245904.png"
@@ -32,7 +23,7 @@ function Contractor() {
                 setCurrentSlide("pricing")
               }}
             />
-            <div className="navTitle">Mission</div>
+            <div className="navTitle">Membership</div>
           </div>
 
           <div className="navBtn">
@@ -43,7 +34,7 @@ function Contractor() {
                 setCurrentSlide("engagement")
               }}
             />
-            <div className="navTitle">Recruit</div>
+            <div className="navTitle">Recruitment</div>
           </div>
 
           <div className="navBtn">
@@ -54,7 +45,7 @@ function Contractor() {
                 setCurrentSlide("solutions")
               }}
             />
-            <div className="navTitle">Events</div>
+            <div className="navTitle">Invest</div>
           </div>
 
           <div className="navBtn">
@@ -65,9 +56,19 @@ function Contractor() {
                 setCurrentSlide("targeting")
               }}
             />
-            <div className="navTitle">Invest</div>
+            <div className="navTitle">Target</div>
           </div>
         </nav>
+        <div className="screen">
+          
+          {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
+            {currentSlide === "pricing" ? <> <Membership/> </> : "" }
+            {currentSlide === "engagement" ? <> <MajorModelXP /> </> : "" }
+            {currentSlide === "solutions" ? <> <Pricing /> </> : "" }
+            {currentSlide === "targeting" ? <> <Targeting/> </> : ""}
+
+        </div>
+      
       </div>
     </div>
   );
