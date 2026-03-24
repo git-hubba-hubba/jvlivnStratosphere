@@ -28,7 +28,7 @@ function Home() {
           <div
             className="quad"
             onClick={() => {
-              setCurrentInfo("929.269.9227");
+              setCurrentInfo("929.233.2109");
             }}
           >
             Contact
@@ -85,10 +85,7 @@ function Home() {
       </h3>
       <p className="brandMani">
         {" "}
-        Our mission is to build impactful applications and deliver practical,
-        high-quality education that equips melanated people to thrive in the
-        digital economy. We focus on real skills, real tools, and real
-        outcomes—creating pathways to opportunity, ownership, and growth.
+        Our mission is to build impactful applications and deliver practical, high-quality education that equips people from all backgrounds to thrive in the digital economy. We focus on real skills, real tools, and real outcomes—creating clear pathways to opportunity, ownership, and long-term growth.
       </p>
       <img
         src="https://plus.unsplash.com/premium_photo-1681400156787-e4afe6e6949a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGZyZWUlMjBhYnN0cmFjdCUyMGFydCUyMGltYWdlcyUyMHRvJTIwdXNlfGVufDB8fDB8fHww"
