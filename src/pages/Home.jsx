@@ -58,7 +58,7 @@ function Home() {
             className="quad"
             onClick={() => {
               setCurrentInfo(
-                "Creating Kommunity & Initiatives for Melanated Entreprenuers"
+                "Creating Global Community Initiatives for Inspiring Entreprenuers"
               );
             }}
           >
