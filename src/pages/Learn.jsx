@@ -179,7 +179,7 @@ function Learn() {
           />
         </div>
       </div>
-      <Bookmark name={"Courses&Content"} />{" "}
+      <Bookmark name={"CourseCart"} />{" "}
       <div className="courseCata">
         {subjects.map((topic, i) => {
           return <Subject key={i} obj={topic} />;
