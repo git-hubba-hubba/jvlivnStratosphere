@@ -313,7 +313,7 @@
   /* border: .2px solid grey; */
   display:flex;
   justify-content: space-evenly;
-  /* margin:2em; */
+  margin:2em;
   align-items: center;
 }
 .navBtn{
@@ -605,6 +605,12 @@ justify-content: space-between;
   padding:8px;
   display:flex;
   justify-content: space-between;
+}
+Link{
+  margin:0;
+}
+a{
+  margin:0;
 }
 /* .ogLeft, .ogRight{
 border:solid grey;
