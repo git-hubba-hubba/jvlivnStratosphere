@@ -78,7 +78,7 @@ function Contact() {
       pricing: "Half-Day Workshop: $800 – $1,500",
     },
     {
-      title: "Brand Redevelopment",
+      title: "Brand Development",
       image: "/images/brand-redevelopment.jpg",
       features: [
         "Brand identity refresh",
