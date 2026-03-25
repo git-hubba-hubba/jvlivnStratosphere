@@ -4,23 +4,31 @@ import FaceCard from "./FaceCard";
 
 /**
  * FlashCard
- * - Click to flip like a study flash card.
- * - No UI libraries, no Tailwind.
+ * Responsive version:
+ * - Scales to parent width
+ * - Uses maxWidth instead of hard fixed width
+ * - Keeps consistent card proportions with aspect-ratio
+ * - Handles smaller screens more cleanly
  *
  * Usage:
+ * <FlashCard obj={item} />
+ *
+ * Optional:
  * <FlashCard
- *   front={<div>Question: What is n8n?</div>}
- *   back={<div>Answer: An automation workflow tool...</div>}
- *   width={360}
- *   height={220}
+ *   obj={item}
+ *   width="100%"
+ *   maxWidth="400px"
+ *   aspectRatio="400 / 450"
  * />
  */
 export function FlashCard({
   obj,
   front,
   back,
-  width = "400px",
-  height = "450px",
+  width = "100%",
+  maxWidth = "800px",
+  minHeight = "520px",
+  aspectRatio = "100 / 150",
   borderRadius = 22,
   durationMs = 600,
   perspective = 1000,
@@ -42,12 +50,22 @@ export function FlashCard({
       <style>{`
         .fc-scene {
           perspective: ${perspective}px;
-          display: inline-block;
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .fc-card-wrap {
+          position: relative;
+          width: 100%;
+          max-width: 100%;
+          min-height: ${minHeight};
+          aspect-ratio: ${aspectRatio};
         }
 
         .fc-card {
           position: relative;
-          width: 98%;
+          width: 100%;
           height: 100%;
           transform-style: preserve-3d;
           transition: transform ${durationMs}ms cubic-bezier(.2,.9,.2,1);
@@ -67,27 +85,49 @@ export function FlashCard({
           -webkit-backface-visibility: hidden;
           border-radius: inherit;
           overflow: hidden;
-          display: block;
-          align-items: center;
-          justify-content: center;
-          padding: 18px;
+          display: flex;
+          flex-direction: column;
           box-sizing: border-box;
+          padding: clamp(12px, 2vw, 18px);
         }
 
         .fc-front {
-          /* default front styling (customize via your front content) */
         }
 
         .fc-back {
           transform: rotateY(180deg);
+          overflow-y: auto;
         }
 
-        /* Keyboard focus ring */
         .fc-card:focus-visible {
           box-shadow: 0 0 0 3px rgba(90, 160, 255, 0.85);
         }
 
-        /* Reduced motion */
+        .fc-back h4,
+        .fc-back h2 {
+          margin: 0 0 12px 0;
+        }
+
+        .fc-back h2 {
+          margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+          .fc-card-wrap {
+            min-height: 300px;
+          }
+        }
+
+        @media (max-width: 540px) {
+          .fc-card-wrap {
+            min-height: 280px;
+          }
+
+          .fc-face {
+            padding: 12px;
+          }
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .fc-card {
             transition: none;
@@ -99,64 +139,63 @@ export function FlashCard({
         className={`fc-scene ${className}`}
         style={{
           width,
-          height,
+          maxWidth,
           borderRadius,
+          margin: "0 auto",
           ...style,
         }}
       >
-        <div
-          className={`fc-card ${flipped ? "fc-flipped" : ""}`}
-          role="button"
-          tabIndex={0}
-          aria-pressed={flipped}
-          aria-label="Flip card"
-          onClick={toggle}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              toggle();
-            }
-          }}
-        >
+        <div className="fc-card-wrap" style={{ borderRadius }}>
           <div
-            className="fc-face fc-front"
-            style={{
-              background: "white",
-              border: "1px solid rgba(0,0,0,0.12)",
-              boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
-              color: "navy",
+            className={`fc-card ${flipped ? "fc-flipped" : ""}`}
+            role="button"
+            tabIndex={0}
+            aria-pressed={flipped}
+            aria-label="Flip card"
+            onClick={toggle}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                toggle();
+              }
             }}
+            style={{ borderRadius }}
           >
-            <>
-              {/* Create Front Structure */}
-              <FaceCard obj={obj} />
-            </>
-          </div>
+            <div
+              className="fc-face fc-front"
+              style={{
+                background: "white",
+                border: "1px solid rgba(0,0,0,0.12)",
+                boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
+                color: "navy",
+              }}
+            >
+              {front || <FaceCard obj={obj} />}
+            </div>
 
-          <div
-            className="fc-face fc-back"
-            style={{
-              background: "white",
-              border: "1px solid rgba(0,0,0,0.12)",
-              boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
-            }}
-          >
-            {/* Create Back Structure */}
-            <>
-              <h4>Included Service Features: </h4>
-              {obj.features.map((feat,i) => {
-                return (
-                  <div key={i}>
-                    <Bulletpoint txt={feat} />
-                  </div>
-                );
-              })}
-              <h2>{obj.pricing}</h2>
-            </>
+            <div
+              className="fc-face fc-back"
+              style={{
+                background: "white",
+                border: "1px solid rgba(0,0,0,0.12)",
+                boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
+              }}
+            >
+              {back || (
+                <>
+                  <h4>Included Service Features:</h4>
+                  {obj.features?.map((feat, i) => (
+                    <div key={i}>
+                      <Bulletpoint txt={feat} />
+                    </div>
+                  ))}
+                  <h2>{obj.pricing}</h2>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
     </>
   );
 }
-

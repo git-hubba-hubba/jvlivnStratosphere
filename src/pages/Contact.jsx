@@ -36,7 +36,7 @@ function Contact() {
       pricing: "Starter Package: $1,200 – $3,000",
     },
     {
-      title: "Content Management Architecture",
+      title: "CMS Architecture",
       image:
         "https://cdn9.dissolve.com/p/D1293_620_007/D1293_620_007_0004_600.jpg",
       features: [
@@ -108,7 +108,7 @@ function Contact() {
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
       <Bookmark name={"Our Services"} />
 
-      <div className="flashMeContainer">
+      <div className="flashMeContainer flashcard-grid">
         {allCardInfo.map((crd, i) => {
           return (
             <div key={i}>
