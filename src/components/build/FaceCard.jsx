@@ -8,7 +8,7 @@ function FaceCard({ obj }) {
         alt=""
         className="cardCoverer heartbeat"
       />
-      <h5 className="facerTitle">{obj.title} Services</h5>
+      <h3 className="facerTitle">{obj.title} Services</h3>
     </>
   );
 }

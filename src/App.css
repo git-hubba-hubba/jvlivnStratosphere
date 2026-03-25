@@ -313,11 +313,11 @@
   /* border: .2px solid grey; */
   display:flex;
   justify-content: space-around;
-  /* margin:2em; */
+  margin:1em;
   align-items: center;
 }
 .navBtn{
-  border: .2px solid red;
+  /* border: .2px solid red; */
   display:flex;
   justify-content: space-between;
   /* width:15%; */
