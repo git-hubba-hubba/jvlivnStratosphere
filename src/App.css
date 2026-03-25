@@ -319,7 +319,7 @@
 .navBtn{
   /* border: .2px solid black; */
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   /* width:15%; */
   /* border-radius:5px; */
   
