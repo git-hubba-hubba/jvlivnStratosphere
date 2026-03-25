@@ -312,12 +312,12 @@
 .navMain{
   /* border: .2px solid grey; */
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /* margin:2em; */
   align-items: center;
 }
 .navBtn{
-  /* border: .2px solid black; */
+  border: .2px solid red;
   display:flex;
   justify-content: space-between;
   /* width:15%; */
