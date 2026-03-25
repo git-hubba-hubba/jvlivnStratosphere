@@ -599,6 +599,18 @@ justify-content: space-between;
   /* display:flex; */
   justify-content: space-around;
 }
+.hideSyll{
+  /* border:solid red; */
+  margin:1em;
+  padding:1em;
+}
+.lilSyll{
+  border: .2px solid grey;
+  margin:5px;
+  padding:8px;
+  display:flex;
+  justify-content: space-between;
+}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
