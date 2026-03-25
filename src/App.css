@@ -312,7 +312,7 @@
 .navMain{
   /* border: .2px solid grey; */
   display:flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin:2em;
   align-items: center;
 }

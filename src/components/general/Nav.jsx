@@ -26,7 +26,6 @@ function Nav() {
                 onClick={toggleMusic}
               />
             </Link> */}
-            
           </div>
 
           {/* <p className="slogan">True. Innovative. Tech. Solutions</p> */}
@@ -55,12 +54,14 @@ function Nav() {
               </div>
             </Link>
             <Link to="/home">
-              <img
-                src="/images/jclLogoMajor.png"
-                alt=""
-                className="gifMe"
-                onClick={toggleMusic}
-              />
+              <div className="navBtn">
+                <img
+                  src="/images/jclLogoMajor.png"
+                  alt=""
+                  className="gifMe"
+                  onClick={toggleMusic}
+                />
+              </div>
             </Link>
             <Link to="/teach">
               <div className="navBtn">
