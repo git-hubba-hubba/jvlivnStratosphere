@@ -93,7 +93,7 @@ function Home() {
         className="stretchImg"
       />
       <h3 className="sampleTxt">
-        Our vision is a future where melanated people are leaders, creators, and
+        Our vision is a future where creative technologists are leaders, creators, and
         owners in technology—shaping innovation and defining what’s next.
       </h3>
       <img
