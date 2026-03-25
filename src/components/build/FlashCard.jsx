@@ -26,7 +26,7 @@ export function FlashCard({
   front,
   back,
   width = "100%",
-  maxWidth = "800px",
+  maxWidth = "900px",
   minHeight = "520px",
   aspectRatio = "100 / 150",
   borderRadius = 22,
@@ -189,7 +189,7 @@ export function FlashCard({
                       <Bulletpoint txt={feat} />
                     </div>
                   ))}
-                  <h2>{obj.pricing}</h2>
+                  <h4>{obj.pricing}</h4>
                 </>
               )}
             </div>
