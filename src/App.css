@@ -490,7 +490,7 @@ justify-content: space-between;
   height:40px;
 }
 .bulletFeat{
-  font-size:12px;
+  font-size:14px;
   color:navy;
 }
 .cardCoverer{
@@ -578,15 +578,15 @@ justify-content: space-between;
 .flashcard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  gap: 10px;
   width: 100%;
 }
 .flashMeContainer{
-  width:100%;
+  width:auto;
   /* border:solid green; */
   display:flex;
   flex-wrap:wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .megallion{

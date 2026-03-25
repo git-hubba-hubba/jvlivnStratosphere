@@ -108,7 +108,7 @@ function Contact() {
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
       <Bookmark name={"Our Services"} />
 
-      <div className="flashMeContainer flashcard-grid">
+      <div className="flashcard-grid">
         {allCardInfo.map((crd, i) => {
           return (
             <div key={i}>
