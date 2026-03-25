@@ -1,7 +1,8 @@
 #root {
   /* height:4444vh; */
-  /* border: 9px double navy; */
-  /* margin:0; */
+  width:100vw;
+  border: 9px double navy;
+  margin:0;
   padding: .5em;
   text-align: center;
   background-color: white;
@@ -312,7 +313,8 @@
   /* border: .2px solid grey; */
   display:flex;
   justify-content: space-evenly;
-  margin:2em;
+  /* margin:2em; */
+  align-items: center;
 }
 .navBtn{
   /* border: .2px solid black; */
@@ -334,14 +336,7 @@
 .letta{
   font-size:44px;
 }
-.gifMe{
-  width:60%;
-  opacity:.3;
-}
-.gifMe:hover{
-  width:60%;
-  opacity:1;
-}
+
 .navSuperior{
   /* border: .2px solid grey; */
   /* display:flex; */
@@ -611,28 +606,39 @@ justify-content: space-between;
   display:flex;
   justify-content: space-between;
 }
+/* .ogLeft, .ogRight{
+border:solid grey;
+} */
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-@media (max-width:2800px) {
+@media (max-width:3000px) {
   body{
     color:grey;
+  }
+  .gifMe{
+    width:150px;
+    opacity:.3;
+  }
+  .gifMe:hover{
+    width:150px;
+    opacity:1;
   }
   .navTitle{
     display:block;
   }
   .ogMid{
-    width:80%;
+    width:60%;
   }
   .ogLeft{
-    width:10%;
+    width:20%;
     /* border: .2px solid grey; */
   }
   .ogRight{
-    width:10%;
+    width:20%;
     /* border: .2px solid grey; */
 
   }
@@ -671,22 +677,30 @@ justify-content: space-between;
 }
 
 /* ------------------------------------------- DESKTOP*/
-@media (max-width:1200px) {
+@media (max-width:1350px) {
   body{
     color:grey;
+  }
+  .gifMe{
+    width:150px;
+    opacity:.3;
+  }
+  .gifMe:hover{
+    width:150px;
+    opacity:1;
   }
   .navTitle{
     display:block;
   }
   .ogMid{
-    width:100%;
+    width:70%;
   }
   .ogLeft{
-    width:0%;
+    width:15%;
     /* border: .2px solid grey; */
   }
   .ogRight{
-    width:0%;
+    width:15%;
     /* border: .2px solid grey; */
   }
   .stepContainer{
@@ -724,9 +738,17 @@ justify-content: space-between;
   }
 }
 /* ------------------------------------------- IPAD*/
-@media (max-width:700px) {
+@media (max-width:900px) {
   body{
     color:black;
+  }
+  .gifMe{
+    width:150px;
+    opacity:.3;
+  }
+  .gifMe:hover{
+    width:150px;
+    opacity:1;
   }
   .navTitle{
     display:none;

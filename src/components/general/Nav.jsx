@@ -18,14 +18,14 @@ function Nav() {
           </div>
 
           <div className="guessingGame">
-            <Link to="/home">
+            {/* <Link to="/home">
               <img
                 src="/images/jclLogoMajor.png"
                 alt=""
                 className="gifMe"
                 onClick={toggleMusic}
               />
-            </Link>
+            </Link> */}
             
           </div>
 
@@ -54,7 +54,14 @@ function Nav() {
                 <div className="navTitle">Build</div>
               </div>
             </Link>
-
+            <Link to="/home">
+              <img
+                src="/images/jclLogoMajor.png"
+                alt=""
+                className="gifMe"
+                onClick={toggleMusic}
+              />
+            </Link>
             <Link to="/teach">
               <div className="navBtn">
                 <img
