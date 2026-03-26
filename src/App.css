@@ -636,6 +636,9 @@ input{
   border:solid grey;
   text-align:center;
 }
+.revOne{
+  padding:1em;
+}
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
@@ -664,12 +667,12 @@ input{
   }
   .ogLeft{
     width:20%;
-    border: .2px solid grey;
+    border: .2px solid navy;
     display:block;
   }
   .ogRight{
     width:20%;
-    border: .2px solid grey;
+    border: .2px solid navy;
     display:block;
 
   }
@@ -687,7 +690,7 @@ input{
     font-size:18px;
   }
   .stepPhoto{
-    width:50%;
+    width:40%;
     border: 6px double black;
     margin:1em;
   }
@@ -728,12 +731,12 @@ input{
   }
   .ogLeft{
     width:30%;
-    border: .2px solid grey;
+    border: .2px solid navy;
     display:block;
   }
   .ogRight{
     width:0;
-    border: .2px solid grey;
+    border: .2px solid navy;
     display:none;
   }
   .stepContainer{
@@ -750,7 +753,7 @@ input{
     font-size:18px;
   }
   .stepPhoto{
-    width:50%;
+    width:60%;
     border: 6px double black;
     margin:1em;
   }
@@ -771,7 +774,7 @@ input{
   }
 }
 /* ------------------------------------------- IPAD*/
-@media (max-width:850px) {
+@media (max-width:954px) {
   body{
     color:black;
   }
