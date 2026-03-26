@@ -23,15 +23,15 @@ function Subject({ obj }) {
           </button>
           <Tvmodal2 />
         </div>
-        <div className="hideSyll">
+        <div className="hideSyll" >
           {currentSyll.map((badSyll, key) => {
             return (
-              <>
+              <div>
                 <div className="lilSyll">
                   <div className="syllTrack">[Wk{key}]</div>
                   <div className="syllName">{badSyll}</div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

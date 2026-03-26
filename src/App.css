@@ -660,6 +660,7 @@ input{
   }
   .navTitle{
     display:block;
+    margin: 8px;
   }
   .ogMid{
     width:60%;
@@ -725,6 +726,8 @@ input{
   }
   .navTitle{
     display:block;
+    margin: 8px;
+
   }
   .ogMid{
     width:70%;

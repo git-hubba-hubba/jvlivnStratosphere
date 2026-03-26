@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link,Navigate } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/general/Nav";
 import Home from "./pages/Home";
@@ -11,6 +11,7 @@ import Footer from "./pages/Footer";
 import TestimonialsQueue from "./components/build/TestimonialsStack";
 import RippableFlyerCarousel from "./components/teach/RippableFlyerCarousel";
 function App() {
+  const[mainPage,setMainPage] = useState(true)
   return (
     <>
       {/* Nav */}
@@ -30,6 +31,7 @@ function App() {
         </div>
         <div className="ogMid">
           <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/build" element={<Build />} />
             <Route path="/teach" element={<Learn />} />
