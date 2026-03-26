@@ -8,6 +8,8 @@ import Learn from "./pages/Learn";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import Footer from "./pages/Footer";
+import TestimonialsQueue from "./components/build/TestimonialsStack";
+import RippableFlyerCarousel from "./components/teach/RippableFlyerCarousel";
 function App() {
   return (
     <>
@@ -15,7 +17,15 @@ function App() {
       <Nav />
       {/* Dashboard */}
       <div className="organicSplit">
-        <div className="ogRight"></div>
+        <div className="ogRight">
+          <img
+            src="/public/images/jclLogoMajor.png"
+            alt=""
+            className="lionShare"
+          />
+          <div className="lionShareTopic fontdiner-swanky-regular">Reviews</div>
+          <TestimonialsQueue />
+        </div>
         <div className="ogMid">
           <Routes>
             <Route path="/home" element={<Home />} />
@@ -24,7 +34,15 @@ function App() {
             <Route path="/about" element={<Contact />} />
           </Routes>
         </div>
-        <div className="ogLeft"></div>
+        <div className="ogLeft">
+          <img
+            src="/public/images/jclLogoMajor.png"
+            alt=""
+            className="lionShare"
+          />
+          <div className="lionShareTopic fontdiner-swanky-regular">Events</div>
+          <RippableFlyerCarousel/> 
+        </div>
       </div>
     </>
   );

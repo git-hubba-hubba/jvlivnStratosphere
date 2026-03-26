@@ -5,8 +5,8 @@ const defaultFlyers = [
       id: 1,
       accent: "lightgrey",
       pinColor: "#f59e0b",
-      tag: "LIVE VIRTUAL EVENT",
-      eyebrow: "WEB STRATEGY • STARTUP EXECUTION • Q&A",
+      tag: "1_0_Them Ones Study Session",
+      eyebrow: "Web Strategy Study Group",
       title: "Build A Service Website That Actually Converts",
       subtitle:
         "Join a live online workshop focused on turning service ideas into a clean, convincing web presence that makes people want to book.",
@@ -139,14 +139,14 @@ function FlyerCard({ flyer }) {
             <span style={{ fontSize: "1.5rem", lineHeight: .8 }}>✦</span>
           </div>
           <p className="rf-eyebrow">{flyer.eyebrow || "Community Flyer"}</p>
-          <h2 className="rf-title">{flyer.title}</h2>
+          <h4 className="rf-title">{flyer.title}</h4>
           <p className="rf-subtitle">{flyer.subtitle}</p>
         </div>
 
         <div className="rf-body">
           <div className="rf-priceRow">
             <div>
-              <p className="rf-label">Starting At</p>
+              {/* <p className="rf-label">Starting At</p> */}
               <p className="rf-price">{flyer.price}</p>
             </div>
             <div className="rf-locationWrap">
@@ -254,10 +254,10 @@ export default function RippableFlyerCarousel({
               disabled={isAnimating}
             >
               <span aria-hidden="true">←</span>
-              Prev
+              
             </button>
 
-            <div className="rf-dots">
+            {/* <div className="rf-dots">
               {flyers.map((flyer, dotIndex) => (
                 <button
                   key={flyer.id}
@@ -269,14 +269,14 @@ export default function RippableFlyerCarousel({
                   className={`rf-dot ${dotIndex === index ? "rf-dot--active" : ""}`}
                 />
               ))}
-            </div>
+            </div> */}
 
             <button
               onClick={() => paginate(1)}
               className="rf-button"
               disabled={isAnimating}
             >
-              Next
+              
               <span aria-hidden="true">→</span>
             </button>
           </div>
