@@ -19,7 +19,7 @@ function App() {
       <div className="organicSplit">
         <div className="ogRight">
           <img
-            src="/public/images/jclLogoMajor.png"
+            src="images/jclLogoMajor.png"
             alt=""
             className="lionShare"
           />
@@ -36,7 +36,7 @@ function App() {
         </div>
         <div className="ogLeft">
           <img
-            src="/public/images/jclLogoMajor.png"
+            src="images/jclLogoMajor.png"
             alt=""
             className="lionShare"
           />

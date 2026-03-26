@@ -407,7 +407,7 @@ padding:1em;
   border:solid navy;
   /* height:44vh; */
   border-radius:22px;
-  padding:1em;
+  padding:.5em;
   margin:1em;
 }
 .subMtop{
@@ -684,7 +684,7 @@ input{
   }
   .stepDescribe{
     padding: 1em;
-    font-size:26px;
+    font-size:18px;
   }
   .stepPhoto{
     width:50%;
