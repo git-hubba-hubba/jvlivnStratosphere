@@ -312,8 +312,8 @@
 .navMain{
   /* border: .2px solid grey; */
   display:flex;
-  justify-content: space-around;
-  margin:1em;
+  justify-content: space-between;
+  margin:.2em;
   align-items: center;
 }
 .navBtn{
@@ -751,11 +751,11 @@ input{
     color:grey;
   }
   .gifMe{
-    width:150px;
+    width:100px;
     opacity:.3;
   }
   .gifMe:hover{
-    width:150px;
+    width:100px;
     opacity:1;
   }
   .navTitle{
@@ -816,11 +816,11 @@ input{
     color:black;
   }
   .gifMe{
-    width:150px;
+    width:100px;
     opacity:.3;
   }
   .gifMe:hover{
-    width:150px;
+    width:100px;
     opacity:1;
   }
   .navTitle{
