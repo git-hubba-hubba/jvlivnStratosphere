@@ -15,7 +15,7 @@ function Footer() {
           </div>
           <div className="righti">
             <div className="footSmaller"> Founder Bio</div>
-            <div className="footSmaller"> Scheduling Assist</div>
+            <div className="footSmaller"> Scheduling </div>
             <div className="footSmaller"> admin@jvlivn.dev</div>
             <div className="footSmaller"> Translate Site</div>
           </div>
