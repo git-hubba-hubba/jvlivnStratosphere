@@ -131,6 +131,7 @@ function Home() {
       <div className="spacer"></div>
       <Bookmark name={"Membership"}/>
       <Contractor />
+      
       {/* <Contractor /> */}
       
     </>
