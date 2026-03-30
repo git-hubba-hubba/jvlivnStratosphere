@@ -1,7 +1,7 @@
 #root {
   /* height:4444vh; */
   width:100vw;
-  border: 9px double navy;
+  border: .2 solid navy;
   margin:0;
   padding: .5em;
   text-align: center;
@@ -474,7 +474,7 @@ justify-content: space-between;
 }
 .screen{
   /* border: .2px solid black; */
-  /* margin:3em; */
+  margin:1.4em;
   background-color:rgb(51, 51, 120);
   color:white;
   padding:1em;
@@ -570,10 +570,10 @@ justify-content: space-between;
   margin:2em;
 }
 .fancyName{
-  text-align:right;
+  text-align:center;
   color:grey;
   opacity:.4;
-  font-size:41px;
+  font-size:51px;
   margin:1em;
 }
 .flashcard-grid {
@@ -697,6 +697,7 @@ input{
     margin: 8px;
   }
   .ogMid{
+    /* border: 6px double navy; */
     width:60%;
     display:block;
   }
