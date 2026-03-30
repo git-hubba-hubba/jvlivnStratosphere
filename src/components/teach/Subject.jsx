@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import Tvmodal2 from "../build/Tvmodal2";
-function Subject({ obj }) {
+function Subject({ obj}) {
   const [currentSyll, setCurrentSyll] = useState([]);
   return (
     <>
@@ -23,10 +23,10 @@ function Subject({ obj }) {
           </button>
           <Tvmodal2 />
         </div>
-        <div className="hideSyll" >
-          {currentSyll.map((badSyll, key) => {
+        <div className="hideSyll"  >
+          {currentSyll.map((badSyll,key) => {
             return (
-              <div>
+              <div key={key}>
                 <div className="lilSyll">
                   <div className="syllTrack">[Wk{key}]</div>
                   <div className="syllName">{badSyll}</div>

@@ -189,7 +189,7 @@ export function FlashCard({
                       <Bulletpoint txt={feat} />
                     </div>
                   ))}
-                  <h4>{obj.pricing}</h4>
+                  <h2>{obj.pricing}</h2>
                 </>
               )}
             </div>

@@ -94,6 +94,7 @@ function Contact() {
   return (
     <>
       <div className="introduckN">
+      <Bookmark name={"Our Services"} />
         <div className="descriptionUpper">
           <div className="smSay">
             Witness What We Aim to Accomplish for Your Organization
@@ -106,7 +107,7 @@ function Contact() {
         </div>
       </div>
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
-      <Bookmark name={"Our Services"} />
+      
 
       <div className="flashcard-grid">
         {allCardInfo.map((crd, i) => {

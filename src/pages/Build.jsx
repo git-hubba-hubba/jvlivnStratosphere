@@ -41,6 +41,7 @@ function Build() {
   return (
     <>
       <div className="introduckN">
+      <Bookmark name={"How It Works"}/>
         <div className="descriptionUpper">
           <div className="smSay">
             Understand our Build Process & Procedural Outline
@@ -53,7 +54,7 @@ function Build() {
           />
         </div>
       </div>
-      <Bookmark name={"How It Works"}/>
+    
     
       {/* <h2 className="howIt">How Our Process Works</h2> */}
       <Sequence info={stepCalculator[0]} />

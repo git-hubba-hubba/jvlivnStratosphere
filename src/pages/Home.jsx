@@ -11,6 +11,7 @@ function Home() {
   return (
     <>
       <div className="introduckN">
+      <Bookmark name={"About Us"}/>
         <div className="descriptionUpper">
           <div className="smSay">
             Learn about who we are and what we seek to accomplish.
@@ -22,7 +23,7 @@ function Home() {
           />
         </div>
       </div>
-      <Bookmark name={"About Us"}/>
+   
       <div className="quadMaster">
         <div className="qp">
           <div
