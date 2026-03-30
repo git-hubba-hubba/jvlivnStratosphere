@@ -342,7 +342,7 @@
   /* display:flex; */
 }
 .introduckN{
-border: 6px double navy;
+/* border: solid navy; */
 padding:1em;
 }
 .descriptionUpper{
@@ -362,7 +362,7 @@ padding:1em;
   justify-content: space-evenly;
 }
 .quad{
-  border: 4px double navy;
+  border: .2px solid  navy;
   width:45%;
 }
 .quad:hover{
@@ -508,7 +508,7 @@ justify-content: space-between;
   width:100%;
 }
 .lionShare{
-  width:100%;
+  width:50%;
 }
 .eventMajor{
   border: 6px double navy;
@@ -672,7 +672,9 @@ input{
   color:navy;
   font-weight: bold;
 }
-
+.ogLeft,.ogRight{
+  border:solid navy;
+}
 
 /* ------------------------------------------- */
 /* ------------------------------------------- */
