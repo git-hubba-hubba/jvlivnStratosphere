@@ -16,25 +16,6 @@ import { ArticleBubble } from "./components/build/ArticleBubble";
 function App() {
   const articleData = [
     {
-      image: "/images/article1.jpg",
-      alt: "Stale code intelligence article",
-      title: "QCon London 2026: Refreshing Stale Code Intelligence",
-      content: (
-        <div>
-          <p>
-            InfoQ coverage on how AI coding models drift from real-world repositories and why repository-specific knowledge matters.
-          </p>
-          <a
-            href="https://www.infoq.com/news/2026/03/stale-code-intelligence/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Read full article →
-          </a>
-        </div>
-      ),
-    },
-    {
       image: "/images/article2.jpg",
       alt: "Humans in AI-assisted software development article",
       title: "Where Do Humans Fit in AI-Assisted Software Development?",
@@ -1218,10 +1199,7 @@ function App() {
           <Footer />
         </div>
         <div className="ogLeft">
-          <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
-          <div className="lionShareTopic fontdiner-swanky-regular">Events</div>
-          <RippableFlyerCarousel />
-          <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
+        <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">
             Articles
           </div>
@@ -1241,6 +1219,10 @@ function App() {
             )
           })}
           </div>
+          <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
+          <div className="lionShareTopic fontdiner-swanky-regular">Events</div>
+          <RippableFlyerCarousel />
+          
           
         </div>
       </div>

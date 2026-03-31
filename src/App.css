@@ -277,7 +277,7 @@
 .articleBubble {
   cursor: pointer;
   width: 40px;
-  margin:.5em;
+  margin:.8em;
   max-width: 100%;
   border-radius: 14px;
   display: block;
@@ -286,6 +286,9 @@
 
 .articleBubble:hover {
   transform: scale(1.03);
+  border: solid navy;
+  border-radius:50%;
+  padding:8px;
 }
 
 .articleOverlay {
@@ -446,7 +449,7 @@ padding:1em;
 }
 .quad{
   border: 6px double navy;
-  margin:1em;
+  margin:.5em;
   width:45%;
 }
 
@@ -754,7 +757,7 @@ input{
   border:solid navy;
 }
 .articleMajor{
-  border:solid navy;
+  /* border:solid navy; */
   display:flex;
   justify-content: space-evenly;
   flex-wrap:wrap;
