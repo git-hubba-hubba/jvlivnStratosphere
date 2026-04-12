@@ -6,6 +6,7 @@ import Engagement from "../general/Engage"
 import Solutions from "../general/Solutions";
 import MajorModelXP from "../teach/MajorModelXP";
 import Membership from "../general/Membership";
+import ResumeTailor from "./../build/ResumeTailor";
 
 function Contractor() {
     const [currentSlide,setCurrentSlide] = useState("")
@@ -65,7 +66,7 @@ function Contractor() {
             {currentSlide === "pricing" ? <> <Membership/> </> : "" }
             {currentSlide === "engagement" ? <> <MajorModelXP /> </> : "" }
             {currentSlide === "solutions" ? <> <Pricing /> </> : "" }
-            {currentSlide === "targeting" ? <> <Targeting/> </> : ""}
+            {currentSlide === "targeting" ? <> <ResumeTailor/> </> : ""}
 
         </div>
       
