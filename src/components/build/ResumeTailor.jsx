@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-
+import Namespace from '../general/Namespace'
 // ─── Styles ────────────────────────────────────────────────────────────────────
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap');
@@ -435,7 +435,7 @@ Format with sections: Name & Contact, Professional Summary, Experience, Skills, 
             Resume <em>Tailor</em>
           </h1>
           <div className="rt-divider" />
-          <p>AI-powered · Upload → Tailor → Download</p>
+          <Namespace />
         </div>
 
         {/* Input Grid */}
