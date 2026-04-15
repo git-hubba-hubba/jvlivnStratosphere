@@ -3,7 +3,7 @@ import React from "react";
 function Namespace() {
   return (
     <>
-    <div className="spacer"></div>
+    {/* <div className="spacer"></div> */}
       <div className="nameStretch">
         <div className="letta">J</div>
         <div className="letta">V</div>
@@ -12,7 +12,7 @@ function Namespace() {
         <div className="letta">V</div>
         <div className="letta">N</div>
       </div>
-      <div className="spacer"></div>
+      {/* <div className="spacer"></div> */}
     </>
   );
 }

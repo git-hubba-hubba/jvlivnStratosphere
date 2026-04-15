@@ -64,20 +64,15 @@ function Build() {
       <Sequence info={stepCalculator[4]} />
       <Sequence info={stepCalculator[5]} />
       <div className="spacer"></div>
-      <div className="nameStretch">
-        <div className="letta">J</div>
-        <div className="letta">V</div>
-        <div className="letta">L</div>
-        <div className="letta">I</div>
-        <div className="letta">V</div>
-        <div className="letta">N</div>
-      </div>
+      
       <div className="spacer"></div>
 
       <div className="relaxer">
       </div>
-      <Bookmark name={"Recruitment"}/>
-      <MajorModelXP />
+      <Bookmark name={"Membership"}/>
+      <Contractor />
+      
+      
      
         {/* <MajorModelXP /> */}
 

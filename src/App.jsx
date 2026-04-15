@@ -13,6 +13,7 @@ import Contractor from "./components/build/Contractor";
 import TestimonialsQueue from "./components/build/TestimonialsStack";
 import RippableFlyerCarousel from "./components/teach/RippableFlyerCarousel";
 import { ArticleBubble } from "./components/build/ArticleBubble";
+import Namespace from "./components/general/Namespace";
 function App() {
   const articleData = [
     {
@@ -1161,7 +1162,8 @@ function App() {
   return (
     <>
       {/* Nav */}
-      <Nav />
+      <Namespace/>
+     
       {/* Dashboard */}
       <div className="organicSplit">
         <div className="ogRight">
@@ -1189,6 +1191,7 @@ function App() {
           </div>
         </div>
         <div className="ogMid">
+        <Nav />
           <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
@@ -1199,7 +1202,8 @@ function App() {
           <Footer />
         </div>
         <div className="ogLeft">
-        <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
+        
+        {/* <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">
             Articles
           </div>
@@ -1218,11 +1222,12 @@ function App() {
             </div>
             )
           })}
-          </div>
+          </div> */}
           <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">Events</div>
-          <RippableFlyerCarousel />
-          
+          {/* <RippableFlyerCarousel /> */}
+         
+      
           
         </div>
       </div>
