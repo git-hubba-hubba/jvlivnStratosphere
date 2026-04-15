@@ -86,15 +86,21 @@ function Home() {
         long-term growth.
       </p>
       <img
-        src="https://ai.gatech.edu/sites/default/files/2024-11/Header-Graphic-gif-V3.gif"
+        src="https://images.pexels.com/photos/35088939/pexels-photo-35088939.jpeg?cs=srgb&dl=pexels-akoonie-35088939.jpg&fm=jpg"
         alt=""
-        className="stretchImg"
+        className="newOne"
       />
       <h3 className="sampleTxt">
         Our vision is a future where creative technologists are leaders,
         creators, and owners in technology—shaping innovation and defining
         what’s next.
       </h3>
+      <img
+        src="https://img.freepik.com/free-photo/halftone-monochrome-collage_23-2151005137.jpg?semt=ais_hybrid&w=740&q=80"
+        alt=""
+        className="newOne"
+      />
+
 
       <p className="brandMani">
         A future where access is equitable, talent is recognized, and potential
@@ -103,7 +109,11 @@ function Home() {
         technology. It’s about closing gaps, creating access, and building
         lasting impact.
       </p>
-      <img src="" alt="" className="stretchImg" />
+      <img
+        src="https://media.istockphoto.com/id/2198117851/photo/digital-overload-and-its-impact-on-the-human-brain-showcasing-fragmented-thoughts-information.jpg?s=612x612&w=0&k=20&c=BPuv9nXpOkB8fDtXHyf53wlywGTvMjRw5w5U14yoemY="
+        alt=""
+        className="newOne"
+      />
 
       
 

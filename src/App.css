@@ -442,18 +442,14 @@ padding:1em;
 }
 .quadMaster{
   /* border:solid black; */
-  margin:2em;
+  margin:3em;
 }
 .qp{
   /* border: 4px double grey; */
   display:flex;
   justify-content: space-evenly;
 }
-.quad{
-  border: 6px double navy;
-  margin:.5em;
-  width:45%;
-}
+
 
 .hiddenOne{
   /* border:solid red; */
@@ -800,6 +796,7 @@ input{
 @media (max-width:3000px) {
   body{
     color:grey;
+    background-color:lightblue;
   }
   .gifMe{
     width:150px;
@@ -861,16 +858,21 @@ input{
     margin:1em;
     width:30%;
   }
-
+  .quad{
+    border: 6px double navy;
+    margin:.5em;
+    width:25%;
+  }
 }
 
 /* ------------------------------------------- DESKTOP*/
 @media (max-width:1050px) {
   body{
     color:grey;
+    background-color:navy;
   }
   .gifMe{
-    width:100px;
+    width:400px;
     opacity:.3;
   }
   .gifMe:hover{
@@ -928,12 +930,18 @@ input{
     height:auto;
     width:30%;
   }
+  .quad{
+    border: 6px double navy;
+    margin:.5em;
+    width:45%;
+  }
  
 }
 /* ------------------------------------------- IPAD*/
 @media (max-width:578px) {
   body{
     color:black;
+    background-color:white;
   }
   .gifMe{
     width:40%;
@@ -996,6 +1004,10 @@ input{
     display:flex;
     justify-content: space-evenly;
   }
-
+  .quad{
+    border: 6px double navy;
+    margin:.5em;
+    width:45%;
+  }
 }
 /* ------------------------------------------- MOBILE*/
