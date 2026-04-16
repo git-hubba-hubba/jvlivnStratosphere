@@ -517,7 +517,7 @@ justify-content: space-between;
 }
 .newOne{
   width:100%;
-  opacity:.4;
+  /* opacity:.4; */
 }
 .taContainer{
   border:.2px solid grey;
