@@ -406,7 +406,8 @@
 .navBtn{
   /* border: .2px solid red; */
   display:flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
   /* width:15%; */
   /* border-radius:5px; */
   
@@ -606,9 +607,11 @@ justify-content: space-between;
 }
 .majorRight{
   /* border:solid navy; */
+  /* padding:1em; */
   width:100%;
   display:flex;
-  justify-content: space-evenly;
+  margin-bottom:3em;
+  justify-content: space-around;
 }
 .majorModelContainer{
   /* border:solid red; */
@@ -661,8 +664,8 @@ justify-content: space-between;
 }
 .fancyName{
   text-align:center;
-  color:grey;
-  opacity:.4;
+  color:navy;
+  /* opacity:.4; */
   font-size:28px;
   width:40%;
   /* margin:1em; */
@@ -886,7 +889,7 @@ input{
 }
 
 /* ------------------------------------------- DESKTOP*/
-@media (max-width:1050px) {
+@media (max-width:880px) {
   body{
     color:grey;
     background-color:white;
