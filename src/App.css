@@ -703,12 +703,12 @@ justify-content: space-between;
 }
 .hideSyll{
   /* border:solid red; */
-  margin:1em;
+  /* margin:1em; */
   padding:1em;
 }
 .lilSyll{
   border: .2px solid grey;
-  margin:5px;
+  /* margin:5px; */
   padding:8px;
   display:flex;
   justify-content: space-between;
