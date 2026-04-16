@@ -11,19 +11,7 @@ function Home() {
   const [currentInfo, setCurrentInfo] = useState(null);
   return (
     <>
-      <div className="introduckN">
-        <Bookmark name={"About Us"} />
-        <div className="descriptionUpper">
-          <div className="smSay">
-            Learn about who we are and what we seek to accomplish.
-          </div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/256/25/25694.png"
-            alt=""
-            className="logo"
-          />
-        </div>
-      </div>
+      
 
       <div className="quadMaster">
         <div className="qp">
@@ -96,7 +84,7 @@ function Home() {
         what’s next.
       </h3>
       <img
-        src="https://img.freepik.com/free-photo/halftone-monochrome-collage_23-2151005137.jpg?semt=ais_hybrid&w=740&q=80"
+        src="https://img.freepik.com/premium-photo/showcasing-technology-integration-diverse-settings_1161356-31043.jpg?semt=ais_hybrid&w=740&q=80"
         alt=""
         className="newOne"
       />

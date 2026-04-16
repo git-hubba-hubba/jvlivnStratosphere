@@ -14,6 +14,7 @@ import TestimonialsQueue from "./components/build/TestimonialsStack";
 import RippableFlyerCarousel from "./components/teach/RippableFlyerCarousel";
 import { ArticleBubble } from "./components/build/ArticleBubble";
 import Namespace from "./components/general/Namespace";
+import { useYoutubeAudio } from "./components/teach/useYoutubeAudio";
 function App() {
   const articleData = [
     {
@@ -1159,11 +1160,22 @@ function App() {
       ),
     }
   ];
+  const toggleMusic = useYoutubeAudio("2uhxcxRtkaQ");
+  
   return (
     <>
       {/* Nav */}
       <Namespace/>
-     
+     <div className="majorLeft">
+               <Link to="/home">
+                 <img
+                   src="/images/jclLogoMajor.png"
+                   alt=""
+                   className="gifMe"
+                   onClick={toggleMusic}
+                 />
+               </Link>
+             </div>
       {/* Dashboard */}
       <div className="organicSplit">
         <div className="ogRight">

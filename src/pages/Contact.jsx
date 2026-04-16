@@ -93,19 +93,7 @@ function Contact() {
   ];
   return (
     <>
-      <div className="introduckN">
-      <Bookmark name={"Our Services"} />
-        <div className="descriptionUpper">
-          <div className="smSay">
-            Witness What We Aim to Accomplish for Your Organization
-          </div>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/65/65000.png"
-            alt=""
-            className="logo"
-          />
-        </div>
-      </div>
+      
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
       
 

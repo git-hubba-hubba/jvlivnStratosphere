@@ -167,20 +167,6 @@ function Learn() {
   ];
   return (
     <>
-      <div className="introduckN">
-      <Bookmark name={"CourseCart"} />
-        <div className="descriptionUpper">
-          <div className="smSay">
-            Explore Our Many Different Course Offerings
-          </div>
-          <img
-            src="https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png"
-            alt=""
-            className="logo"
-          />
-        </div>
-      </div>
-     
       <div className="courseCata">
         {subjects.map((topic, i) => {
           return <Subject key={i} obj={topic} />;
