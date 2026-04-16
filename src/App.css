@@ -665,7 +665,7 @@ justify-content: space-between;
 .fancyName{
   text-align:center;
   color:navy;
-  /* opacity:.4; */
+  opacity:.4;
   font-size:28px;
   width:40%;
   /* margin:1em; */
