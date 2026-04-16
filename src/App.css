@@ -601,7 +601,7 @@ justify-content: space-between;
   /* border:solid red; */
 }
 .majorRight{
-  border:solid navy;
+  /* border:solid navy; */
   width:100%;
   display:flex;
   justify-content: space-evenly;
