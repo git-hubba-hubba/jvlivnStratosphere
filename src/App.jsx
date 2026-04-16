@@ -1179,8 +1179,8 @@ function App() {
       {/* Dashboard */}
       <div className="organicSplit">
         <div className="ogRight">
-          <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">Reviews</div>
+          <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <p className="revOne">
             JVLIVN is in the early stages of building its reputation, with a
             strong focus on delivering real value through practical tech
@@ -1205,7 +1205,7 @@ function App() {
 
           {articleData.map((item, index) => {
             return(
-            <div key={index}>
+            <div style={{border:".2px solid navy",display:"flex",alignItems:"center"}} key={index}>
               <ArticleBubble
                 key={index}
                 image={"https://png.pngtree.com/png-vector/20230307/ourmid/pngtree-article-vector-icon-design-illustration-png-image_6637011.png"}
@@ -1213,6 +1213,7 @@ function App() {
                 title={item.title}
                 content={item.content}
               />
+              <p style={{fontSize: "14px"}}>{item.title}</p>
             </div>
             )
           })}

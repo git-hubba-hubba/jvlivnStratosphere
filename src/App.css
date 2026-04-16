@@ -276,10 +276,10 @@
 
 .articleBubble {
   cursor: pointer;
-  width: 40px;
-  margin:.2em;
+  width: 30px;
+  margin:1em;
   max-width: 100%;
-  border-radius: 14px;
+  /* border-radius: 14px; */
   display: block;
   transition: transform 0.2s ease;
 }
@@ -288,6 +288,7 @@
   transform: scale(1.03);
   border: solid navy;
   border-radius:50%;
+  padding:2px;
 }
 
 .articleOverlay {
@@ -397,7 +398,7 @@
 .navMain{
   /* border: .2px solid navy; */
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* margin:.2em; */
   align-items:center;
   width:60%;
@@ -434,13 +435,16 @@
 padding:1em;
 }
 .descriptionUpper{
-  /* border:solid red; */
+  border:solid navy;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   
 }
 .logo{
-  height:40px;
+  border:solid navy;
+  border-radius:50%;
+  padding:2px;
+  height:30px;
 }
 .quadMaster{
   /* border:solid black; */
@@ -660,7 +664,7 @@ justify-content: space-between;
   color:grey;
   opacity:.4;
   font-size:28px;
-  width:50%;
+  width:40%;
   /* margin:1em; */
 }
 .flashcard-grid {
@@ -794,6 +798,7 @@ input{
 .smSay{
   font-size:18px;
   padding:.2em;
+  text-align:center;
   color:grey;
 }
 /* ------------------------------------------- */
@@ -821,7 +826,7 @@ input{
   }
   .ogMid{
     /* border: solid navy; */
-    width:80%;
+    width:70%;
     display:block;
   }
   .ogLeft{
@@ -830,9 +835,9 @@ input{
     display:none;
   }
   .ogRight{
-    width:20%;
-    /* border: .2px solid navy; */
-    padding:2em;
+    width:30%;
+    border:solid navy;
+    padding:1em;
     display:block;
 
   }
