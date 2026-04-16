@@ -805,7 +805,7 @@ input{
 @media (max-width:3000px) {
   body{
     color:grey;
-    background-color:lightblue;
+    background-color:white;
   }
   .gifMe{
     width:350px;
@@ -879,7 +879,7 @@ input{
 @media (max-width:1050px) {
   body{
     color:grey;
-    background-color:navy;
+    background-color:white;
   }
   .gifMe{
     width:400px;
