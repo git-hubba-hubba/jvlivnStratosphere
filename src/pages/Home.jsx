@@ -89,7 +89,6 @@ function Home() {
         className="newOne"
       />
 
-
       <p className="brandMani">
         A future where access is equitable, talent is recognized, and potential
         is fully realized. We build with purpose. We teach with intention. We
@@ -102,9 +101,6 @@ function Home() {
         alt=""
         className="newOne"
       />
-
-      
-
       {/* <Contractor /> */}
     </>
   );

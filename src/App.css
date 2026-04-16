@@ -444,7 +444,7 @@ padding:1em;
 }
 .quadMaster{
   /* border:solid black; */
-  margin:3em;
+  margin:1em;
 }
 .qp{
   /* border: 4px double grey; */
@@ -518,7 +518,7 @@ justify-content: space-between;
   text-align:right;
 }
 .sampleTxt{
-  margin:1em;
+  /* margin:1em; */
 }
 .stretchImg{
   width:60%;
@@ -659,7 +659,7 @@ justify-content: space-between;
   text-align:center;
   color:grey;
   opacity:.4;
-  font-size:35px;
+  font-size:28px;
   width:50%;
   /* margin:1em; */
 }
@@ -855,7 +855,7 @@ input{
     margin:1em;
   }
   .brandMani{
-    padding:2em;
+    padding:1em;
     font-size:26px;
   }
   .memberLounge{
