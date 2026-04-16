@@ -1179,7 +1179,6 @@ function App() {
       {/* Dashboard */}
       <div className="organicSplit">
         <div className="ogRight">
-         
           <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">Reviews</div>
           <p className="revOne">
@@ -1206,7 +1205,7 @@ function App() {
 
           {articleData.map((item, index) => {
             return(
-            <div>
+            <div key={index}>
               <ArticleBubble
                 key={index}
                 image={"https://png.pngtree.com/png-vector/20230307/ourmid/pngtree-article-vector-icon-design-illustration-png-image_6637011.png"}
@@ -1231,8 +1230,6 @@ function App() {
           <Footer />
         </div>
         <div className="ogLeft">
-        
-        
           <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">Events</div>
           {/* <RippableFlyerCarousel /> */}

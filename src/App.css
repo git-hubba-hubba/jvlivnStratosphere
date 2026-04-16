@@ -836,10 +836,14 @@ input{
     display:block;
 
   }
+  .stepHeader{
+    border:solid grey;
+  }
   .stepContainer{
     /* border: .2px solid black; */
     margin:1em;
     display:flex;
+    align-items:center;
     /* height:15vh; */
   }
   .stepMaker{
@@ -848,6 +852,7 @@ input{
   .stepDescribe{
     padding: 1em;
     font-size:18px;
+    text-align:right;
   }
   .stepPhoto{
     width:40%;
