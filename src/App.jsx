@@ -1179,6 +1179,7 @@ function App() {
       {/* Dashboard */}
       <div className="organicSplit">
         <div className="ogRight">
+         
           <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">Reviews</div>
           <p className="revOne">
@@ -1199,24 +1200,6 @@ function App() {
           </p>
           <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">
-            Partnership
-          </div>
-        </div>
-        <div className="ogMid">
-        <Nav />
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" replace />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/build" element={<Build />} />
-            <Route path="/teach" element={<Learn />} />
-            <Route path="/about" element={<Contact />} />
-          </Routes>
-          <Footer />
-        </div>
-        <div className="ogLeft">
-        
-        {/* <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
-          <div className="lionShareTopic fontdiner-swanky-regular">
             Articles
           </div>
           <div className="articleMajor">
@@ -1234,7 +1217,22 @@ function App() {
             </div>
             )
           })}
-          </div> */}
+          </div>
+        </div>
+        <div className="ogMid">
+        <Nav />
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/build" element={<Build />} />
+            <Route path="/teach" element={<Learn />} />
+            <Route path="/about" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </div>
+        <div className="ogLeft">
+        
+        
           <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
           <div className="lionShareTopic fontdiner-swanky-regular">Events</div>
           {/* <RippableFlyerCarousel /> */}

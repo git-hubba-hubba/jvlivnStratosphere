@@ -42,7 +42,7 @@ function Nav() {
         </div>
         <div className="majorRight">
           <nav className="navMain">
-            <div className="navBtn">
+            <div className="navBtn heartbeat">
               <Link to="/home">
                 <img
                   src="https://cdn-icons-png.flaticon.com/256/25/25694.png"
@@ -56,7 +56,7 @@ function Nav() {
               <div className="navTitle">Home</div>
             </div>
 
-            <div className="navBtn">
+            <div className="navBtn heartbeat">
               <Link to="/build">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/603/603781.png"
@@ -70,7 +70,7 @@ function Nav() {
               <div className="navTitle">Build</div>
             </div>
 
-            <div className="navBtn">
+            <div className="navBtn heartbeat">
               <Link to="/teach">
                 <img
                   src="https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png"
@@ -84,7 +84,7 @@ function Nav() {
               <div className="navTitle">Learn</div>
             </div>
 
-            <div className="navBtn">
+            <div className="navBtn heartbeat">
               <Link to="/about">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/65/65000.png"

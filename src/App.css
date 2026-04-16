@@ -397,10 +397,10 @@
 .navMain{
   /* border: .2px solid navy; */
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /* margin:.2em; */
-  align-items: center;
-  width:50%;
+  align-items:center;
+  width:60%;
 }
 .navBtn{
   /* border: .2px solid red; */
@@ -427,7 +427,7 @@
   /* border: .2px solid navy; */
   /* display:flex; */
   justify-content: space-evenly;
-  align-items: center;
+  text-align: center;
 }
 .introduckN{
 /* border: solid navy; */
@@ -808,11 +808,11 @@ input{
     background-color:lightblue;
   }
   .gifMe{
-    width:550px;
+    width:350px;
     opacity:.3;
   }
   .gifMe:hover{
-    width:550px;
+    width:350px;
     opacity:1;
   }
   .navTitle{
@@ -820,8 +820,8 @@ input{
     margin: 8px;
   }
   .ogMid{
-    /* border: 6px double navy; */
-    width:100%;
+    /* border: solid navy; */
+    width:80%;
     display:block;
   }
   .ogLeft{
@@ -830,9 +830,10 @@ input{
     display:none;
   }
   .ogRight{
-    width:0%;
+    width:20%;
     /* border: .2px solid navy; */
-    display:none;
+    padding:2em;
+    display:block;
 
   }
   .stepContainer{
