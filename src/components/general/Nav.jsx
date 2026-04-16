@@ -22,7 +22,7 @@ function Nav() {
       tabImg: "https://cdn-icons-png.flaticon.com/512/603/603781.png",
     },
     learn: {
-      tabName: "CourseCart",
+      tabName: "Courses",
       tabDescription: "Explore Our Many Different Course Offerings",
       tabImg: "https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png",
     },

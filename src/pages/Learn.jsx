@@ -37,7 +37,7 @@ function Learn() {
       ]
     },
     {
-      img: "https://designoweb.s3.eu-north-1.amazonaws.com/technologies/mern.webp",
+      img: "https://www.mangoitsolutions.com/wp-content/uploads/2022/01/becomeamernstackdeveloper-mobile-300x279.png",
       subName: "Full-Stack Web Development (MERN)",
       subDesc:
         "Hands-on instruction in building full-stack applications using MongoDB, Express, React, and Node.js, covering frontend UI, backend APIs, authentication, and deployment.",

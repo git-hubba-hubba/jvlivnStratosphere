@@ -494,22 +494,25 @@ padding:1em;
   /* height:44vh; */
   border-radius:22px;
   padding:.5em;
-  margin:1em;
+  margin-top:1em;
 }
 .subMtop{
 display:flex;
 justify-content: space-between;
 }
 .subImg{
-  height:60px;
+  height:80px;
   border-radius:50%;
 }
 .btnCafe{
+  font-size:12px;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .syllabus{
   background-color:grey;
+  text-decoration:none;
+  width:105px;
 }
 .newOne{
   width:100%;
