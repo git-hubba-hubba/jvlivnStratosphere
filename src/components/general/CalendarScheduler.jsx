@@ -89,7 +89,7 @@ export default function CalendarScheduler() {
           >
             <h3>Book Appointment – {months[currentMonth]} {selectedDay}</h3>
 
-            <img src="/public/images/jclLogoMajor.png" alt="" className="calImg" />
+            <img src="images/jclLogoMajor.png" alt="" className="calImg" />
             <form className="modal-form" onSubmit={handleSubmit}>
               <input name="name" placeholder="Full Name" required />
               <input name="phone" placeholder="Phone Number" required />
