@@ -18,7 +18,7 @@ export default function TvModal({name,component, width,title}) {
   return (
     <>
       {/* Trigger (DIV, not button) */}
-      <div className="open-trigger" style={{border:"solid white", width: width}}  onClick={openModal}>
+      <div className="open-trigger fontdiner-swanky-regular" style={{border:"solid white", width: width}}  onClick={openModal}>
         {name}
       </div>
 
@@ -28,7 +28,7 @@ export default function TvModal({name,component, width,title}) {
             className={`tv-modal ${isClosing ? "tv-off" : "tv-on"}`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="modal-header">
+            <div className="modal-header fontdiner-swanky-regular">
               <h2>{title}</h2>
               <div className="close-x" onClick={closeModal}>✕</div>
             </div>

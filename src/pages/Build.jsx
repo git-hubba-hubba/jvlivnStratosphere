@@ -41,7 +41,6 @@ function Build() {
   ];
   return (
     <>
-    
       {/* <h2 className="howIt">How Our Process Works</h2> */}
       <Sequence info={stepCalculator[0]} />
       <Sequence info={stepCalculator[1]} />
@@ -50,45 +49,17 @@ function Build() {
       <Sequence info={stepCalculator[4]} />
       <Sequence info={stepCalculator[5]} />
       <div className="spacer"></div>
-      
+
       <div className="spacer"></div>
 
-      <div className="relaxer">
-      </div>
+      <div className="relaxer"></div>
 
-      <Bookmark name={"Collaboration& Recruitment"}/>
-      <MajorModelXP/> 
+      <Bookmark name={"Collaboration& Recruitment"} />
+      <MajorModelXP />
       <br />
 
-      <Bookmark name={"Membership"}/>
+      <Bookmark name={"Event Finder*[uc]"} />
       <Contractor />
-      
-      
-     
-        {/* <MajorModelXP /> */}
-
-      {/* <h2>Reviews & Testimonials</h2> */}
-      {/* <TestimonialsQueue /> */}
-      {/* <img
-        src="https://t3.ftcdn.net/jpg/03/87/94/86/360_F_387948605_WXRMvwVWbB1V21quHWFwTTQEUDqz5n3S.jpg"
-        alt=""
-        className="fillerPic"
-      /> */}
-      {/* <h2>Service Guarantee</h2>
-      <p className="gserv">
-        We guarantee that every course and learning experience we deliver is
-        built on high-quality lesson planning, thorough research, and real-world
-        industry relevance. Our curriculum is intentionally designed using
-        current technologies, proven methodologies, and best practices aligned
-        with today’s tech landscape. Each lesson is carefully structured to
-        ensure clarity, progression, and practical application—so students
-        aren’t just learning concepts, but developing skills they can
-        immediately use in professional environments. We continuously review and
-        refine our materials to reflect evolving tools, standards, and employer
-        expectations. Our commitment is simple: if you engage with our program,
-        you will receive instruction that is intentional, well-researched, and
-        aligned with the skills demanded by the modern technology industry.
-      </p> */}
     </>
   );
 }

@@ -66,7 +66,7 @@ function Home() {
         alt=""
         className="newOne"
       />
-      <h3 className="sampleTxt">
+      <h3 className="sampleTxt fontdiner-swanky-regular">
         We believe technology should empower, not exclude.
       </h3>
 

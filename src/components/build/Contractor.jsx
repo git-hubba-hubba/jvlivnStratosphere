@@ -7,6 +7,8 @@ import Solutions from "../general/Solutions";
 import MajorModelXP from "../teach/MajorModelXP";
 import Membership from "../general/Membership";
 import ResumeTailor from "./../build/ResumeTailor";
+import Engage from "../general/Engage";
+import RippableFlyerCarousel from "../teach/RippableFlyerCarousel";
 
 function Contractor() {
     const [currentSlide,setCurrentSlide] = useState("")
@@ -24,7 +26,7 @@ function Contractor() {
                 setCurrentSlide("pricing")
               }}
             />
-            <div className="navTitle">Membership</div>
+            <div className="navTitle">Paid</div>
           </div>
 
           <div className="navBtn">
@@ -35,7 +37,7 @@ function Contractor() {
                 setCurrentSlide("engagement")
               }}
             />
-            <div className="navTitle">Recruitment</div>
+            <div className="navTitle">Local</div>
           </div>
 
           <div className="navBtn">
@@ -46,7 +48,7 @@ function Contractor() {
                 setCurrentSlide("solutions")
               }}
             />
-            <div className="navTitle">Invest</div>
+            <div className="navTitle">Inquiry</div>
           </div>
 
           <div className="navBtn">
@@ -57,16 +59,16 @@ function Contractor() {
                 setCurrentSlide("targeting")
               }}
             />
-            <div className="navTitle">Target</div>
+            <div className="navTitle">Nearby</div>
           </div>
         </nav>
         <div className="screen">
           
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
-            {currentSlide === "pricing" ? <> <Membership/> </> : "" }
-            {currentSlide === "engagement" ? <> <MajorModelXP /> </> : "" }
-            {currentSlide === "solutions" ? <> <Pricing /> </> : "" }
-            {currentSlide === "targeting" ? <> <ResumeTailor/> </> : ""}
+            {currentSlide === "pricing" ? <> </> : "" }
+            {currentSlide === "engagement" ? <> </> : "" }
+            {currentSlide === "solutions" ? <>  </> : "" }
+            {currentSlide === "targeting" ? <> </> : ""}
 
         </div>
       
