@@ -5,6 +5,7 @@ import { FlashCard } from "../components/build/FlashCard";
 import Events from "./Events";
 import MajorModelXP from "../components/teach/MajorModelXP";
 import Bookmark from "./Bookmark";
+import Membership from "../components/general/Membership";
 function Contact() {
   const allCardInfo = [
     {
@@ -95,8 +96,9 @@ function Contact() {
     <>
       
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
-      
-
+      <Bookmark name="Membership Tiers"/>
+      <Membership />  
+      <Bookmark name="Service(s) Offered"/>
       <div className="flashcard-grid">
         {allCardInfo.map((crd, i) => {
           return (
