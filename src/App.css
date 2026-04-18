@@ -810,6 +810,11 @@ input{
   text-align:center;
   color:grey;
 }
+.tierSep:hover{
+  background-color: navy;
+  color:white;
+  transition:.8s;
+}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
@@ -883,7 +888,7 @@ input{
     display:flex;
   }
   .tierSep{
-    border:solid white;
+    border:solid navy;
     margin:1em;
     width:30%;
   }
@@ -955,7 +960,7 @@ input{
     display:flex;
   }
   .tierSep{
-    border:solid white;
+    border:solid navy;
     margin:1em;
     height:auto;
     width:30%;
@@ -1026,7 +1031,7 @@ input{
     display:block;
   }
   .tierSep{
-    border: .2px solid white;
+    border: .2px solid navy;
     margin:.2em;
     padding:.5em;
     height:auto;

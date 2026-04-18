@@ -7,6 +7,7 @@ import Contractor from "../components/build/Contractor";
 import Bookmark from "./Bookmark";
 import MajorModelXP from "../components/teach/MajorModelXP";
 import AlsoHome from "./AlsoHome";
+import Pricing from "../components/general/Pricing";
 function Home() {
   const [currentInfo, setCurrentInfo] = useState(null);
   return (
@@ -55,6 +56,10 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <hr />
+            <Pricing />
+      <hr />
 
       <img
         src="https://images.unsplash.com/photo-1717701505819-9722f6c92bc0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
