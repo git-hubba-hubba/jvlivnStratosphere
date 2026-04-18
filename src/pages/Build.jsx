@@ -5,6 +5,7 @@ import Contractor from "../components/build/Contractor";
 import TestimonialsQueue from "../components/build/TestimonialsStack";
 import MajorModelXP from "../components/teach/MajorModelXP";
 import Bookmark from "./Bookmark";
+import Recruit from "./Recruit";
 function Build() {
   const stepCalculator = [
     {
@@ -54,6 +55,11 @@ function Build() {
 
       <div className="relaxer">
       </div>
+
+      <Bookmark name={"Collaboration& Recruitment"}/>
+      <MajorModelXP/> 
+      <br />
+
       <Bookmark name={"Membership"}/>
       <Contractor />
       
