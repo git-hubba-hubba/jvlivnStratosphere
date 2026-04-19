@@ -120,16 +120,7 @@ function InternalEvPage() {
   ];
   return (
     <>
-      <div className="eventNav">
-        <input
-          type="text"
-          placeholder="Enter Job Category"
-          className="searcher"
-        />
-        <button className="searchBtn" onClick={""}>
-          Find Event(s)
-        </button>
-      </div>
+      
       <div className="defaultEvt">
         {techEvents.map((thingToDo) => {
           return (
