@@ -880,7 +880,7 @@ input {
 }
 .evtNamingBox{
   border:solid navy;
-  height:23px;
+  /* height:23px; */
   margin:5px;
 }
 .sectionRegulation{
