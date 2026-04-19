@@ -9,6 +9,8 @@ import Membership from "../general/Membership";
 import ResumeTailor from "./../build/ResumeTailor";
 import Engage from "../general/Engage";
 import RippableFlyerCarousel from "../teach/RippableFlyerCarousel";
+import EventPage from "../../pages/EventPage";
+import InternalEvPage from "../../pages/InternalEvPage";
 
 function Contractor() {
     const [currentSlide,setCurrentSlide] = useState("")
@@ -65,8 +67,8 @@ function Contractor() {
         <div className="screen">
           
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
-            {currentSlide === "pricing" ? <> </> : "" }
-            {currentSlide === "engagement" ? <> </> : "" }
+            {currentSlide === "pricing" ? <><InternalEvPage /></> : "" }
+            {currentSlide === "engagement" ? <>  <EventPage/> </> : "" }
             {currentSlide === "solutions" ? <>  </> : "" }
             {currentSlide === "targeting" ? <> </> : ""}
 
