@@ -120,7 +120,7 @@ function InternalEvPage() {
   ];
   return (
     <>
-      
+        <h3 className="bubbbleEv fontdiner-swanky-regular">Major Tech Conferences 26' </h3>
       <div className="defaultEvt">
         {techEvents.map((thingToDo) => {
           return (
