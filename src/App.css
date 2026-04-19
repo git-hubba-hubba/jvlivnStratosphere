@@ -851,30 +851,31 @@ input {
   background-color: grey;
   border-radius: 4px;
 }.defaultEvt{
-  border:solid white;
+  /* border:solid white; */
   /* height:44vh; */
 }
 .evtSlice{
-  /* border:solid white; */
+  border:solid white;
   /* background-color: rgb(33, 68, 150); */
   margin:1em;
   display:flex;
   align-items:center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   padding:.2em;
   color:navy;
 }
 .evtImg{
   border:solid navy;
-  height:90px;
-  width:90px;
+  height:50px;
+  width:50px;
+  border-radius:50%;
 }
 .evtDesc{
-  border:solid navy;
+  /* border:solid navy; */
   font-size:12px;
   padding:1em;
   /* height:43px; */
-  /* width:70%; */
+  width:90%;
 }
 .evtSmImg{
   height:30px;
@@ -887,7 +888,7 @@ input {
 .sectionRegulation{
   /* border:solid red; */
   padding:3px;
-  width:70%;
+  width:auto;
 
 }
 /* ------------------------------------------- */
