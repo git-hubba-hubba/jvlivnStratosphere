@@ -416,15 +416,15 @@
 .navMain {
   /* border: .2px solid navy; */
   display: flex;
-  justify-content: space-around;
-  /* margin:.2em; */
+  justify-content: space-between;
+  margin:.2em;
   align-items: center;
-  width: 70%;
+  width: 60%;
 }
 .navBtn {
   /* border: .2px solid red; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   /* width:15%; */
   /* border-radius:5px; */
@@ -690,7 +690,7 @@
   color: grey;
   opacity: 0.4;
   font-size: 28px;
-  width: 30%;
+  width: 35%;
   /* margin:1em; */
 }
 .flashcard-grid {
@@ -894,6 +894,9 @@ input {
 .courseCata{
   margin:1em;
 }
+.navTitle{
+  font-size:14px;
+}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
@@ -915,7 +918,7 @@ input {
   }
   .navTitle {
     display: block;
-    margin: 8px;
+    margin: 6px;
   }
   .ogMid {
     /* border: solid navy; */
@@ -992,7 +995,7 @@ input {
     opacity: 1;
   }
   .navTitle {
-    display: none;
+    display: block;
     margin: 4px;
   }
   .ogMid {
