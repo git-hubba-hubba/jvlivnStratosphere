@@ -58,7 +58,7 @@ function Build() {
       <MajorModelXP />
       <br />
 
-      <Bookmark name={"Event Finder*[uc]"} />
+      <Bookmark name={"Event Finder"} />
       <Contractor />
     </>
   );

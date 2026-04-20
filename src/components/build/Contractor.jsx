@@ -69,7 +69,7 @@ function Contractor() {
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
             {currentSlide === "pricing" ? <><InternalEvPage /></> : "" }
             {currentSlide === "engagement" ? <>  <EventPage/> </> : "" }
-            {currentSlide === "solutions" ? <>  </> : "" }
+            {currentSlide === "solutions" ? <> <Targeting /></> : "" }
             {currentSlide === "targeting" ? <> </> : ""}
 
         </div>
