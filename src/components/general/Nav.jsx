@@ -31,6 +31,11 @@ function Nav() {
       tabDescription: "Witness What We Aim to Accomplish for Your Organization",
       tabImg: "https://cdn-icons-png.flaticon.com/512/65/65000.png",
     },
+    library: {
+      tabName: "Library",
+      tabDescription: "Collection of Valuable Resources for Memebers",
+      tabImg: "https://images.vexels.com/media/users/3/140908/isolated/preview/bdc30bbe3c022a11e2d7fd0e642c61ae-open-book-icon.png",
+    },
   };
   const [currentInfo, setCurrentInfo] = useState(descriptionPuzzle.home);
   return (
@@ -96,6 +101,20 @@ function Nav() {
                 />
               </Link>
               <div className="navTitle">Vision</div>
+            </div>
+
+            <div className="navBtn heartbeat">
+              <Link to="/lib">
+                <img
+                  src="https://images.vexels.com/media/users/3/140908/isolated/preview/bdc30bbe3c022a11e2d7fd0e642c61ae-open-book-icon.png"
+                  alt=""
+                  className="navImg"
+                  onClick={() => {
+                    setCurrentInfo(descriptionPuzzle.library);
+                  }}
+                />
+              </Link>
+              <div className="navTitle">Library</div>
             </div>
           </nav>
           <Bookmark name={currentInfo.tabName} />

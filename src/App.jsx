@@ -15,6 +15,8 @@ import RippableFlyerCarousel from "./components/teach/RippableFlyerCarousel";
 import { ArticleBubble } from "./components/build/ArticleBubble";
 import Namespace from "./components/general/Namespace";
 import { useYoutubeAudio } from "./components/teach/useYoutubeAudio";
+import Library from "./components/general/Library";
+import Articles from "./components/Articles";
 function App() {
   const articleData = [
     {
@@ -1197,27 +1199,7 @@ function App() {
             allowing authentic feedback to naturally shape the brand’s
             credibility over time.
           </p>
-          <img src="images/jclLogoMajor.png" alt="" className="lionShare" />
-          <div className="lionShareTopic fontdiner-swanky-regular">
-            Articles
-          </div>
-          <div className="articleMajor">
-
-          {articleData.map((item, index) => {
-            return(
-            <div style={{border:".2px solid navy",display:"flex",alignItems:"center"}} key={index}>
-              <ArticleBubble
-                key={index}
-                image={"https://png.pngtree.com/png-vector/20230307/ourmid/pngtree-article-vector-icon-design-illustration-png-image_6637011.png"}
-                alt={item.alt}
-                title={item.title}
-                content={item.content}
-              />
-              <p style={{fontSize: "14px"}}>{item.title}</p>
-            </div>
-            )
-          })}
-          </div>
+          <Articles/>
         </div>
         <div className="ogMid">
         <Nav />
@@ -1227,6 +1209,7 @@ function App() {
             <Route path="/build" element={<Build />} />
             <Route path="/teach" element={<Learn />} />
             <Route path="/about" element={<Contact />} />
+            <Route path="/lib" element={<Library/>} />
           </Routes>
           <Footer />
         </div>
