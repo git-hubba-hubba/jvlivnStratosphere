@@ -510,12 +510,12 @@
   /* height:44vh; */
   border-radius: 22px;
   padding: 0.5em;
-  margin: 1em;
+  margin-bottom: 1em;
 }
 .subMtop {
   /* margin:1em; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .subImg {
   height: 80px;
@@ -892,7 +892,7 @@ input {
   width:auto;
 }
 .courseCata{
-  margin:1em;
+  /* margin:1em; */
 }
 .navTitle{
   font-size:14px;
