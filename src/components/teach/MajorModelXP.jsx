@@ -35,11 +35,6 @@ function MajorModelXP() {
         <div className="containerC">
         <Tvmodal name={"Maintenance Process"}width={"90%"} component={<MandP />} title={"Maintenance & Restructuring"} />
         </div>
-
-
-
-
-
     </div>
     
     

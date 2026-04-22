@@ -11,6 +11,7 @@ import Engage from "../general/Engage";
 import RippableFlyerCarousel from "../teach/RippableFlyerCarousel";
 import EventPage from "../../pages/EventPage";
 import InternalEvPage from "../../pages/InternalEvPage";
+import InquireForm from "../general/InquireForm";
 
 function Contractor() {
     const [currentSlide,setCurrentSlide] = useState("")
@@ -70,7 +71,7 @@ function Contractor() {
             {currentSlide === "pricing" ? <><InternalEvPage /></> : "" }
             {currentSlide === "engagement" ? <>  <EventPage/> </> : "" }
             {currentSlide === "solutions" ? <> <Targeting /></> : "" }
-            {currentSlide === "targeting" ? <> </> : ""}
+            {currentSlide === "targeting" ? <><InquireForm/></> : ""}
 
         </div>
       

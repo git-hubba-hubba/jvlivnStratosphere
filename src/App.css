@@ -585,7 +585,7 @@
   margin: 1.4em;
   background-color: lightsteelblue;
   color: white;
-  padding: 1em;
+  /* padding: 1em; */
   /* height:55vh; */
 }
 .barrel {
@@ -897,6 +897,22 @@ input {
 .navTitle{
   font-size:14px;
 }
+
+.ef_fm{
+  width:80%;
+  border-radius:8px;
+  /* margin:.5em; */
+  background-color:black;
+}
+.fmTable{
+  width:100%;
+}
+.bookcaseMajor{
+  border:solid navy;
+  height:72vh;
+  margin:1em;
+}
+
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */
@@ -978,6 +994,14 @@ input {
     margin: 0.5em;
     width: 25%;
   }
+  .formHandler{
+    display:flex;
+    align-items:center;
+  }
+  .formShowPic{
+    border:solid white;
+    width:100%;
+  }
 }
 
 /* ------------------------------------------- DESKTOP*/
@@ -1050,6 +1074,27 @@ input {
     margin: 0.5em;
     width: 45%;
   }
+  .formHandler{
+    display:flex;
+    align-items:center;
+  }
+  .formShowPic{
+    border:solid white;
+    width:100%;
+    margin:0;
+  }
+  .formProtect{
+  /* border:solid black; */
+  /* margin:1em; */
+  /* padding:1em; */
+  width:60%;
+  
+}
+.flexup{
+  /* border:solid red; */
+  padding:2em;
+  width:50%;
+}
 }
 /* ------------------------------------------- IPAD*/
 @media (max-width: 578px) {
@@ -1123,5 +1168,28 @@ input {
     margin: 0.5em;
     width: 45%;
   }
+  .formHandler{
+    display:block;
+    width:100%;
+  }
+  .formShowPic{
+    border:solid white;
+    width:100%;
+    margin:0;
+  }
+  .formProtect{
+    /* border:solid black; */
+    /* margin:1em; */
+    /* padding:1em; */
+    align-items:center;
+    width:100%;
+    display:flex;
+  }
+  .flexup{
+    /* border:solid red; */
+    padding:0;
+    width:100%;
+  }
+  
 }
 /* ------------------------------------------- MOBILE*/
