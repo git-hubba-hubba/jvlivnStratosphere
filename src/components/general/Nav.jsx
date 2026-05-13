@@ -24,12 +24,12 @@ function Nav() {
     learn: {
       tabName: "Courses",
       tabDescription: "Explore Our Many Different Course Offerings",
-      tabImg: "https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png",
+      tabImg: "https://st4.depositphotos.com/18672748/20963/v/450/depositphotos_209638806-stock-illustration-learning-icon-vector-isolated-white.jpg",
     },
     service: {
       tabName: "Services",
       tabDescription: "Witness What We Aim to Accomplish for Your Organization",
-      tabImg: "https://cdn-icons-png.flaticon.com/512/65/65000.png",
+      tabImg: "https://www.clipartmax.com/png/full/470-4708897_thx-consulting-icon-c-transparent-service-icon-png.png",
     },
     library: {
       tabName: "Library",
@@ -42,12 +42,12 @@ function Nav() {
     <>
       <div className="navSuperior">
       <div className="descriptionUpper">
-          <div className="smSay fontdiner-swanky-regular">{currentInfo.tabDescription}</div>
+        <div className="smSay fontdiner-swanky-regular">{currentInfo.tabDescription}</div>
           <img src={currentInfo.tabImg} alt="" className="logo" />
         </div>
         <div className="majorRight">
           <nav className="navMain">
-            <div className="navBtn heartbeat">
+            <div className="navBtn ">
               <Link to="/home">
                 <img
                   src="https://cdn-icons-png.flaticon.com/256/25/25694.png"
@@ -58,10 +58,10 @@ function Nav() {
                   }}
                 />
               </Link>
-              <div className="navTitle">Home</div>
+              <div className="navTitle">Engage</div>
             </div>
 
-            <div className="navBtn heartbeat">
+            <div className="navBtn ">
               <Link to="/build">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/603/603781.png"
@@ -72,13 +72,13 @@ function Nav() {
                   }}
                 />
               </Link>
-              <div className="navTitle">Build</div>
+              <div className="navTitle">Process</div>
             </div>
 
-            <div className="navBtn heartbeat">
+            <div className="navBtn ">
               <Link to="/teach">
                 <img
-                  src="https://www.freeiconspng.com/thumbs/brain-icon-png/brain-2.png"
+                  src="https://st4.depositphotos.com/18672748/20963/v/450/depositphotos_209638806-stock-illustration-learning-icon-vector-isolated-white.jpg"
                   alt=""
                   className="navImg"
                   onClick={() => {
@@ -89,10 +89,10 @@ function Nav() {
               <div className="navTitle">Learn</div>
             </div>
 
-            <div className="navBtn heartbeat">
+            <div className="navBtn ">
               <Link to="/about">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/65/65000.png"
+                  src="https://www.clipartmax.com/png/full/470-4708897_thx-consulting-icon-c-transparent-service-icon-png.png"
                   alt=""
                   className="navImg"
                   onClick={() => {
@@ -100,10 +100,10 @@ function Nav() {
                   }}
                 />
               </Link>
-              <div className="navTitle">Vision</div>
+              <div className="navTitle">Services</div>
             </div>
 
-            <div className="navBtn heartbeat">
+            <div className="navBtn ">
               <Link to="/lib">
                 <img
                   src="https://images.vexels.com/media/users/3/140908/isolated/preview/bdc30bbe3c022a11e2d7fd0e642c61ae-open-book-icon.png"
@@ -114,7 +114,7 @@ function Nav() {
                   }}
                 />
               </Link>
-              <div className="navTitle">Library</div>
+              <div className="navTitle">Lib</div>
             </div>
           </nav>
           <Bookmark name={currentInfo.tabName} />

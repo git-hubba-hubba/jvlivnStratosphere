@@ -94,10 +94,11 @@ function Contact() {
   ];
   return (
     <>
-      
-      <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
       <Bookmark name="Membership Tiers"/>
       <Membership />  
+      <Namespace />
+      <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
+      
       <Bookmark name="Service(s) Offered"/>
       <div className="flashcard-grid">
         {allCardInfo.map((crd, i) => {
