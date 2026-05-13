@@ -948,7 +948,7 @@ input {
   }
   .ogRight {
     width: 30%;
-    border: solid navy;
+    border: .2px solid navy;
     padding: 1em;
     display: block;
   }
