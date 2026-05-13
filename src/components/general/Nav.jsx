@@ -103,7 +103,7 @@ function Nav() {
               <div className="navTitle">Services</div>
             </div>
 
-            <div className="navBtn ">
+            {/* <div className="navBtn ">
               <Link to="/lib">
                 <img
                   src="https://images.vexels.com/media/users/3/140908/isolated/preview/bdc30bbe3c022a11e2d7fd0e642c61ae-open-book-icon.png"
@@ -115,7 +115,7 @@ function Nav() {
                 />
               </Link>
               <div className="navTitle">Lib</div>
-            </div>
+            </div> */}
           </nav>
           <Bookmark name={currentInfo.tabName} />
         </div>
