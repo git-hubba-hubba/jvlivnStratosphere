@@ -241,7 +241,7 @@ function HackerEnvio() {
                   <div className="probDiff">{problem.difficulty}</div>
                 </div>
                 
-                {problem.prompt}
+                <p className="probprob">{problem.prompt}</p>
 
                 <textarea className="blackScreen"></textarea>
               </div>
@@ -259,7 +259,7 @@ function HackerEnvio() {
                   <div className="probDiff">{problem.difficulty}</div>
                 </div>
                 
-                {problem.prompt}
+                <p className="probprob">{problem.prompt}</p>
 
                 <textarea className="blackScreen"></textarea>
               </div>
@@ -277,7 +277,7 @@ function HackerEnvio() {
                   <div className="probDiff">{problem.difficulty}</div>
                 </div>
                 
-                {problem.prompt}
+                <p className="probprob">{problem.prompt}</p>
 
                 <textarea className="blackScreen"></textarea>
               </div>
