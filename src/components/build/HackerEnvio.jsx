@@ -1,4 +1,5 @@
-import React from "react";
+import { React, useState } from "react";
+import AnswerModal from "./AnswerModal";
 
 function HackerEnvio() {
   const pracQuestions = {
@@ -227,6 +228,15 @@ function HackerEnvio() {
       },
     ],
   };
+  const [answer, setAnswer] = useState("");
+  const [open, setOpen] = useState(false);
+  const sampleCode = `
+  function add(a,b){
+  return a+b;
+  }
+  
+  console.log(add(2,5));
+    `;
   return (
     <>
       <div className="levelTiers">
@@ -237,13 +247,24 @@ function HackerEnvio() {
               <div className="probGod">
                 <div className="probStack fontdiner-swanky-regular">
                   <div className="probTitle">{problem.platform}</div>
-                  <h2 style={{color:"navy"}}className="promptProb">{problem.title}</h2>
+                  <h2 style={{ color: "navy" }} className="promptProb">
+                    {problem.title}
+                  </h2>
                   <div className="probDiff">{problem.difficulty}</div>
                 </div>
-                
+
                 <p className="probprob">{problem.prompt}</p>
 
                 <textarea className="blackScreen"></textarea>
+                <button onClick={() => {
+                    setOpen(true)
+                    setAnswer(problem.solution)
+                }}>Show Answer</button>
+                <AnswerModal
+                  isOpen={open}
+                  onClose={() => setOpen(false)}
+                  code={answer}
+                />
               </div>
             </>
           );
@@ -255,13 +276,24 @@ function HackerEnvio() {
               <div className="probGod">
                 <div className="probStack fontdiner-swanky-regular">
                   <div className="probTitle">{problem.platform}</div>
-                  <h2 style={{color:"navy"}}className="promptProb">{problem.title}</h2>
+                  <h2 style={{ color: "navy" }} className="promptProb">
+                    {problem.title}
+                  </h2>
                   <div className="probDiff">{problem.difficulty}</div>
                 </div>
-                
+
                 <p className="probprob">{problem.prompt}</p>
 
                 <textarea className="blackScreen"></textarea>
+                <button onClick={() => {
+                    setOpen(true)
+                    setAnswer(problem.solution)
+                }}>Show Answer</button>
+                <AnswerModal
+                  isOpen={open}
+                  onClose={() => setOpen(false)}
+                  code={answer}
+                />
               </div>
             </>
           );
@@ -273,13 +305,24 @@ function HackerEnvio() {
               <div className="probGod">
                 <div className="probStack fontdiner-swanky-regular">
                   <div className="probTitle">{problem.platform}</div>
-                  <h2 style={{color:"navy"}}className="promptProb">{problem.title}</h2>
+                  <h2 style={{ color: "navy" }} className="promptProb">
+                    {problem.title}
+                  </h2>
                   <div className="probDiff">{problem.difficulty}</div>
                 </div>
-                
+
                 <p className="probprob">{problem.prompt}</p>
 
                 <textarea className="blackScreen"></textarea>
+                <button onClick={() => {
+                    setOpen(true)
+                    setAnswer(problem.solution)
+                }}>Show Answer</button>
+                <AnswerModal
+                  isOpen={open}
+                  onClose={() => setOpen(false)}
+                  code={answer}
+                />
               </div>
             </>
           );
