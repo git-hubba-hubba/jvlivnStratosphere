@@ -967,8 +967,27 @@ input {
   display:flex;
   justify-content: space-evenly;
 }
-
-
+.probGod{
+  border: .6px solid navy;
+  margin:1em;
+  /* height:22vh; */
+}
+.probStack{
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+}
+.blackScreen{
+  border: 2px solid lime;
+  
+  margin:1em;
+  height:22vh;
+  background-color:black;
+}
+textarea{
+  width:90%;
+  color:lime;
+}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 /* --------------{{GENERAL}}------------------ */

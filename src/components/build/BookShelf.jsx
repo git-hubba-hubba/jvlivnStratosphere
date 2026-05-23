@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import HackerEnvio from "./HackerEnvio";
 
 function BookShelf(title, resourceObjs) {
   const resourceCenter = {
@@ -220,6 +221,11 @@ function BookShelf(title, resourceObjs) {
   const [currentComplex, setCurrentComplex] = useState(
     "https://www.youtube.com/embed/WRoz58oOO7o?si=hmYVN9jtnhTnVqH-"
   );
+//   ------------------------------------------
+
+// --------------------------------------------
+  const [sectionId, setSectionId] = useState("723");
+  //   secId: vid== 723, practice= 444, progTracker== 111 , leader==000
   return (
     <>
       <div className="contentScreen">
@@ -228,24 +234,39 @@ function BookShelf(title, resourceObjs) {
             src="https://www.freeiconspng.com/thumbs/camera-icon/camera-icon-21.png"
             alt=""
             className="channelBtn"
+            onClick={()=>{
+                setSectionId('723')
+            }}
           />
           <img
             src="https://cdn-icons-png.flaticon.com/512/4149/4149646.png"
             alt=""
             className="channelBtn"
+            onClick={()=>{
+                setSectionId('444')
+            }}
           />
           <img
             src="https://png.pngtree.com/png-vector/20230419/ourmid/pngtree-productivity-line-icon-vector-png-image_6714726.png"
             alt=""
             className="channelBtn"
+            onClick={()=>{
+                setSectionId('111')
+            }}
           />
           <img
             src="https://www.freeiconspng.com/uploads/profile-icon-9.png"
             alt=""
             className="channelBtn"
+            onClick={()=>{
+                setSectionId('000')
+            }}
           />
         </div>
-        <h2 style={{textAlign:"right"}}className="sneakTitle fontdiner-swanky-regular">
+        <h2
+          style={{ textAlign: "right" }}
+          className="sneakTitle fontdiner-swanky-regular"
+        >
           Video Study Guide{" "}
         </h2>
 
@@ -260,44 +281,54 @@ function BookShelf(title, resourceObjs) {
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
+          {sectionId}
         </div>
-       
+        {/* --------------MEDIA SWITCH---------------- */}
+        {/* --------------MEDIA SWITCH---------------- */}
+        {/* --------------MEDIA SWITCH---------------- */}
+        {/* --------------MEDIA SWITCH---------------- */}
+        {/* --------------MEDIA SWITCH---------------- */}
 
-        {resourceCenter.resourceTopics.map((srrc) => {
-          return (
-            <>
-              <div className="openSource">
-                <h3 className="sneqTopic fontdiner-swanky-regular">
-                  {srrc.topicTitle}
-                </h3>
-                {srrc.addtlVideos.map((adVid) => {
-                  return (
-                    <>
-                      <div className="linqContainer">
-                        <img
-                          src="https://www.freeiconspng.com/uploads/video-icon-6.png"
-                          alt=""
-                          className="vidLinq"
-                          onClick={() => {
-                            setCurrentComplex(adVid.url);
-                          }}
-                        />
-                      </div>
-                    </>
-                  );
-                })}
-              </div>
-            </>
-          );
-        })}
+        {/* Button Switch for Topic Navigation */}
+        {/* secId: vid== 723, practice= 444, progTracker== 111 , leader==000 */}
+        {sectionId === "723" ? (
+          <>
+            {resourceCenter.resourceTopics.map((srrc) => {
+              return (
+                <>
+                  <div className="openSource">
+                    <h3 className="sneqTopic fontdiner-swanky-regular">
+                      {srrc.topicTitle}
+                    </h3>
+                    {srrc.addtlVideos.map((adVid) => {
+                      return (
+                        <>
+                          <div className="linqContainer">
+                            <img
+                              src="https://www.freeiconspng.com/uploads/video-icon-6.png"
+                              alt=""
+                              className="vidLinq"
+                              onClick={() => {
+                                setCurrentComplex(adVid.url);
+                              }}
+                            />
+                          </div>
+                        </>
+                      );
+                    })}
+                  </div>
+                </>
+              );
+            })}
+          </>
+        ) : null}
+
+        {sectionId === "444" ? (<>
+            <HackerEnvio />
+        </>) : null}
+        {sectionId === "111" ? (<></>) : null}
+        {sectionId === "000" ? (<></>) : null}
       </div>
-      <h2
-        className="bkShelfTitle fontdiner-swanky-regular"
-        style={{ textAlign: "right" }}
-      >
-        {" "}
-        Video Resources{" "}
-      </h2>
     </>
   );
 }
