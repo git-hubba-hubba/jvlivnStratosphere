@@ -45,17 +45,6 @@ function Contractor() {
 
           <div className="navBtn">
             <img
-              src="https://www.freeiconspng.com/thumbs/question-mark-icon/black-question-mark-icon-clip-art-10.png"
-              alt=""
-              className="navImg" onClick={()=>{
-                setCurrentSlide("solutions")
-              }}
-            />
-            <div className="navTitle">Inquiry</div>
-          </div>
-
-          <div className="navBtn">
-            <img
               src="https://static.thenounproject.com/png/2191323-200.png"
               alt=""
               className="navImg" onClick={()=>{
@@ -64,14 +53,25 @@ function Contractor() {
             />
             <div className="navTitle">Nearby</div>
           </div>
+          <div className="navBtn">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5471/5471074.png"
+              alt=""
+              className="navImg" onClick={()=>{
+                setCurrentSlide("solutions")
+              }}
+            />
+            <div className="navTitle">Inquiry</div>
+          </div>
+
         </nav>
         <div className="screen">
           
           {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
             {currentSlide === "pricing" ? <><InternalEvPage /></> : "" }
             {currentSlide === "engagement" ? <>  <EventPage/> </> : "" }
-            {currentSlide === "solutions" ? <> <Targeting /></> : "" }
-            {currentSlide === "targeting" ? <><InquireForm/></> : ""}
+            {currentSlide === "solutions" ? <> <InquireForm/></> : "" }
+            {currentSlide === "targeting" ? <><Targeting/></> : ""}
 
         </div>
       
