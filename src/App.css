@@ -919,7 +919,7 @@ input {
   /* height:22vh; */
 }
 .contentContainer {
-  border: solid navy;
+  /* border: solid navy; */
   /* margin: 2.2em; */
   height: 44vh;
   width: 100%;
@@ -931,8 +931,8 @@ input {
   border: solid peru;
 }
 .contentBtns {
-  border: solid black;
-  margin: 2em;
+  border:.2px solid black;
+  margin: 1em;
   display:flex;
   justify-content: space-evenly;
 }

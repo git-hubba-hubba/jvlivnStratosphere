@@ -17,17 +17,17 @@ function ProgressTracker() {
           <div className="ptPathFinder">
             <h1 className="fontdiner-swanky-regular">Progress Tracker</h1>
             <img
-              src="/public/images/jvlBadjiess/111.png"
+              src="images/jvlBadjiess/111.png"
               alt=""
               className="baddge"
             />
             <img
-              src="/public/images/jvlBadjiess/222.png"
+              src="images/jvlBadjiess/222.png"
               alt=""
               className="baddge"
             />
             <img
-              src="/public/images/jvlBadjiess/333.png"
+              src="images/jvlBadjiess/333.png"
               alt=""
               className="baddge"
             />
