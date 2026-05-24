@@ -1,7 +1,9 @@
 import { React, useState } from "react";
 import HackerEnvio from "./HackerEnvio";
+import ProgressTracker from "../general/ProgressTracker";
+import Leaderboard from "../general/Leaderboard";
 
-function BookShelf(title, resourceObjs) {
+function BookShelf() {
   const resourceCenter = {
     resourceTopics: [
       {
@@ -221,9 +223,9 @@ function BookShelf(title, resourceObjs) {
   const [currentComplex, setCurrentComplex] = useState(
     "https://www.youtube.com/embed/WRoz58oOO7o?si=hmYVN9jtnhTnVqH-"
   );
-//   ------------------------------------------
+  //   ------------------------------------------
 
-// --------------------------------------------
+  // --------------------------------------------
   const [sectionId, setSectionId] = useState("723");
   //   secId: vid== 723, practice= 444, progTracker== 111 , leader==000
   return (
@@ -234,32 +236,32 @@ function BookShelf(title, resourceObjs) {
             src="https://www.freeiconspng.com/thumbs/camera-icon/camera-icon-21.png"
             alt=""
             className="channelBtn"
-            onClick={()=>{
-                setSectionId('723')
+            onClick={() => {
+              setSectionId("723");
             }}
           />
           <img
             src="https://cdn-icons-png.flaticon.com/512/4149/4149646.png"
             alt=""
             className="channelBtn"
-            onClick={()=>{
-                setSectionId('444')
+            onClick={() => {
+              setSectionId("444");
             }}
           />
           <img
             src="https://png.pngtree.com/png-vector/20230419/ourmid/pngtree-productivity-line-icon-vector-png-image_6714726.png"
             alt=""
             className="channelBtn"
-            onClick={()=>{
-                setSectionId('111')
+            onClick={() => {
+              setSectionId("111");
             }}
           />
           <img
             src="https://www.freeiconspng.com/uploads/profile-icon-9.png"
             alt=""
             className="channelBtn"
-            onClick={()=>{
-                setSectionId('000')
+            onClick={() => {
+              setSectionId("000");
             }}
           />
         </div>
@@ -276,13 +278,14 @@ function BookShelf(title, resourceObjs) {
             height="100%"
             src={currentComplex}
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           ></iframe>
-          {sectionId}
+          <div style={{ margin: "1em" }}>{sectionId}</div>
         </div>
+        <div className="spacer"></div>
         {/* --------------MEDIA SWITCH---------------- */}
         {/* --------------MEDIA SWITCH---------------- */}
         {/* --------------MEDIA SWITCH---------------- */}
@@ -293,17 +296,17 @@ function BookShelf(title, resourceObjs) {
         {/* secId: vid== 723, practice= 444, progTracker== 111 , leader==000 */}
         {sectionId === "723" ? (
           <>
-            {resourceCenter.resourceTopics.map((srrc) => {
+            {resourceCenter.resourceTopics.map((srrc,i) => {
               return (
-                <>
-                  <div className="openSource">
+                <div key={i}>
+                  <div className="openSource" >
                     <h3 className="sneqTopic fontdiner-swanky-regular">
                       {srrc.topicTitle}
                     </h3>
-                    {srrc.addtlVideos.map((adVid) => {
+                    {srrc.addtlVideos.map((adVid,j) => {
                       return (
-                        <>
-                          <div className="linqContainer">
+                        <div key={j}>
+                          <div className="linqContainer" >
                             <img
                               src="https://www.freeiconspng.com/uploads/video-icon-6.png"
                               alt=""
@@ -313,21 +316,31 @@ function BookShelf(title, resourceObjs) {
                               }}
                             />
                           </div>
-                        </>
+                        </div>
                       );
                     })}
                   </div>
-                </>
+                </div>
               );
             })}
           </>
         ) : null}
 
-        {sectionId === "444" ? (<>
+        {sectionId === "444" ? (
+          <>
             <HackerEnvio />
-        </>) : null}
-        {sectionId === "111" ? (<></>) : null}
-        {sectionId === "000" ? (<></>) : null}
+          </>
+        ) : null}
+        {sectionId === "111" ? (
+          <>
+            <ProgressTracker />
+          </>
+        ) : null}
+        {sectionId === "000" ? (
+          <>
+            <Leaderboard />
+          </>
+        ) : null}
       </div>
     </>
   );
