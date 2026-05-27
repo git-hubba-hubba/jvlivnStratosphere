@@ -909,12 +909,12 @@ input {
   width: 100%;
 }
 .bookcaseMajor {
-  border: solid navy;
+  border: .2px solid navy;
   /* height: 72vh; */
-  margin: 1em;
+  /* margin: 1em; */
 }
 .contentScreen {
-  border: 0.2px solid black;
+  /* border: 0.2px solid black; */
   margin: 1em;
   /* height:22vh; */
 }
