@@ -283,30 +283,22 @@ function BookShelf() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <div style={{ margin: "1em" }}>{sectionId}</div>
         </div>
-        <div className="spacer"></div>
-        {/* --------------MEDIA SWITCH---------------- */}
-        {/* --------------MEDIA SWITCH---------------- */}
-        {/* --------------MEDIA SWITCH---------------- */}
-        {/* --------------MEDIA SWITCH---------------- */}
         {/* --------------MEDIA SWITCH---------------- */}
 
-        {/* Button Switch for Topic Navigation */}
-        {/* secId: vid== 723, practice= 444, progTracker== 111 , leader==000 */}
         {sectionId === "723" ? (
           <>
-            {resourceCenter.resourceTopics.map((srrc,i) => {
+            {resourceCenter.resourceTopics.map((srrc, i) => {
               return (
                 <div key={i}>
-                  <div className="openSource" >
+                  <div className="openSource">
                     <h3 className="sneqTopic fontdiner-swanky-regular">
                       {srrc.topicTitle}
                     </h3>
-                    {srrc.addtlVideos.map((adVid,j) => {
+                    {srrc.addtlVideos.map((adVid, j) => {
                       return (
                         <div key={j}>
-                          <div className="linqContainer" >
+                          <div className="linqContainer">
                             <img
                               src="https://www.freeiconspng.com/uploads/video-icon-6.png"
                               alt=""

@@ -59,17 +59,17 @@ function ProgressTracker() {
               </span>
             </div>
             <img
-              src="/public/images/jvlBadjiess/444.png"
+              src="images/jvlBadjiess/444.png"
               alt=""
               className="baddge"
             />
             <img
-              src="/public/images/jvlBadjiess/555.png"
+              src="images/jvlBadjiess/555.png"
               alt=""
               className="baddge"
             />
             <img
-              src="/public/images/jvlBadjiess/777.png"
+              src="images/jvlBadjiess/777.png"
               alt=""
               className="baddge"
             />

@@ -96,7 +96,7 @@ function Contact() {
     <>
       <Bookmark name="Membership Tiers"/>
       <Membership />  
-      <Namespace />
+      {/* <Namespace /> */}
       <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
       
       <Bookmark name="Service(s) Offered"/>
