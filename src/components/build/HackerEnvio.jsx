@@ -240,10 +240,9 @@ function HackerEnvio() {
   return (
     <>
       <div className="levelTiers">
-        <h2 className="fontdiner-swanky-regular">TierOne</h2>
-        {pracQuestions.easy.map((problem) => {
+        {pracQuestions.easy.map((problem,i) => {
           return (
-            <>
+            <div key={i}>
               <div className="probGod">
                 <div className="probStack fontdiner-swanky-regular">
                   <div className="probTitle">{problem.platform}</div>
@@ -266,14 +265,13 @@ function HackerEnvio() {
                   code={answer}
                 />
               </div>
-            </>
+            </div>
           );
         })}
-        <h2 className="fontdiner-swanky-regular">TierTwo</h2>
-        {pracQuestions.med.map((problem) => {
+        {pracQuestions.med.map((problem,j) => {
           return (
-            <>
-              <div className="probGod">
+            <div key={j}>
+              <div className="probGod" >
                 <div className="probStack fontdiner-swanky-regular">
                   <div className="probTitle">{problem.platform}</div>
                   <h2 style={{ color: "navy" }} className="promptProb">
@@ -295,14 +293,13 @@ function HackerEnvio() {
                   code={answer}
                 />
               </div>
-            </>
+            </div>
           );
         })}
-        <h2 className="fontdiner-swanky-regular">TierThree</h2>
-        {pracQuestions.hard.map((problem) => {
+        {pracQuestions.hard.map((problem,k) => {
           return (
-            <>
-              <div className="probGod">
+            <div key={k}>
+              <div className="probGod" >
                 <div className="probStack fontdiner-swanky-regular">
                   <div className="probTitle">{problem.platform}</div>
                   <h2 style={{ color: "navy" }} className="promptProb">
@@ -324,7 +321,7 @@ function HackerEnvio() {
                   code={answer}
                 />
               </div>
-            </>
+            </div>
           );
         })}
       </div>

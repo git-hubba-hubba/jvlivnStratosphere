@@ -14,7 +14,7 @@ function Membership() {
             <p>FrontEnd Maintainence</p>
             <p>Business Analytics</p>
 
-            <h2 className="tierPrice fontdiner-swanky-regular">$50/monthly</h2>
+            <p style={{color:"peru"}} className="tierPrice fontdiner-swanky-regular">$50/monthly</p>
           </div>
         </div>
         <div className="tierSep">
@@ -31,7 +31,7 @@ function Membership() {
             <p>Full Course Access</p>
             <p>Rebranding Package</p>
             <p></p>
-            <h2 className="tierPrice fontdiner-swanky-regular">$250/monthly</h2>
+            <p style={{color:"peru"}} className="tierPrice fontdiner-swanky-regular">$250/monthly</p>
           </div>
         </div>
         <div className="tierSep">
@@ -43,7 +43,7 @@ function Membership() {
             <p>3 scheduled 1-on-1s</p>
             <p>Individual Course Access</p>
             <p>Branding Package Access</p>
-            <h2 className="tierPrice fontdiner-swanky-regular">$100/monthly</h2>
+            <p style={{color:"peru"}} className="tierPrice fontdiner-swanky-regular">$100/monthly</p>
           </div>
         </div>
       </div>

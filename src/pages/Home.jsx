@@ -57,7 +57,7 @@ function Home() {
         </div>
       </div>
 
-      <hr />
+    
             <Pricing />
       <hr />
 

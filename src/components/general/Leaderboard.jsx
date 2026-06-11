@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Namespace from "./Namespace";
 import itGlossary from "../dataDump/itTerms";
+import ResumeTailor from "../build/ResumeTailor";
 
 function Leaderboard() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -117,6 +118,7 @@ function Leaderboard() {
           <div className="quadShow"></div>
           <div className="quadShow"></div>
         </div>
+        
       </div>
     </>
   );

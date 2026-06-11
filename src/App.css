@@ -422,12 +422,14 @@
   width: 60%;
 }
 .navBtn {
-  /* border: .2px solid red; */
+  /* border: .2px solid grey; */
+padding:4px;
+margin-left:12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width:15%; */
-  /* border-radius:5px; */
+  width:18%;
+  border-radius:5px;
 }
 .navImg {
   width: 28px;
@@ -454,7 +456,7 @@
   padding: 1em;
 }
 .descriptionUpper {
-  border: 0.4px solid navy;
+  /* border: 0.4px solid navy; */
   display: flex;
   justify-content: space-around;
 }
@@ -630,7 +632,7 @@
   /* padding:1em; */
   width: 100%;
   display: flex;
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
   justify-content: space-around;
 }
 .majorModelContainer {
@@ -954,10 +956,12 @@ input {
 .openSource {
   border: 0.2px solid navy;
   margin: 1em;
+  border-radius:12px;
   align-items: center;
   /* height:90px; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding:5px;
 }
 .vidLinq {
   border: 0.4px solid navy;
@@ -1173,7 +1177,7 @@ textarea {
     display: block;
   }
   .stepHeader {
-    border: solid grey;
+    border: .2px solid grey;
   }
   .stepContainer {
     /* border: .2px solid black; */
