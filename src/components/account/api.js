@@ -1,6 +1,6 @@
 export async function accountRequest(path,{method='GET',body,signal}={}){
   const controller=new AbortController();
-  const timeout=setTimeout(()=>controller.abort(),10000);
+  const timeout=setTimeout(()=>controller.abort(),65000);
   let response;
   try{response=await fetch(`/api/auth${path}`,{method,credentials:'same-origin',headers:{Accept:'application/json',...(body!==undefined?{'Content-Type':'application/json'}:{})},...(body!==undefined?{body:JSON.stringify(body)}:{}),signal:signal||controller.signal});}
   catch{throw new Error('The account service is unavailable. Please try again shortly.');}

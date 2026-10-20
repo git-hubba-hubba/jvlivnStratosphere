@@ -28,6 +28,36 @@ Serve the frontend and `/api/auth` on the same origin through a reverse proxy. U
 
 The existing integrations also use `PREDICTHQ_ACCESS_TOKEN` and `ANTHROPIC_API_KEY` as backend environment variables.
 
+### Cloudflare Pages frontend + Render accounts API
+
+`functions/api/auth/[[path]].js` proxies account requests to
+`https://jvlivnstratosphere.onrender.com`, preserving request bodies, Origin,
+cookies, JSON statuses, and Set-Cookie responses. The browser continues using
+`/api/auth` on the frontend origin. Account responses are never cached.
+`public/_routes.json` limits Function invocations to the account API.
+
+Deploy the repository through Cloudflare Pages Git integration (build command
+`npm run build`, output `dist`) or Wrangler from the project root. Uploading only
+`dist` through dashboard drag-and-drop does not deploy the root `functions` folder.
+To override the backend address, set `RENDER_BACKEND_ORIGIN` in the Pages project's
+Settings → Variables and Secrets to an HTTPS origin without a path, then redeploy.
+The supplied Render address is the default; no frontend Vite variable is needed.
+
+On Render, set `NODE_ENV=production` and
+`APP_ORIGINS=https://jvlivn.pages.dev`. Add any custom frontend domains or explicitly
+trusted preview origins to that comma-separated list. The proxy preserves Origin
+instead of bypassing the backend's origin validation. Session cookies remain
+HttpOnly, Secure, SameSite=Lax, and scoped to `/api/auth` on the frontend host.
+Persist `AUTH_STORE_PATH` on a persistent disk or migrate the store to a database;
+the proxy does not make Render's temporary filesystem persistent.
+
+After deployment, `/api/auth/me` should return JSON with status 401 when signed
+out. Check signup, refresh while signed in, profile edits, and logout. A 403 on
+signup/login usually means Render's `APP_ORIGINS` does not include the exact
+frontend origin. A 502 means Render could not return a JSON API response. The
+proxy allows up to 60 seconds for Render startup; the frontend allows 65 seconds.
+Local `npm run dev` still uses the existing Vite proxy to Express on port 3001.
+
 ## Checks
 
 ```sh
