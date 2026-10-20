@@ -1,179 +1,40 @@
-import React from "react";
-import Subject from "../components/teach/Subject";
-import Bookmark from "./Bookmark";
+import {learningStorage} from '../components/account/learningStorage';
+import {useRef, useState} from 'react';
+import {useSearchParams} from 'react-router-dom';
+import Subject from '../components/teach/Subject';
+import catalog from '../components/courses/catalog';
+import demoContent, {checkedOn} from '../components/courses/demoContent';
+import DemoCourse from '../components/courses/DemoCourse';
+import {recordLearning} from '../components/gamification/store';
+import '../components/courses/courses.css';
 
-function Learn() {
-  const subjects = [
-    {
-      img: "https://n8n.io/brandguidelines/dont/vertical-align.png",
-      subName: "Agentic Sys Development",
-      subDesc:
-        "Unlock the power of automation with n8n, the open-source workflow automation tool that lets you connect apps, APIs, and databases with ease. In this hands-on course, you’ll learn how to design, build, and deploy scalable automation workflows without relying on expensive SaaS tools.",
-      syllabusDesc: [
-        "Introduction to n8n & workflow automation",
-        "Understanding nodes, triggers, and executions",
-        "API integrations & webhooks",
-        "Data transformation & logic flows",
-        "Connecting databases and external services",
-        "Building agentic workflows with AI integrations",
-        "Error handling & workflow optimization",
-        "Deploying and scaling automation systems"
-      ]
-    },
-    {
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/960px-Unofficial_JavaScript_logo_2.svg.png",
-      subName: "JavaScript Programming",
-      subDesc:
-        "Teach core to advanced JavaScript concepts including variables, functions, ES6+, asynchronous programming, APIs, and real-world problem solving used in modern web applications.",
-      syllabusDesc: [
-        "Variables, data types, and operators",
-        "Functions and scope",
-        "Control flow (loops & conditionals)",
-        "Arrays and objects",
-        "DOM manipulation",
-        "ES6+ features (arrow functions, destructuring)",
-        "Asynchronous JavaScript (callbacks, promises, async/await)",
-        "Working with APIs and JSON"
-      ]
-    },
-    {
-      img: "https://www.mangoitsolutions.com/wp-content/uploads/2022/01/becomeamernstackdeveloper-mobile-300x279.png",
-      subName: "Full-Stack Web Development (MERN)",
-      subDesc:
-        "Hands-on instruction in building full-stack applications using MongoDB, Express, React, and Node.js, covering frontend UI, backend APIs, authentication, and deployment.",
-      syllabusDesc: [
-        "Overview of MERN stack architecture",
-        "Building frontend with React",
-        "Creating REST APIs with Node.js & Express",
-        "MongoDB database design & queries",
-        "Authentication & authorization (JWT)",
-        "Connecting frontend to backend",
-        "CRUD operations in full-stack apps",
-        "Deployment and hosting strategies"
-      ]
-    },
-    {
-      img: "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
-      subName: "React Development",
-      subDesc:
-        "Focused training on React fundamentals and advanced concepts such as hooks, state management, component architecture, and building scalable, production-ready user interfaces.",
-      syllabusDesc: [
-        "React fundamentals & component structure",
-        "JSX and rendering techniques",
-        "Props and state management",
-        "React Hooks (useState, useEffect, custom hooks)",
-        "Routing with React Router",
-        "Component reusability & architecture",
-        "Performance optimization techniques",
-        "Building production-ready UI applications"
-      ]
-    },
-    {
-      img: "https://images.credly.com/images/51aeb74b-ec87-4069-93fc-0ea449c8d77f/twitter_thumb_201604_node.png",
-      subName: "Backend Development with Node.js",
-      subDesc:
-        "Teach server-side development using Node.js and Express, including REST APIs, middleware, authentication, database integration, and secure application design.",
-      syllabusDesc: [
-        "Introduction to Node.js runtime",
-        "Express.js fundamentals",
-        "Building RESTful APIs",
-        "Middleware and routing",
-        "Database integration (MongoDB/SQL)",
-        "Authentication & authorization",
-        "Error handling & logging",
-        "Securing backend applications"
-      ]
-    },
-    {
-      img: "https://img.freepik.com/premium-vector/cyber-security-logo-icon-symbol-vector-illustration-modern-cyber-security-logo_1123785-4541.jpg",
-      subName: "Cybersecurity Fundamentals",
-      subDesc:
-        "Introduction to cybersecurity concepts including threat models, vulnerabilities, attacks, defensive strategies, and foundational security principles aligned with Security+ objectives.",
-      syllabusDesc: [
-        "Introduction to cybersecurity concepts",
-        "Types of threats and vulnerabilities",
-        "Network security fundamentals",
-        "Encryption and cryptography basics",
-        "Risk management and mitigation",
-        "Security frameworks and compliance",
-        "Incident response basics",
-        "Security best practices"
-      ]
-    },
-    {
-      img: "https://www.oreilly.com/api/v2/epubs/urn:orm:book:9781492069485/files/images/page212.jpg",
-      subName: "Ethical Hacking & Penetration Testing Basics",
-      subDesc:
-        "Introductory penetration testing concepts including reconnaissance, scanning, vulnerability assessment, and ethical hacking methodologies using tools like Kali Linux.",
-      syllabusDesc: [
-        "Introduction to ethical hacking",
-        "Reconnaissance and information gathering",
-        "Scanning networks and systems",
-        "Vulnerability assessment techniques",
-        "Exploitation fundamentals",
-        "Using tools like Kali Linux",
-        "Reporting and documentation",
-        "Legal and ethical considerations"
-      ]
-    },
-    {
-      img: "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png",
-      subName: "Cloud Computing Fundamentals",
-      subDesc:
-        "Cover cloud concepts including IaaS, PaaS, SaaS, virtualization, identity and access management, and core Azure fundamentals for beginners.",
-      syllabusDesc: [
-        "Introduction to cloud computing concepts",
-        "IaaS, PaaS, SaaS models",
-        "AWS core services (EC2, S3, IAM)",
-        "Virtualization and cloud architecture",
-        "Identity and access management",
-        "Deploying applications to the cloud",
-        "Monitoring and scaling resources",
-        "Cloud security fundamentals"
-      ]
-    },
-    {
-      img: "https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png",
-      subName: "Technical Interview & Coding Prep",
-      subDesc:
-        "Prepare students for technical interviews with coding challenges, data structures, algorithms, problem-solving strategies, and real-world engineering scenarios.",
-      syllabusDesc: [
-        "Data structures (arrays, stacks, queues, trees)",
-        "Algorithms (sorting, searching)",
-        "Problem-solving strategies",
-        "Coding challenge practice",
-        "Time and space complexity (Big O)",
-        "Whiteboard and mock interviews",
-        "System design basics",
-        "Behavioral interview preparation"
-      ]
-    },
-    {
-      img: "https://t4.ftcdn.net/jpg/04/52/93/93/360_F_452939372_33TpmMySxDxez38m7B55TM0hbTrG0oKm.jpg",
-      subName: "Career Development in Tech",
-      subDesc:
-        "Guide students on breaking into tech roles through resume building, portfolio projects, interview strategies, and navigating career paths in software and cybersecurity.",
-      syllabusDesc: [
-        "Resume and portfolio development",
-        "Building real-world projects",
-        "Personal branding and LinkedIn optimization",
-        "Networking strategies",
-        "Job search techniques",
-        "Freelancing and client acquisition",
-        "Interview preparation strategies",
-        "Career growth and advancement planning"
-      ]
-    }
-  ];
-  return (
-    <>
-      <div className="courseCata">
-        {subjects.map((topic, i) => {
-          return <Subject key={i} obj={topic} />;
-        })}
-      </div>
-    </>
-  );
+const courses=catalog.map(course=>({...course,demo:demoContent[course.id]}));
+const key='jvl-demo-courses-v1';
+function readSaved(){
+  try{
+    const data=JSON.parse(learningStorage.getItem(key))||{};
+    return Object.fromEntries(courses.map(course=>{const saved=data[course.id]||{};return [course.id,{passed:Array.isArray(saved.passed)?[...new Set(saved.passed.filter(i=>Number.isInteger(i)&&i>=0&&i<3))]:[],lesson:Number.isInteger(saved.lesson)&&saved.lesson>=0&&saved.lesson<3?saved.lesson:0,notes:saved.notes&&typeof saved.notes==='object'?saved.notes:{},lab:saved.lab&&typeof saved.lab==='object'?saved.lab:{}}];}));
+  }catch{return {};}
 }
-
-export default Learn;
+export default function Learn(){
+  const [params,setParams]=useSearchParams();
+  const [query,setQuery]=useState('');const [category,setCategory]=useState('All');
+  const [saved,setSaved]=useState(readSaved);const state=useRef(saved);const [storageError,setStorageError]=useState(false);
+  const selected=courses.find(course=>course.id===params.get('course'));
+  function save(id,transform){
+    const next={...state.current,[id]:transform(state.current[id]||{passed:[],lesson:0,notes:{},lab:{}})};
+    state.current=next;setSaved(next);
+    try{learningStorage.setItem(key,JSON.stringify(next));}catch{setStorageError(true);}
+    recordLearning({demos:Object.entries(next).flatMap(([course,value])=>(value.passed||[]).map(lesson=>`${course}:${lesson}`))});
+  }
+  const filtered=courses.filter(course=>(category==='All'||course.demo.category===category)&&`${course.subName} ${course.subDesc} ${course.demo.project}`.toLowerCase().includes(query.toLowerCase()));
+  const completed=Object.values(saved).filter(course=>course.passed?.length===3).length;
+  return <main className="dc-learn">
+    {storageError&&<p className="dc-storage-error" role="alert">Browser storage is unavailable or full. Your changes may not persist after reloading.</p>}
+    {selected?<DemoCourse key={selected.id} course={selected} progress={saved[selected.id]||{passed:[],lesson:0}} save={transform=>save(selected.id,transform)} onBack={()=>setParams(previous=>{const next=new URLSearchParams(previous);next.delete('course');return next;})}/>:<>
+      <header className="dc-intro"><span className="dc-eyebrow">EXPLORE · PRACTICE · BUILD</span><h1>A little curiosity. A new skill.</h1><p>Try a free course in every topic. Read a short lesson, test your understanding, and bring it to life in an interactive demo.</p><div className="dc-summary"><span>10 free demo courses</span><span>30 short lessons</span><span>{completed}/10 demos completed</span></div><small>Free references checked {checkedOn}. No enrollment needed for these demos.</small></header>
+      <div className="dc-catalog-controls"><label>Find your next skill<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search courses, concepts, or projects…"/></label><div className="dc-category-filters" aria-label="Filter courses by topic">{['All','Development','Security','Cloud','Career'].map(value=><button key={value} aria-pressed={category===value} onClick={()=>setCategory(value)}>{value}</button>)}</div></div><p className="dc-result-count" role="status">{filtered.length} demo courses</p>
+      <div className="courseCata">{filtered.map(course=><Subject key={course.id} obj={course} progress={saved[course.id]} onStart={()=>{const resume=(saved[course.id]?.passed||[]);const firstIncomplete=[0,1,2].find(index=>!resume.includes(index));if(firstIncomplete!==undefined)save(course.id,p=>({...p,lesson:firstIncomplete}));setParams({course:course.id});window.scrollTo({top:document.querySelector('.dc-learn').getBoundingClientRect().top+window.scrollY,behavior:'instant'});}}/>)}</div>{!filtered.length&&<div className="dc-empty"><h2>No courses match yet.</h2><button onClick={()=>{setQuery('');setCategory('All');}}>Clear filters</button></div>}
+    </>}
+  </main>;
+}

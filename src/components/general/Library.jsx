@@ -1,17 +1,5 @@
-import React from 'react'
-import Bookmark from '../../pages/Bookmark'
-import Articles from '../Articles'
-import Bookcase from '../../pages/Bookcase'
+import LearningDashboard from '../learning/LearningDashboard';
 
-function Library() {
-  return (
-    <>
-    
-    <Bookmark name={"Resources"}/>
-      <Bookcase /> 
-
-    </>
-  )
+export default function Library() {
+  return <LearningDashboard />;
 }
-
-export default Library

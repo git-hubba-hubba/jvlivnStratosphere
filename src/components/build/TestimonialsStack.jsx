@@ -75,52 +75,42 @@ const testimonialsData = [
   { name: "Sabrina White", role: "Tech Community Organizer", rating: 5, text: "The care and quality were immediately noticeable." },
   { name: "Trevor Collins", role: "Junior Software Engineer", rating: 5, text: "Clear, practical, and confidence-building." }
 ];
-const MAX_VISIBLE = 4;
-const STACK_OFFSET = 22;
-
 export default function TestimonialsQueue() {
-  const [queue, setQueue] = useState([]);
-  const [index, setIndex] = useState(0);
+  const [step, setStep] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setQueue((prev) => {
-        const next = testimonialsData[index];
-        const updated = [...prev, next];
-        return updated.slice(-MAX_VISIBLE);
-      },);
-
-      setIndex((i) => (i + 1) % testimonialsData.length);
-    }, 3000);
-
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (paused || motion.matches) return;
+    const interval = setInterval(() => setStep(value => value + 1), 6000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, [paused]);
+
+  const current = step % testimonialsData.length;
+  const visible = step === 0 ? [current] : [
+    (current - 1 + testimonialsData.length) % testimonialsData.length,
+    current,
+  ];
 
   return (
-    <div className="queue-container">
-      {queue.map((review, i) => (
-        <div
-          key={i}
-          className="queue-card"
-          style={{
-            transform: `translateY(${i * STACK_OFFSET}px)`,
-            zIndex: i
-          }}
-        >
+    <div className="queue-container" aria-label="Customer reviews" aria-live="off"
+      onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      {visible.map(index => {
+        const review = testimonialsData[index];
+        const active = index === current;
+        return <div key={review.name}
+          className={`queue-card ${active ? 'queue-current' : 'queue-outgoing'}`}
+          aria-hidden={!active}>
           <div className="queue-header">
             <h4>{review.name}</h4>
             <span>{review.role}</span>
           </div>
-
-          <div className="queue-stars">
-            {Array.from({ length: review.rating }).map((_, idx) => (
-              <span key={idx}>★</span>
-            ))}
+          <div className="queue-stars" aria-label={`${review.rating} out of 5 stars`}>
+            <span aria-hidden="true">{"★".repeat(review.rating)}</span>
           </div>
-
           <p>“{review.text}”</p>
-        </div>
-      ))}
+        </div>;
+      })}
     </div>
   );
 }

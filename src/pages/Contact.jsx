@@ -1,9 +1,6 @@
 import React from "react";
 import Namespace from "../components/general/Namespace";
-import Contractor from "../components/build/Contractor";
-import { FlashCard } from "../components/build/FlashCard";
-import Events from "./Events";
-import MajorModelXP from "../components/teach/MajorModelXP";
+import ServiceOfferings from "../components/services/ServiceOfferings";
 import Bookmark from "./Bookmark";
 import Membership from "../components/general/Membership";
 function Contact() {
@@ -97,18 +94,10 @@ function Contact() {
       <Bookmark name="Membership Tiers"/>
       <Membership />  
       {/* <Namespace /> */}
-      <img src="/images/jvlMantra.png" alt="" className="jvlShowcase" />
+      <img src="/images/jvl-services.png" alt="JVLIVN crowned lion and shield overlooking a blue-lit city skyline" className="jvlShowcase services-showcase" width="1672" height="941" loading="lazy" decoding="async" />
       
-      <Bookmark name="Service(s) Offered"/>
-      <div className="flashcard-grid">
-        {allCardInfo.map((crd, i) => {
-          return (
-            <div key={i}>
-              <FlashCard obj={crd} />
-            </div>
-          );
-        })}
-      </div>
+      <Bookmark name="Services Offered"/>
+      <ServiceOfferings services={allCardInfo} />
       <Namespace />
     </>
   );

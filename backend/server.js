@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import process from "node:process";
+import {fileURLToPath} from "node:url";
+import {createAuthRouter} from "./auth/router.js";
 
 dotenv.config();
 
@@ -71,7 +74,12 @@ app.use(cors({
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
 }));
-app.use(express.json());
+app.use(express.json({limit:"32kb"}));
+app.use("/api/auth", createAuthRouter({
+  filename: process.env.AUTH_STORE_PATH || fileURLToPath(new URL("./data/accounts.json", import.meta.url)),
+  origins: (process.env.APP_ORIGINS || "http://localhost:5173,http://127.0.0.1:5173").split(",").map(value => value.trim()),
+  secure: process.env.NODE_ENV === "production",
+}));
 
 // ResumeBuilder
 // app.post("/api/anthropic", async (req, res) => {
