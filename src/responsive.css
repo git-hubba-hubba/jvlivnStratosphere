@@ -31,8 +31,8 @@ input,textarea{opacity:1}
 .navSuperior .navTitle{display:block;margin:0;font-size:inherit}
 .navSuperior .navMain .gm-status{margin:0;max-width:100%;gap:6px;padding:7px 10px;min-height:40px;font-size:11px;justify-self:end;flex-wrap:nowrap}
 .navSuperior .gm-status span+span{padding-left:6px}
-.navSuperior .majorRight>.fancyName{width:100%;margin:4px 0 22px;text-align:center;font-size:clamp(24px,2.7vw,32px)}
-.fancyName{width:auto;max-width:100%;margin:32px auto 20px;font-size:clamp(24px,2.7vw,32px);text-align:center;line-height:1.35;overflow-wrap:anywhere}
+.navSuperior .majorRight>.fancyName{width:100%;margin:4px 0 22px;text-align:right;font-size:clamp(24px,2.7vw,32px)}
+.fancyName{width:auto;max-width:100%;margin:32px auto 20px;font-size:clamp(24px,2.7vw,32px);text-align:right;line-height:1.35;overflow-wrap:anywhere}
 .quadMaster{margin:0 0 30px}
 .qp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:760px;margin:16px auto}
 .qp .quad{width:auto;margin:0;padding:14px 12px;min-height:54px;display:grid;place-items:center}
