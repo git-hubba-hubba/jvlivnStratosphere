@@ -33,7 +33,7 @@ export function ArticleBubble({
 
             {title && <h2 className="articleTitle">{title}</h2>}
             <div style={{alignItems:"center"}}>
-              <img src="/images/jclLogoMajor.png" alt="" className="myguyy" />
+              <img src="/images/main-logo.png" alt="" className="myguyy" />
             </div>
             <div className="articleContent">
               {typeof content === "string" ? <p>{content}</p> : content}

@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
       <div className="jvl-footer-contact">
         <Link className="jvl-footer-brand" to="/home" aria-label="JVLIVN home">
-          <img src="/images/jclLogoMajor.png" alt="" width="48" height="48" loading="lazy" />
+          <img src="/images/main-logo.png" alt="" width="48" height="48" loading="lazy" />
           <span>JVLIVN<small>Technology with purpose.</small></span>
         </Link>
         <div className="jvl-footer-contact-links"><a href="mailto:admin@jvlivn.dev">admin@jvlivn.dev</a><a href="tel:+19292332109">929-233-2109</a></div>

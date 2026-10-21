@@ -78,7 +78,7 @@ function Leaderboard() {
           <form className="jvlCrawler" onSubmit={handleSearch}>
             <button type="submit" className="jvlSearchButton" aria-label="Search glossary">
               <img
-                src="/images/jclLogoMajor.png"
+                src="/images/main-logo.png"
                 alt=""
                 className="jvlSrch"
               />

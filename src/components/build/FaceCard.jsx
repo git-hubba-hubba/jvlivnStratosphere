@@ -4,7 +4,7 @@ function FaceCard({ obj }) {
   return (
     <>
       <img
-        src="images/jclLogoMajor.png"
+        src="/images/main-logo.png"
         alt=""
         className="cardCoverer heartbeat"
       />

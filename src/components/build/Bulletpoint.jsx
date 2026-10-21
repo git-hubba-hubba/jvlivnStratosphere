@@ -5,7 +5,7 @@ function Bulletpoint({ txt }) {
     <>
       <div className="barrel">
         <img
-          src="/images/jclLogoMajor.png"
+          src="/images/main-logo.png"
           alt=""
           className="bulletLogo"
         />
