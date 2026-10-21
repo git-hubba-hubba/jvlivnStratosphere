@@ -1,30 +1,5 @@
-import React from "react";
-
-function EventSlice({ obj }) {
-  return (
-    <>
-      <div className="evtSlice">
-        <img src="images/jclLogoMajor.png" alt={obj.eventName} className="evtImg" />
-        <div className="sectionRegulation">
-          <div className="evtDesc">{obj.evtDesc}</div>
-          <div className="evtNamingBox">
-            {obj.evtUrl ? (
-              <a href={obj.evtUrl} target="_blank" rel="noreferrer">
-                {obj.eventName}
-              </a>
-            ) : (
-              obj.eventName
-            )}
-          </div>
-        </div>
-        {/* <img
-          src="https://www.freeiconspng.com/thumbs/calendar-icon-png/calendar-icon-png--0.png"
-          alt=""
-          className="evtSmImg"
-        /> */}
-      </div>
-    </>
-  );
+import {safeEventUrl} from '../components/events/catalog';
+export default function EventSlice({obj,saved,onSave}){
+  const url=safeEventUrl(obj.evtUrl);
+  return <article className="ef-card"><div className="ef-card-top"><span className="ef-mark" aria-hidden="true">{obj.mark||'↗'}</span><span className="ef-kind">{obj.format||'Local event'}</span>{onSave&&<button className="ef-save" aria-label={`${saved?'Unsave':'Save'} ${obj.eventName}`} aria-pressed={saved} onClick={()=>onSave(obj)}>{saved?'★':'☆'}</button>}</div><span className="ef-category">{obj.category||'Technology'}</span><h3>{obj.eventName}</h3><p>{obj.evtDesc}</p>{obj.date&&<div className="ef-date">{obj.date}</div>}<div className="ef-card-bottom">{url?<a href={url} target="_blank" rel="noopener noreferrer">{obj.local?'Event details':'Visit organizer'} <span aria-hidden="true">↗</span></a>:<span className="ef-no-link">Organizer link unavailable</span>}<small>{obj.location||'Check organizer for dates & access'}</small></div></article>;
 }
-
-export default EventSlice;

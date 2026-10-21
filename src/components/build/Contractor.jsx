@@ -1,83 +1,21 @@
-import { React,useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Targeting from "../general/Targeting";
-import Pricing from '../general/Pricing'
-import Engagement from "../general/Engage"
-import Solutions from "../general/Solutions";
-import MajorModelXP from "../teach/MajorModelXP";
-import Membership from "../general/Membership";
-import ResumeTailor from "./../build/ResumeTailor";
-import Engage from "../general/Engage";
-import RippableFlyerCarousel from "../teach/RippableFlyerCarousel";
-import EventPage from "../../pages/EventPage";
-import InternalEvPage from "../../pages/InternalEvPage";
-import InquireForm from "../general/InquireForm";
-
-function Contractor() {
-    const [currentSlide,setCurrentSlide] = useState("")
-  return (
-    <div>
-   
-
-      <div className="movieScreen">
-      <nav className="navMain">
-          <div className="navBtn">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/245/245904.png"
-              alt=""
-              className="navImg" onClick={()=>{
-                setCurrentSlide("pricing")
-              }}
-            />
-            <div className="navTitle">Paid</div>
-          </div>
-
-          <div className="navBtn">
-            <img
-              src="https://static.thenounproject.com/png/87667-200.png"
-              alt=""
-              className="navImg" onClick={()=>{
-                setCurrentSlide("engagement")
-              }}
-            />
-            <div className="navTitle">Local</div>
-          </div>
-
-          <div className="navBtn">
-            <img
-              src="https://static.thenounproject.com/png/2191323-200.png"
-              alt=""
-              className="navImg" onClick={()=>{
-                setCurrentSlide("targeting")
-              }}
-            />
-            <div className="navTitle">Nearby</div>
-          </div>
-          <div className="navBtn">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5471/5471074.png"
-              alt=""
-              className="navImg" onClick={()=>{
-                setCurrentSlide("solutions")
-              }}
-            />
-            <div className="navTitle">Inquiry</div>
-          </div>
-
-        </nav>
-        <div className="screen">
-          
-          {currentSlide === ""? <img src="/images/jclLogoMajor.png" alt="" className="lionShare" /> : ""}
-            {currentSlide === "pricing" ? <><InternalEvPage /></> : "" }
-            {currentSlide === "engagement" ? <>  <EventPage/> </> : "" }
-            {currentSlide === "solutions" ? <> <InquireForm/></> : "" }
-            {currentSlide === "targeting" ? <><Targeting/></> : ""}
-
-        </div>
-      
-      </div>
-    </div>
-  );
+import {useState} from 'react';
+import {Link} from 'react-router-dom';
+import EventPage from '../../pages/EventPage';
+import EventSlice from '../../pages/EventSlice';
+import {learningStorage} from '../account/learningStorage';
+import {eventSources} from '../events/catalog';
+import '../events/events.css';
+const storageKey='jvl-saved-events-v1';
+function readSaved(){try{const items=JSON.parse(learningStorage.getItem(storageKey));return Array.isArray(items)?items.filter(item=>item&&typeof item.id==='string'&&typeof item.eventName==='string'):[];}catch{return [];}}
+export default function Contractor(){
+  const [tab,setTab]=useState('discover');const [query,setQuery]=useState('');const [category,setCategory]=useState('All topics');const [saved,setSaved]=useState(readSaved);const [notice,setNotice]=useState('');
+  function toggleSave(item){const next=saved.some(event=>event.id===item.id)?saved.filter(event=>event.id!==item.id):[...saved,item];setSaved(next);try{learningStorage.setItem(storageKey,JSON.stringify(next));setNotice('');}catch{setNotice('Your saved events are available for this visit, but could not be saved in this browser.');}}
+  const source=tab==='saved'?saved:eventSources;
+  const filtered=source.filter(item=>(category==='All topics'||item.category===category)&&`${item.eventName} ${item.evtDesc} ${item.category}`.toLowerCase().includes(query.toLowerCase()));
+  function changeTab(next){setTab(next);setQuery('');setCategory('All topics');}
+  return <section className="ef-finder" aria-label="Event Finder"><header className="ef-hero"><div><span className="ef-eyebrow">LEARN SOMETHING. MEET SOMEONE. BUILD WHAT’S NEXT.</span><h2>Your next connection<br/>starts here.</h2><p>Find your people in tech. Explore developer conferences, discover events nearby, and keep a shortlist of what interests you.</p><div className="ef-hero-actions"><button onClick={()=>changeTab('nearby')}>Find events near me <span aria-hidden="true">↗</span></button><span>For builders, learners & curious minds.</span></div></div><div className="ef-hero-logo"><img src="/images/main-logo.png" alt="JVLIVN crowned lion logo" width="260" height="280" loading="lazy"/><span>GOOD IDEAS START WITH CONNECTION.</span></div></header>
+    <nav className="ef-tabs" aria-label="Event Finder views">{[['discover','Discover'],['nearby','Near you'],['saved',`Saved (${saved.length})`]].map(([id,label])=><button key={id} aria-current={tab===id?'page':undefined} onClick={()=>changeTab(id)}>{label}</button>)}<span>EXPLORE BEYOND THE SCREEN</span></nav>
+    <div className="ef-content">{notice&&<p className="ef-error" role="status">{notice}</p>}{tab==='nearby'?<EventPage saved={saved} onSave={toggleSave}/>:<><div className="ef-section-heading"><div><span className="ef-eyebrow">{tab==='saved'?'YOUR SHORTLIST':'THE ORGANIZER DIRECTORY'}</span><h3>{tab==='saved'?'Make room for what’s next.':'Big ideas. Real connections.'}</h3><p>{tab==='saved'?'Your saved organizers and events, stored in this browser.':'Explore tech communities and event organizers. Follow their links for current dates, availability, and pricing.'}</p></div><span className="ef-total">{source.length} {tab==='saved'?'saved':'organizers'}</span></div><div className="ef-controls"><label>Search {tab==='saved'?'your shortlist':'organizers'}<input type="search" placeholder="Search AI, cloud, careers…" value={query} onChange={event=>setQuery(event.target.value)}/></label><label>Topic<select value={category} onChange={event=>setCategory(event.target.value)}>{['All topics',...new Set(source.map(item=>item.category).filter(Boolean))].map(topic=><option key={topic}>{topic}</option>)}</select></label></div><p className="ef-results" role="status">{filtered.length} {tab==='saved'?'saved items':'organizers'}{query?' matching your search':''}</p><div className="ef-grid">{filtered.map(item=><EventSlice key={item.id} obj={item} saved={saved.some(event=>event.id===item.id)} onSave={toggleSave}/>)}</div>{!filtered.length&&<div className="ef-empty"><h3>{tab==='saved'&&!source.length?'Your next adventure belongs here.':'No matches just yet.'}</h3><p>{tab==='saved'&&!source.length?'Use the star on any organizer or event to save it for later.':'Try a different search or topic.'}</p><button onClick={()=>{if(!source.length)changeTab('discover');else{setQuery('');setCategory('All topics');}}}>{!source.length?'Explore organizers':'Clear filters'}</button></div>}</>}
+    <footer className="ef-footer"><span>Bringing a tech community together?</span><Link to="/about">Connect with JVLIVN →</Link></footer></div>
+  </section>;
 }
-
-export default Contractor;

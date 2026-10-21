@@ -70,3 +70,9 @@ Local `npm run dev` still uses the existing Vite proxy to Express on port 3001.
 npm run build
 node --test backend/auth/*.test.js src/components/gamification/rules.test.js
 ```
+
+## Event Finder
+
+The Process page includes Discover (organizer directory), Near you (US ZIP-code search within 15 miles), and Saved views. Organizer cards link to the organizer for current dates and pricing; they are not presented as confirmed upcoming events. Saved items use the existing per-account browser storage.
+
+Local search requires `PREDICTHQ_ACCESS_TOKEN` on the backend. Vite and the Cloudflare Pages Function proxy `/api/predicthq/events` to the backend. Deploy the root `functions` folder and updated `public/_routes.json` with the frontend. Empty results and provider failures appear explicitly in the finder.

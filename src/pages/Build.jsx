@@ -9,32 +9,32 @@ import Recruit from "./Recruit";
 function Build() {
   const stepCalculator = [
     {
-      img: "/images/jclwireframe.png",
+      img: "/images/lion-planning.png",
       title: " Initial Consultation",
       desc: "We begin by understanding your goals, users, and technical requirements. This phase ensures alignment on scope, functionality, timelines, and success criteria before development begins.",
     },
     {
-      img: "/images/jvlVscode.png",
+      img: "/images/lion-web-development.png",
       title: " Front End Framework",
       desc: "We design and build a modern, responsive user interface using industry-standard frameworks. The focus is on usability, performance, and a clean experience across mobile and web platforms.",
     },
     {
-      img: "/images/jvlBE.png",
+      img: "/images/lion-backend.png",
       title: " BackEnd Connectivity",
       desc: "We develop secure and scalable backend services that power your application. This includes APIs, databases, authentication, and integrations to ensure reliable data flow and system performance",
     },
     {
-      img: "/images/jvlYT.png",
+      img: "/images/lion-tutorial.png",
       title: " Feature Review and Connectivity ",
       desc: "We review core features and confirm system connectivity across all components. This step ensures frontend and backend features are properly integrated, functional, and aligned with application requirements.",
     },
     {
-      img: "/images/jvlTed.png",
+      img: "/images/lion-speaking.png",
       title: " Application Review & Finalization",
       desc: "We conduct thorough testing, optimization, and quality assurance to ensure stability, security, and functionality. Feedback is incorporated to finalize the application for production readiness.",
     },
     {
-      img: "/images/jvlFinal.png",
+      img: "/images/lion-product-launch.png",
       title: " Delivery & Deployment",
       desc: "We deploy the application to the appropriate production environment and ensure a smooth launch. Final documentation, handoff, and post-deployment support are provided as needed.",
     },
