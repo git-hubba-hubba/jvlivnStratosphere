@@ -1,3 +1,4 @@
+import {communityAction} from './community.js';
 import {Buffer} from 'node:buffer';
 import {mkdir, readFile, writeFile, rename} from 'node:fs/promises';
 import {dirname} from 'node:path';
@@ -33,6 +34,7 @@ export function createAccountStore(filename){
   return {
     async register(input){const {email,password}=credentials(input);const profile=validateProfile(input);const salt=randomBytes(16).toString('hex');const passwordHash=(await scrypt(password,salt,64,{N:32768,maxmem:64*1024*1024})).toString('hex');return transaction(data=>{if(data.users.some(u=>u.email===email))throw new AuthError('An account with this email already exists. Try logging in.',409);const user={...profile,id:randomUUID(),email,salt,passwordHash,createdAt:new Date().toISOString()};data.users.push(user);return issue(data,user);});},
     async login(input){let creds;try{creds=credentials(input);}catch{throw new AuthError('Email or password is incorrect.',401);}await queue;const existing=(await load()).users.find(u=>u.email===creds.email);const salt=existing?.salt||'00000000000000000000000000000000';const hash=await scrypt(creds.password,salt,64,{N:32768,maxmem:64*1024*1024});if(!existing||!timingSafeEqual(hash,Buffer.from(existing.passwordHash,'hex')))throw new AuthError('Email or password is incorrect.',401);return transaction(data=>issue(data,data.users.find(u=>u.id===existing.id)));},
+    async community(token,action,input){if(action==='list'){await queue;const data=await load();return communityAction(data,findUser(data,token),action,input);}return transaction(data=>communityAction(data,findUser(data,token),action,input));},
     async me(token){await queue;return publicUser(findUser(await load(),token));},
     async update(token,input){const profile=validateProfile(input);return transaction(data=>{const user=findUser(data,token);Object.assign(user,profile);return publicUser(user);});},
     logout(token){return transaction(data=>{if(typeof token==='string')data.sessions=data.sessions.filter(s=>s.tokenHash!==tokenHash(token));return {ok:true};});},

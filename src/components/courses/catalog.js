@@ -1,6 +1,17 @@
+import automationIcon from '../../assets/course-icons/automation.svg';
+import javascriptIcon from '../../assets/course-icons/javascript.svg';
+import mernIcon from '../../assets/course-icons/mern.svg';
+import reactIcon from '../../assets/course-icons/react.svg';
+import nodeIcon from '../../assets/course-icons/node.svg';
+import securityIcon from '../../assets/course-icons/security.svg';
+import pentestingIcon from '../../assets/course-icons/pentesting.svg';
+import cloudIcon from '../../assets/course-icons/cloud.svg';
+import interviewsIcon from '../../assets/course-icons/interviews.svg';
+import careerIcon from '../../assets/course-icons/career.svg';
+
 const subjects = [
     {
-      img: "https://n8n.io/brandguidelines/dont/vertical-align.png",
+      img: automationIcon,
       subName: "Agentic Sys Development",
       subDesc:
         "Unlock the power of automation with n8n, the fair-code workflow automation tool that lets you connect apps, APIs, and databases with ease. In this hands-on course, you’ll learn how to design, build, and deploy scalable automation workflows without relying on expensive SaaS tools.",
@@ -16,7 +27,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/960px-Unofficial_JavaScript_logo_2.svg.png",
+      img: javascriptIcon,
       subName: "JavaScript Programming",
       subDesc:
         "Teach core to advanced JavaScript concepts including variables, functions, ES6+, asynchronous programming, APIs, and real-world problem solving used in modern web applications.",
@@ -32,7 +43,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://www.mangoitsolutions.com/wp-content/uploads/2022/01/becomeamernstackdeveloper-mobile-300x279.png",
+      img: mernIcon,
       subName: "Full-Stack Web Development (MERN)",
       subDesc:
         "Hands-on instruction in building full-stack applications using MongoDB, Express, React, and Node.js, covering frontend UI, backend APIs, authentication, and deployment.",
@@ -48,7 +59,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+      img: reactIcon,
       subName: "React Development",
       subDesc:
         "Focused training on React fundamentals and advanced concepts such as hooks, state management, component architecture, and building scalable, production-ready user interfaces.",
@@ -64,7 +75,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://images.credly.com/images/51aeb74b-ec87-4069-93fc-0ea449c8d77f/twitter_thumb_201604_node.png",
+      img: nodeIcon,
       subName: "Backend Development with Node.js",
       subDesc:
         "Teach server-side development using Node.js and Express, including REST APIs, middleware, authentication, database integration, and secure application design.",
@@ -80,7 +91,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://img.freepik.com/premium-vector/cyber-security-logo-icon-symbol-vector-illustration-modern-cyber-security-logo_1123785-4541.jpg",
+      img: securityIcon,
       subName: "Cybersecurity Fundamentals",
       subDesc:
         "Introduction to cybersecurity concepts including threat models, vulnerabilities, attacks, defensive strategies, and foundational security principles aligned with Security+ objectives.",
@@ -96,7 +107,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://www.oreilly.com/api/v2/epubs/urn:orm:book:9781492069485/files/images/page212.jpg",
+      img: pentestingIcon,
       subName: "Ethical Hacking & Penetration Testing Basics",
       subDesc:
         "Introductory penetration testing concepts including reconnaissance, scanning, vulnerability assessment, and ethical hacking methodologies using tools like Kali Linux.",
@@ -112,7 +123,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png",
+      img: cloudIcon,
       subName: "Cloud Computing Fundamentals",
       subDesc:
         "Cover cloud concepts including IaaS, PaaS, SaaS, virtualization, identity and access management, and AWS and Azure fundamentals for beginners.",
@@ -128,7 +139,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png",
+      img: interviewsIcon,
       subName: "Technical Interview & Coding Prep",
       subDesc:
         "Prepare students for technical interviews with coding challenges, data structures, algorithms, problem-solving strategies, and real-world engineering scenarios.",
@@ -144,7 +155,7 @@ const subjects = [
       ]
     },
     {
-      img: "https://t4.ftcdn.net/jpg/04/52/93/93/360_F_452939372_33TpmMySxDxez38m7B55TM0hbTrG0oKm.jpg",
+      img: careerIcon,
       subName: "Career Development in Tech",
       subDesc:
         "Guide students on breaking into tech roles through resume building, portfolio projects, interview strategies, and navigating career paths in software and cybersecurity.",

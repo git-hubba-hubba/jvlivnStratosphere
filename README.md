@@ -22,6 +22,12 @@ Accounts use salted scrypt password hashes and opaque sessions in HttpOnly, Same
 
 Learning notes, coding drafts, demo progress, XP, and membership preferences remain stored in the browser under each account ID. Pre-account browser progress is attached to the first account signed in on that browser. Account details persist on the backend; learning data does not yet sync between devices.
 
+## Member community
+
+Insights → Community hub provides topic channels and a Code review & Q&A section. Members can post discussions or questions, add up to five tags, attach an HTTPS GitHub repository/file/issue/PR link and a code snippet, reply, and toggle a helpful vote. Question authors can accept or unaccept an answer. Posts refresh every 15 seconds.
+
+Community content is shared across signed-in members and persists alongside accounts in `AUTH_STORE_PATH`; it is not browser-local. The existing same-origin `/api/auth` proxy carries `GET /community` and `POST /community/{create,reply,vote,accept}`. Authors come from the server session, and answer acceptance is restricted to the question author. Deploy both the frontend and backend changes. The same single-process and persistent-disk requirements as accounts apply.
+
 ## Hosting
 
 Serve the frontend and `/api/auth` on the same origin through a reverse proxy. Use HTTPS, set `NODE_ENV=production` for Secure session cookies, and set `APP_ORIGINS` to the exact public frontend origin (comma-separated for multiple origins). Persist and protect the account-store directory. There is no email verification or password-recovery email service configured.

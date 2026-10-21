@@ -1,84 +1,91 @@
-/* A shared frozen skin; decoration never intercepts controls or covers copy. */
-:root{--ice-ink:#173b59;--ice-muted:#536776;--ice-line:#cbd5df;--ice-silver:#b8c5d2;--ice-white:#ffffff;--ice-blue:#126591;--ice-surface:rgba(249,254,255,.9)}
-html{background:#f2f5f8}
-body{background:radial-gradient(ellipse at 5% 0%,#d9edfb80,transparent 44%),radial-gradient(ellipse at 100% 28%,#e0e7ef99,transparent 46%),linear-gradient(160deg,#ffffff,#f5f8fb 48%,#eaf2f8);color:var(--ice-muted);background-attachment:fixed}
-body::before{content:'';position:fixed;inset:0 0 auto;height:52px;background:url('/images/frost-icicles.svg') repeat-x top center / 350px 52px;pointer-events:none;z-index:1;opacity:.7}
-body::after{content:'';position:fixed;inset:0;background:url('/images/frost-veins.svg') repeat top left / 640px 640px;pointer-events:none;z-index:0;opacity:.6}
-#root{position:relative;z-index:2;background:transparent}
-::selection{background:#a9ddf5;color:#123b58}
-.nameStretch .letta{color:#5c8caa;text-shadow:0 1px 0 #fff,0 3px 12px #8bc9ed45}
-.majorLeft .gifMe{filter:drop-shadow(0 7px 18px #4d9fd333)}
-.descriptionUpper .smSay{color:#567e99}
-.navSuperior .navMain{position:relative;background:linear-gradient(110deg,#fffffff5,#eef2f6ed 60%,#fffffff5);border:1px solid var(--ice-silver);border-radius:13px;box-shadow:inset 0 1px 0 #fff,0 6px 22px #70a8cd17;padding:12px 8px;backdrop-filter:blur(12px)}
-.navSuperior .navMain::after{content:'';position:absolute;left:8px;right:8px;top:calc(100% - 2px);height:22px;background:url('/images/frost-icicles.svg') repeat-x top / 220px 33px;opacity:.65;pointer-events:none;z-index:1}
-.navSuperior .navBtn>a{color:#426a85}
-.navSuperior .navBtn>a:hover,.navSuperior .navBtn>a[aria-current=page]{background:linear-gradient(135deg,#d6edfc,#f4fbff);color:#155984;box-shadow:inset 0 0 0 1px #abd3ea,inset 0 1px 0 #fff}
-.navSuperior .majorRight>.fancyName{margin-top:16px;color:#467c9b;opacity:1;text-shadow:0 1px 0 #fff}
-.fancyName{color:#5d87a1;opacity:1;text-shadow:0 1px 0 #fff}
-:where(.lc-dashboard,.dc-learn,.ac-profile,.in-page,.sv-section){color:var(--ice-ink)}
-:where(.lc-dashboard,.dc-learn,.ac-profile,.in-page,.sv-section) :is(p,.lc-muted,.dc-muted,.sv-description,.in-summary,.ac-storage-note){color:var(--ice-muted)}
-:is(.lc-panel,.lc-course,.dc-content,.dc-outline,.dc-catalog-card.subMatter,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep){background:linear-gradient(140deg,#fffffff5 0%,#f8fafced 60%,#edf3f8eb 100%);border:1px solid var(--ice-line);box-shadow:inset 0 1px 0 #fff,inset 1px 0 0 #fff8,0 8px 24px #4a8db010;backdrop-filter:blur(9px)}
-:is(.lc-course,.dc-catalog-card,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep){position:relative}
-:is(.dc-catalog-card,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep)::after{content:'';position:absolute;left:10px;right:10px;top:calc(100% - 1px);height:16px;background:url('/images/frost-icicles.svg') repeat-x top / 165px 25px;pointer-events:none;opacity:.5;z-index:1}
-:is(.dc-catalog-card,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep):hover{border-color:#89bfdc;box-shadow:inset 0 1px 0 #fff,0 10px 25px #65a7ce1c}
-.lc-dashboard{--lc-ink:var(--ice-ink);--lc-muted:var(--ice-muted);--lc-line:var(--ice-line);--lc-accent:#176c98;background:linear-gradient(145deg,#f4f8fbd9,#ffffffd9);border:1px solid var(--ice-line);border-radius:16px}
-:is(.lc-eyebrow,.dc-eyebrow,.sv-eyebrow,.ac-eyebrow,.in-eyebrow){color:#3d6d8e}
-.lc-dashboard .lc-primary,.dc-learn .dc-primary,.ac-auth .ac-primary,.ac-profile .ac-primary{background:linear-gradient(140deg,#277fab,#17567d);border:1px solid #125c85;color:#fff;box-shadow:inset 0 1px 0 #ffffff50,0 3px 8px #2976a124}
-.lc-dashboard .lc-primary:hover:not(:disabled),.dc-learn .dc-primary:hover:not(:disabled),.ac-auth .ac-primary:hover:not(:disabled),.ac-profile .ac-primary:hover:not(:disabled){background:linear-gradient(140deg,#258aba,#124c73);border-color:#6eb5da}
-:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page) button:not(.lc-primary,.dc-primary,.ac-primary,.gm-status,.gm-top>button,.gm-toast button){border-color:#bddbea}
-:is(.lc-dashboard,.dc-learn,.ac-profile,.in-page) button:hover:not(:disabled,.lc-primary,.dc-primary,.ac-primary,.gm-status){background:#e1f2fc;color:#155879}
-:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page) :is(input:not([type=radio],[type=checkbox]),textarea,select){border-color:var(--ice-silver);background:var(--ice-white);color:#234d69;box-shadow:inset 0 2px 5px #83b3d00a}
-.lc-dashboard .lc-editor{background:#102a40;color:#d5efff;border:1px solid #426e89;box-shadow:inset 0 1px 12px #051a2e55}
-.lc-editor-label{background:#1e415a;color:#e3f6ff;border:1px solid #426e89;border-bottom:0}
-.lc-editor-label span{color:#b1d7ed}
-.lc-dashboard .lc-hero{position:relative;background:radial-gradient(ellipse at 90% 20%,#61b2da45,transparent 50%),linear-gradient(125deg,#113751,#1a5478 75%,#377e9f);border:1px solid #8fc4e5;box-shadow:inset 0 1px 0 #ddf6ff6b,0 10px 30px #4c8eb326}
-.lc-hero::before{content:'';position:absolute;inset:0 0 auto;height:28px;background:url('/images/frost-icicles.svg') repeat-x top / 260px 39px;pointer-events:none;opacity:.55}
-.lc-hero .lc-eyebrow{color:#b9e4fc}.lc-hero p,.lc-hero small{color:#d0eafa}.lc-hero .lc-primary{background:linear-gradient(130deg,#effbff,#bee4f8);color:#174b6b;border-color:#d8f2ff}.lc-hero .lc-primary:hover:not(:disabled){background:#d8f2ff;color:#174b6b}.lc-hero-art{border-color:#b6e2f74d;background:linear-gradient(130deg,#d9f6ff17,#b6dfff06),url('/images/frost-veins.svg') center / 500px}.lc-hero-art>span{color:#d4f1ff;text-shadow:0 0 30px #a4ddff4a}.lc-hero-art>div{background:#0b2e47;color:#bfe4f8;border:1px solid #659dbc60}
-.lc-course-art,.lc-course-art.tone-1,.lc-course-art.tone-2,.lc-course-art.tone-3{background:linear-gradient(140deg,#d8effe,#effaff 55%,#c5e3f6);color:#467e9e;border-bottom:1px solid #c8e3f2}
-.lc-course-art.tone-1{background:linear-gradient(130deg,#e7eaff,#e6f5ff);color:#6b7aa7}.lc-course-art.tone-2{background:linear-gradient(130deg,#e0f6fa,#ebfaff);color:#447e93}
-:is(.lc-tabs button.active,.lc-dashboard button.active,.dc-outline button[aria-current],.dc-check fieldset label.selected,.dc-category-filters button[aria-pressed=true],.in-tabs button[aria-current],.in-filters button[aria-pressed=true]){background:linear-gradient(135deg,#d9f0ff,#f4fcff);border-color:#9bcbe6;color:#245b7b}
-:is(.lc-tag,.dc-meta span,.in-article-meta>span){background:#e3f3fd;color:#426f8b}
-:is(.dc-card-project,.dc-check,.dc-example,.lc-output,.lc-prompt,.dc-learn pre){background:#edf7fde6;border-color:#c8e3f1;color:#365f7b}
-.dc-check fieldset label{background:#fafdff;border-color:#d3e7f3}
-.dc-learn .dc-lab-result{background:#e8f6ff;border-color:#b5d8ed;color:#315e78}
-.dc-counter-grid>div{background:linear-gradient(145deg,#ffffffd9,#dceffc);border-color:#badbed}
-.dc-code.lc-dashboard{background:transparent;border:0}
-.sv-card{--sv-accent:#32779e;--sv-wash:#e0f2fd}.sv-icon{background:linear-gradient(140deg,#f7fdff,#c9e8fc);border:1px solid #c4e3f5;color:#3a7ba1;box-shadow:inset 0 1px 0 white}.sv-purple .sv-icon{color:#6c7ca4}.sv-rose .sv-icon{color:#6b7fa0}.sv-price{border-color:#c5dfed}.sv-price strong{color:#285a7b}
-.memberLounge .tierSep:hover{color:#244c68;background:linear-gradient(145deg,#fafdff,#d9edf9)}
-.memberLounge .tierPrice{color:#416f91!important}.memberLounge .megallion{border-color:#cae8f9;box-shadow:0 0 20px #a0d7f552}.gm-plan-button[aria-pressed=true]{background:#dbf0fe;border-color:#95c5e3}
-.sv-section .sv-heading h2,.dc-intro h1,.in-intro h1,.ac-panel h2,.ac-profile-heading h1,.dc-content>h3{color:#244b69;text-shadow:0 1px 0 #fff}
-.ac-auth{position:relative;background:#f7fcffed;border-color:#bcdff0;box-shadow:inset 0 1px 0 #fff,0 18px 65px #448db21c}
-.ac-auth::before{content:'';position:absolute;left:0;right:0;top:0;height:25px;background:url('/images/frost-icicles.svg') repeat-x top / 220px 33px;pointer-events:none;z-index:1;opacity:.65}
-.ac-auth-story{background:radial-gradient(ellipse at top left,#d1ecff,transparent 70%),linear-gradient(160deg,#e8f7ff,#dfedfc)}
-.ac-auth-story>img{filter:drop-shadow(0 7px 18px #6bafdf2b)}
-.ac-auth-switch{background:#e0eff9}.ac-auth-switch>a[aria-current]{background:#f8fdff;color:#28618b;box-shadow:inset 0 1px 0 white,0 2px 8px #78b4d52b}.ac-password{background:#fbfeff;border-color:#bad9ea}
-.ac-profile-artwork{background:radial-gradient(ellipse at center,#fff,#e2f2fe);border-color:#b8daee;box-shadow:inset 0 1px 0 white,0 10px 30px #6197b512}
-.ac-achievement-banner{position:relative;background:linear-gradient(130deg,#edfaff,#dcedfb);border-color:#b1d6eb;box-shadow:inset 0 1px 0 white}.ac-profile .gm-status,.gm-status{background:linear-gradient(140deg,#f9feff,#ddf0fc);color:#285d7e;border-color:#a3cee6;box-shadow:inset 0 1px 0 white}.gm-status span+span{border-color:#b3d6e9}.gm-status:hover{background:#e5f5ff}.gm-dialog{background:linear-gradient(145deg,#fafdff,#eaf6ff);border-color:#aacfe8;color:#284e69;box-shadow:inset 0 1px 0 white,0 18px 70px #123f6550}.gm-dialog::backdrop{background:#13324c94;backdrop-filter:blur(5px)}.gm-badge,.gm-badge.earned{background:linear-gradient(135deg,#ffffffec,#e6f5ff);border-color:#abd0e7}.gm-badge.locked{background:#f3f9fc;border-color:#d4e6ef}.gm-membership{background:#f3fbff;border-color:#c1dfea}.gm-toast{background:linear-gradient(130deg,#194565,#246e97);border:1px solid #b7ddf4;box-shadow:inset 0 1px 0 #ffffff52,0 8px 35px #1c5d8c33}
-.footerMain{position:relative;border:1px solid #b5d8eb;border-radius:14px;background:linear-gradient(145deg,#fffffff0,#e9eff5de);box-shadow:inset 0 1px 0 #fff;color:#587d97}.footerMain::before{content:'';position:absolute;top:0;left:0;right:0;height:24px;background:url('/images/frost-icicles.svg') repeat-x top / 210px 31px;pointer-events:none;opacity:.6}.footerMain .footSplitter{padding-top:12px}.footSmaller:hover{color:#1f668f}
-.qp .quad{border:1px solid var(--ice-silver);background:linear-gradient(135deg,#fffffff5,#eaf0f6);border-radius:10px;box-shadow:inset 0 1px 0 #fff;color:#446d88}.qp .quad:hover{background:#dbf0ff;border-color:#82b9db}
-.stepContainer .stepPhoto{border-color:#b7d7ee;border-radius:14px;box-shadow:0 6px 18px #82b3d224}.stepHeader{border-color:#b7d8ed;border-radius:8px;background:#edf8ff;color:#3d6e8d}.containerB,.screen{border:1px solid #acd2ea;border-radius:12px;background:#edf8ffe6}.containerB .open-trigger,.containerA .open-trigger,.containerC .open-trigger{background:linear-gradient(135deg,#b9d9ef,#e4f4ff);color:#345c79;border-color:#b4d6eb!important;box-shadow:inset 0 1px 0 #fff}.syllabus{background:#e0f1fc;color:#356c91}.lilSyll{background:#f7fcff;border-color:#c3dfef}
-.tv-modal,.articleModal{background:#f0f9ff;border:1px solid #a9d1ea;box-shadow:inset 0 1px 0 white,0 0 45px #8bcdfd2e}.modal-header{background:linear-gradient(130deg,#e6f5ff,#f7fdff);border-color:#badced;color:#396b8a}.modal-content{background:linear-gradient(150deg,#f7fcff,#eaf5fc)}
-.in-community .queue-card{background:transparent;box-shadow:none;border:0}.in-community .queue-header h4,.in-community .queue-card p{color:#50758f}.in-community .queue-header span{color:#63869d}.in-community .queue-stars{color:#6eabc9}
-.lion-entrance{background:radial-gradient(ellipse at 50% 43%,#fff 12%,#eaf1f8 80%),#f4f7fb;color:#214f70}.lion-entrance::before{content:'';position:absolute;top:0;left:0;right:0;height:clamp(35px,7vh,65px);background:url('/images/frost-icicles.svg') repeat-x top / 440px 66px;pointer-events:none;opacity:.8}.lion-entrance::after{content:'';position:absolute;inset:0;background:url('/images/frost-veins.svg') center / 600px;opacity:.55;pointer-events:none;z-index:-1}.entrance-orbit{border-color:#adcfe9;background:radial-gradient(circle,#d2edff55,transparent 65%);box-shadow:0 0 40px #a1d4f22b,inset 0 0 28px #fff8}.entrance-orbit::after{border-color:#b8dbf1}.entrance-progress span{background:#bfdced}.entrance-progress span.complete{background:#367eac;box-shadow:0 0 8px #91d5f7}.entrance-skip{color:#477a9c;border-color:#a0c8e3}
-@media(max-width:600px){body::before{height:30px;background-size:250px 38px;opacity:.55}.navSuperior .navMain{padding:10px 4px}.navSuperior .navMain::after{height:16px;background-size:170px 25px}:is(.dc-catalog-card,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep)::after{height:12px;background-size:130px 20px}.lc-hero::before{height:20px;background-size:210px 31px}.lc-dashboard{border-radius:12px}.ac-auth::before{height:18px;background-size:170px 25px}}
-@media(prefers-reduced-motion:reduce){body{background-attachment:scroll}}
-@media print{body::before,body::after,.navSuperior .navMain::after,.lion-entrance::before,:is(.dc-catalog-card,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep)::after{display:none}body,#root{background:#fff}}
-
-/* Silver trim and white highlights keep the ice blue accents crisp. */
-.sv-icon{background:linear-gradient(140deg,#fff,#edf1f5 55%,#dcebf6);border-color:var(--ice-silver);box-shadow:inset 0 1px 0 #fff,0 2px 6px #526b8010}
-.ac-profile .gm-status,.gm-status{background:linear-gradient(140deg,#fff,#edf2f7 65%,#dfedf7);border-color:var(--ice-silver);box-shadow:inset 0 1px 0 #fff,0 2px 8px #526b8012}
-.gm-badge.earned{background:linear-gradient(135deg,#fff,#f2f5f8 55%,#e2f1fb);border-color:var(--ice-silver);box-shadow:inset 0 1px 0 #fff}
-.ac-profile-artwork{background:radial-gradient(ellipse at center,#fff 35%,#eef2f6 75%,#e1edf7);border-color:var(--ice-silver)}
-.ac-achievement-banner{background:linear-gradient(130deg,#fff,#edf2f7 65%,#dfedf8);border-color:var(--ice-silver)}
-.ac-auth-switch{background:#e9eef3}
-.footerMain .footSplitter{border-color:var(--ice-line)}
-.lc-hero,.lc-dashboard .lc-editor{border-color:var(--ice-silver)}
-:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page,.sv-section) :is(button,a,input,textarea,select):focus-visible{outline:2px solid #327ba5;outline-offset:3px}
-
-/* Frost follows the lion mark itself, with no enclosing cube or panel. */
+/* Shared brand palette, drawn from the royal-blue and white lion crest. */
+:root{
+  --brand-blue:#0750e8;
+  --brand-blue-hover:#063db5;
+  --brand-navy:#082d80;
+  --brand-ink:#112b53;
+  --brand-muted:#526581;
+  --brand-white:#fff;
+  --brand-surface:#f3f6ff;
+  --brand-wash:#e8efff;
+  --brand-line:#cbd8f3;
+  --brand-shadow:0 8px 28px #082d800c;
+}
+html{background:var(--brand-surface)}
+body{background:radial-gradient(ellipse at 0 0,#dce7ff99,transparent 45%),linear-gradient(155deg,#fff,#f3f6ff);color:var(--brand-ink);background-attachment:fixed}
+#root{position:relative;background:transparent}
+::selection{background:#c6d8ff;color:var(--brand-navy)}
+a{color:var(--brand-blue)}
+a:hover{color:var(--brand-blue-hover)}
+.nameStretch .letta{color:var(--brand-navy);text-shadow:none}
 .majorLeft{padding-block:20px 30px}
-.majorLeft>a.frozen-logo-link{display:block;width:min(190px,44vw);margin:8px auto;transition:transform .2s ease}
-.majorLeft .gifMe.frozen-logo,.majorLeft .gifMe.frozen-logo:hover{display:block;width:100%;height:auto;opacity:1;filter:none;overflow:visible}
-.frozen-logo-link:hover{transform:translateY(-2px)}
-.frozen-logo-link:focus-visible{outline:3px solid #75aed2;outline-offset:9px;border-radius:12px}
-@media(prefers-reduced-motion:reduce){.majorLeft>a.frozen-logo-link{transition:none}.frozen-logo-link:hover{transform:none}}
+.majorLeft>a.main-logo-link{display:block;width:min(190px,44vw);margin:8px auto;transition:transform .2s ease}
+.majorLeft .gifMe.main-logo,.majorLeft .gifMe.main-logo:hover{display:block;width:100%;height:auto;opacity:1;filter:none;overflow:visible}
+.main-logo-link:hover{transform:translateY(-2px)}
+.descriptionUpper .smSay{color:var(--brand-muted)}
+.navSuperior .navMain{background:#fff;border:1px solid var(--brand-line);border-radius:13px;box-shadow:var(--brand-shadow);padding:12px 8px}
+.navSuperior .navBtn>a{color:var(--brand-navy)}
+.navSuperior .navBtn>a:hover,.navSuperior .navBtn>a[aria-current=page]{background:var(--brand-wash);color:var(--brand-blue);box-shadow:inset 0 0 0 1px #b8cdfb}
+.navSuperior .majorRight>.fancyName{margin-top:16px;color:var(--brand-navy);opacity:1;text-shadow:none}
+.fancyName{color:var(--brand-navy);opacity:1;text-shadow:none}
+:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page,.sv-section,.hub){color:var(--brand-ink)}
+:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page,.sv-section) :is(p,.lc-muted,.dc-muted,.sv-description,.in-summary,.ac-storage-note){color:var(--brand-muted)}
+:is(.lc-panel,.lc-course,.dc-content,.dc-outline,.dc-catalog-card.subMatter,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep){background:#fff;border:1px solid var(--brand-line);box-shadow:var(--brand-shadow)}
+:is(.dc-catalog-card,.ac-panel,.in-article,.sv-card,.memberLounge .tierSep):hover{border-color:#92b1f7;box-shadow:0 10px 28px #0750e812}
+.lc-dashboard{--lc-ink:var(--brand-ink);--lc-muted:var(--brand-muted);--lc-line:var(--brand-line);--lc-accent:var(--brand-blue);background:var(--brand-surface);border:1px solid var(--brand-line);border-radius:16px}
+:is(.lc-eyebrow,.dc-eyebrow,.sv-eyebrow,.ac-eyebrow,.in-eyebrow){color:var(--brand-blue-hover)}
+:is(.sv-heading h2,.dc-intro h1,.in-intro h1,.ac-panel h2,.ac-profile-heading h1,.dc-content>h3,.hub-heading h2,.hub-gate h2,.hub-empty h3){color:var(--brand-navy);text-shadow:none}
+:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page) button{border-color:var(--brand-line)}
+:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page) button:hover:not(:disabled){background:var(--brand-wash);color:var(--brand-navy)}
+.lc-dashboard .lc-primary,.dc-learn .dc-primary,.ac-auth .ac-primary,.ac-profile .ac-primary,.hub .hub-primary{background:var(--brand-blue);border:1px solid var(--brand-blue);color:#fff;box-shadow:0 3px 10px #0750e820}
+.lc-dashboard .lc-primary:hover:not(:disabled),.dc-learn .dc-primary:hover:not(:disabled),.ac-auth .ac-primary:hover:not(:disabled),.ac-profile .ac-primary:hover:not(:disabled),.hub .hub-primary:hover:not(:disabled){background:var(--brand-blue-hover);border-color:var(--brand-blue-hover);color:#fff}
+:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page) :is(input:not([type=radio],[type=checkbox]),textarea,select){border-color:var(--brand-line);background:#fff;color:var(--brand-ink);box-shadow:none}
+:is(.lc-dashboard,.dc-learn,.ac-profile,.ac-auth,.in-page,.sv-section,.navSuperior) :is(button,a,input,textarea,select):focus-visible,.main-logo-link:focus-visible{outline:3px solid var(--brand-blue);outline-offset:3px}
+:is(.ac-profile,.ac-auth,.dc-learn,.hub) :is(input[type=radio],input[type=checkbox],progress){accent-color:var(--brand-blue)}
+.lc-dashboard .lc-editor{background:#081d42;color:#e5eeff;border:1px solid #24477c;box-shadow:none}
+.lc-editor-label{background:#102e60;color:#fff;border:1px solid #24477c;border-bottom:0}
+.lc-editor-label span{color:#c4d5f7}
+.lc-dashboard .lc-hero{background:linear-gradient(120deg,#082d80,#0648cb);border:1px solid #0b43b5;box-shadow:0 10px 30px #082d801a}
+.lc-hero .lc-eyebrow{color:#c9dbff}.lc-hero p,.lc-hero small{color:#e1eaff}
+.lc-hero .lc-primary{background:#fff;color:var(--brand-navy);border-color:#fff}.lc-hero .lc-primary:hover:not(:disabled){background:#e8efff;color:var(--brand-navy)}
+.lc-hero-art{border-color:#ffffff40;background:#ffffff0a}.lc-hero-art>span{color:#fff;text-shadow:none}.lc-hero-art>div{background:#072967;color:#e1eaff;border:1px solid #6487d3}
+.lc-course-art,.lc-course-art.tone-1,.lc-course-art.tone-2,.lc-course-art.tone-3{background:linear-gradient(140deg,#e4edff,#f7f9ff);color:var(--brand-blue);border-bottom:1px solid var(--brand-line)}
+:is(.lc-tabs button.active,.lc-dashboard button.active,.dc-outline button[aria-current],.dc-check fieldset label.selected,.dc-category-filters button[aria-pressed=true],.in-tabs button[aria-current],.in-filters button[aria-pressed=true]){background:var(--brand-wash);border-color:#9ebaf7;color:var(--brand-navy)}
+:is(.lc-tag,.dc-meta span,.in-article-meta>span){background:var(--brand-wash);color:var(--brand-blue-hover)}
+:is(.dc-card-project,.dc-check,.dc-example,.lc-output,.lc-prompt,.dc-learn pre){background:var(--brand-surface);border-color:var(--brand-line);color:var(--brand-ink)}
+.dc-check fieldset label{background:#fff;border-color:var(--brand-line)}
+.dc-learn .dc-lab-result{background:#eaf1ff;border-color:#a9c2fa;color:var(--brand-navy)}
+.dc-counter-grid>div{background:#fff;border-color:var(--brand-line)}
+.dc-code.lc-dashboard{background:transparent;border:0}
+.sv-card{--sv-accent:var(--brand-blue);--sv-wash:var(--brand-wash)}
+.sv-card .sv-icon{background:var(--brand-wash);border:1px solid var(--brand-line);color:var(--brand-blue);box-shadow:none}
+.sv-price{border-color:var(--brand-line)}.sv-price strong{color:var(--brand-navy)}
+.memberLounge .tierSep:hover{color:var(--brand-ink);background:var(--brand-surface)}
+.memberLounge .tierPrice{color:var(--brand-navy)!important}.memberLounge .megallion{border-color:var(--brand-line);box-shadow:0 0 20px #0750e812}.gm-plan-button[aria-pressed=true]{background:var(--brand-wash);border-color:#9ebaf7}
+.ac-auth{background:#fff;border-color:var(--brand-line);box-shadow:0 18px 65px #082d8012}
+.ac-auth-story{background:linear-gradient(150deg,#edf3ff,#dae6ff)}.ac-auth-story h1{color:var(--brand-navy)}
+.ac-auth-story>img{filter:none}.ac-auth-switch{background:var(--brand-wash)}.ac-auth-switch>a[aria-current]{background:#fff;color:var(--brand-blue-hover)}.ac-password{background:#fff;border-color:var(--brand-line)}
+.ac-profile-artwork{background:radial-gradient(ellipse at center,#fff 35%,#e6eeff);border-color:var(--brand-line);box-shadow:var(--brand-shadow)}
+.ac-achievement-banner{background:linear-gradient(120deg,#f5f8ff,#e3ecff);border-color:var(--brand-line)}
+.ac-profile .gm-status,.gm-status{background:#fff;color:var(--brand-navy);border-color:var(--brand-line);box-shadow:0 2px 8px #082d800a}.gm-status span+span{border-color:var(--brand-line)}.gm-status:hover{background:var(--brand-wash)}
+.gm-dialog{background:#fff;border-color:var(--brand-line);color:var(--brand-ink);box-shadow:0 18px 70px #082d8033}.gm-dialog::backdrop{background:#061d4894;backdrop-filter:blur(5px)}
+.gm-badge,.gm-badge.earned{background:var(--brand-wash);border-color:#abc3f7}.gm-badge.locked{background:#f4f6fa;border-color:#d5deed}.gm-membership{background:var(--brand-surface);border-color:var(--brand-line)}.gm-toast{background:var(--brand-navy);border:1px solid #5379c7;box-shadow:var(--brand-shadow)}
+.ac-avatar-blue{background:#dfE9ff;color:var(--brand-blue-hover)}
+.footerMain{border:1px solid var(--brand-line);border-radius:14px;background:#fff;box-shadow:var(--brand-shadow);color:var(--brand-muted)}.footerMain .footSplitter{padding-top:12px;border-color:var(--brand-line)}.footSmaller:hover{color:var(--brand-blue)}
+.qp .quad{border:1px solid var(--brand-line);background:#fff;border-radius:10px;color:var(--brand-navy)}.qp .quad:hover{background:var(--brand-wash);border-color:#92b1f7}
+.stepContainer .stepPhoto{border-color:var(--brand-line);border-radius:14px;box-shadow:var(--brand-shadow)}.stepHeader{border-color:var(--brand-line);border-radius:8px;background:var(--brand-wash);color:var(--brand-navy)}
+.containerB,.screen{border:1px solid var(--brand-line);border-radius:12px;background:var(--brand-surface)}
+.containerB .open-trigger,.containerA .open-trigger,.containerC .open-trigger{background:var(--brand-wash);color:var(--brand-navy);border-color:var(--brand-line)!important;box-shadow:none}.syllabus{background:var(--brand-wash);color:var(--brand-blue-hover)}.lilSyll{background:#fff;border-color:var(--brand-line)}
+.tv-modal,.articleModal{background:#fff;border:1px solid var(--brand-line);box-shadow:0 18px 65px #082d8026}.modal-header{background:var(--brand-wash);border-color:var(--brand-line);color:var(--brand-navy)}.modal-content{background:#fff}
+.hub{background:#fff;border-color:var(--brand-line)}.hub-sidebar{background:var(--brand-surface);border-color:var(--brand-line)}.hub-brand,.hub-sidebar>button{color:var(--brand-navy)}.hub-sidebar>button.active{background:var(--brand-wash);color:var(--brand-blue-hover)}.hub-heading,.hub-member,.hub .hub-post,.hub-thread article{border-color:var(--brand-line)}.hub .hub-post:hover{background:#f5f8ff}.hub-avatar,.hub-tags>span{background:var(--brand-wash);color:var(--brand-blue-hover)}.hub-github{color:var(--brand-blue)}.hub-empty,.hub-gate,.hub pre{background:var(--brand-surface)}.hub-post-meta,.hub-preview,.hub-stats,.hub-count{color:var(--brand-muted)}
+.lion-entrance{background:radial-gradient(ellipse at 50% 43%,#fff 15%,#e4edff 85%);color:var(--brand-navy)}.entrance-orbit{border-color:#a5bef1;background:radial-gradient(circle,#dbe7ff77,transparent 65%);box-shadow:0 0 40px #0750e812}.entrance-orbit::after{border-color:var(--brand-line)}.entrance-progress span{background:#c7d6f5}.entrance-progress span.complete{background:var(--brand-blue);box-shadow:none}.entrance-skip{color:var(--brand-blue-hover);border-color:#a5bef1}
+@media(max-width:600px){.navSuperior .navMain{padding:10px 4px}.lc-dashboard{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){body{background-attachment:scroll}.majorLeft>a.main-logo-link{transition:none}.main-logo-link:hover{transform:none}}
+@media print{body,#root{background:#fff}}
+
+/* Keep hero copy above the shared paragraph and heading color rules. */
+.lc-dashboard .lc-hero h2{color:#fff}
+.lc-dashboard .lc-hero :is(p,small){color:#e1eaff}
+.lc-dashboard .lc-hero .lc-eyebrow{color:#c9dbff}
+.lc-dashboard .lc-hero .lc-actions>button:not(.lc-primary){background:#ffffff14;border-color:#afc8ff;color:#fff}
+.lc-dashboard .lc-hero .lc-actions>button:not(.lc-primary):hover{background:#ffffff26;color:#fff}

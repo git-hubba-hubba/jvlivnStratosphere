@@ -16,5 +16,7 @@ export function createAuthRouter({filename,origins,secure=false}){
   router.get('/me',endpoint(async(req,res)=>res.json({user:await store.me(readToken(req))})));
   router.patch('/profile',endpoint(async(req,res)=>res.json({user:await store.update(readToken(req),req.body||{})})));
   router.post('/logout',endpoint(async(req,res)=>{await store.logout(readToken(req));res.clearCookie(COOKIE,{httpOnly:true,sameSite:'lax',secure,path:'/api/auth'});res.json({ok:true});}));
+  router.get('/community',endpoint(async(req,res)=>res.json(await store.community(readToken(req),'list'))));
+  for(const action of ['create','reply','vote','accept'])router.post(`/community/${action}`,endpoint(async(req,res)=>res.status(action==='create'||action==='reply'?201:200).json(await store.community(readToken(req),action,req.body||{}))));
   return router;
 }

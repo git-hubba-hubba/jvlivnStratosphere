@@ -4,3 +4,11 @@
 @media(max-width:600px){.navSuperior .navMain{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.navSuperior .navBtn{flex:0 0 calc(25% - 8px);min-width:0}.navSuperior .navBtn>a{padding:6px 0;font-size:11px}}
 
 .ac-profile-artwork{display:flex;align-items:center;justify-content:center;width:100%;margin:28px auto;padding:clamp(10px,2vw,24px);border:1px solid #dce6ed;border-radius:14px;background:#f5f8fb}.ac-profile-artwork>img{display:block;width:100%;max-width:600px;height:auto;aspect-ratio:1312 / 1199;object-fit:contain;border-radius:8px}
+
+.ac-profile-hero{display:flex;align-items:center;gap:32px;margin:20px 0 28px}
+.ac-profile-hero>.ac-profile-heading{flex:1;min-width:0;flex-wrap:wrap;border-bottom:0;padding:0}
+.ac-profile-hero>.ac-profile-artwork{flex:0 1 40%;min-width:0;max-width:400px;margin:0;padding:12px}
+@media(max-width:760px){
+  .ac-profile-hero{flex-direction:column;align-items:stretch;gap:24px}
+  .ac-profile-hero>.ac-profile-artwork{flex-basis:auto;width:100%;align-self:center}
+}
