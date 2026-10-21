@@ -8,7 +8,7 @@ export default function Home(){
   return <main className="engage-page">
     <section className="quadMaster engage-quick" aria-label="About JVLIVN">
       <div className="qp">{quickInfo.slice(0,2).map(([label,value])=><button className="quad" key={label} aria-pressed={selected===value} onClick={()=>setSelected(selected===value?null:value)}>{label}</button>)}</div>
-      <p className="hiddenOne engage-quick-answer" role="status">{selected}</p>
+      <p className="hiddenOne engage-quick-answer fontdiner-swanky-regular" role="status">{selected}</p>
       <div className="qp">{quickInfo.slice(2).map(([label,value])=><button className="quad" key={label} aria-pressed={selected===value} onClick={()=>setSelected(selected===value?null:value)}>{label}</button>)}</div>
     </section>
     <Pricing/>

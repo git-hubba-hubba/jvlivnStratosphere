@@ -1,0 +1,51 @@
+.jvl-footer {
+  margin-top: 56px;
+  padding: clamp(24px, 4vw, 56px);
+  overflow: hidden;
+  border: 1px solid var(--brand-line, #d5deea);
+  border-radius: 24px;
+  background: radial-gradient(ellipse at 0 0, #dce9ff 0, transparent 60%), #f5f8fc;
+  color: var(--brand-navy, #182c4b);
+  text-align: left;
+  font-family: system-ui, sans-serif;
+}
+.jvl-footer *, .jvl-footer *::before, .jvl-footer *::after { box-sizing: border-box; }
+.jvl-footer-topline, .jvl-footer-contact, .jvl-footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.jvl-footer-topline { font-size: 10px; font-weight: 650; letter-spacing: .14em; }
+.jvl-footer-topline > span:first-child::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 10px; border-radius: 50%; background: #397b66; }
+.jvl-footer-main { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; padding: 48px 0; }
+.jvl-footer-eyebrow { margin: 0 0 16px; font-size: 12px; color: var(--brand-muted); }
+.jvl-footer h2 { margin: 0; font-size: clamp(32px, 4.3vw, 62px); line-height: 1.08; letter-spacing: -.055em; font-weight: 650; }
+.jvl-footer h2 em { font-family: Georgia, serif; font-weight: 400; color: var(--brand-blue); }
+.jvl-footer-invitation > p:not(.jvl-footer-eyebrow) { max-width: 340px; margin: 22px 0; font-size: 14px; line-height: 1.8; color: var(--brand-muted); }
+.jvl-footer a { color: inherit; text-decoration: none; }
+.jvl-footer .jvl-footer-cta { display: inline-flex; align-items: center; gap: 32px; min-height: 48px; padding: 12px 20px; border-radius: 28px; background: #082d80; color: #fff; font-size: 14px; }
+.jvl-footer-cta span { font-size: 22px; }
+.jvl-footer-path { display: grid; grid-template-columns: 24px minmax(0, 1fr) 24px; gap: 14px; align-items: center; min-height: 94px; padding: 20px 0; border-bottom: 1px solid var(--brand-line); }
+.jvl-footer-path:first-child { border-top: 1px solid var(--brand-line); }
+.jvl-footer-number { align-self: start; margin-top: 3px; font-size: 10px; color: var(--brand-muted); }
+.jvl-footer-path strong { display: block; font-size: clamp(17px, 2vw, 23px); font-weight: 500; letter-spacing: -.03em; }
+.jvl-footer-path small { display: block; margin-top: 5px; font-size: 12px; color: var(--brand-muted); }
+.jvl-footer-arrow { font-size: 24px; transition: transform .2s ease; }
+.jvl-footer-path:hover .jvl-footer-arrow { transform: translate(3px, -3px); }
+.jvl-footer-contact { padding: 24px 0; border-top: 1px solid var(--brand-line); }
+.jvl-footer-brand { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 750; letter-spacing: -.04em; }
+.jvl-footer-brand img { object-fit: contain; }
+.jvl-footer-brand small { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0; color: var(--brand-muted); }
+.jvl-footer-contact-links { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; font-size: 13px; overflow-wrap: anywhere; }
+.jvl-footer-bottom { border-top: 1px solid var(--brand-line); padding-top: 20px; color: var(--brand-muted); font-size: 11px; }
+.jvl-footer-bottom button { padding: 8px 0 8px 12px; min-height: 44px; border: 0; background: transparent; color: inherit; font-size: inherit; }
+.jvl-footer-bottom button span { margin-left: 10px; }
+.jvl-footer a:focus-visible, .jvl-footer button:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 5px; }
+.jvl-footer-contact-links a:hover, .jvl-footer-bottom button:hover { text-decoration: underline; text-underline-offset: 4px; }
+:root[data-theme=neon] .jvl-footer { background: radial-gradient(ellipse at 0 0, #20375b 0, transparent 65%), #10182c; }
+@media (max-width: 680px) {
+  .jvl-footer-main { grid-template-columns: minmax(0, 1fr); padding: 32px 0; }
+  .jvl-footer-topline { flex-wrap: wrap; gap: 10px; font-size: 9px; }
+  .jvl-footer-contact { align-items: flex-start; flex-direction: column; }
+  .jvl-footer-contact-links { align-items: flex-start; }
+  .jvl-footer-bottom { flex-wrap: wrap; gap: 8px 16px; }
+  .jvl-footer-bottom > span:nth-child(2) { display: none; }
+  .jvl-footer-bottom button { margin-left: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .jvl-footer-arrow { transition: none; } }

@@ -1,4 +1,5 @@
 /* Activated by the main logo; brand variables carry the theme across routes. */
+:root[data-theme=neon] :is(.navMain svg.navImg,.descriptionUpper svg.logo){color:var(--brand-blue)}
 :root[data-theme=neon]{
   color-scheme:dark;
   --brand-blue:#57d9ff;
